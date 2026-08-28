@@ -366,13 +366,46 @@ const App = (() => {
   }
 
   function quickSearch(term) {
+    if (!term) return;
+    const cleanTerm = term.trim();
+
     const searchMain = document.getElementById('search-main');
-    if (searchMain) {
-      searchMain.value = term;
-      handleSearch(term);
-      searchMain.focus();
+    if (searchMain) searchMain.value = cleanTerm;
+    closeAutocomplete();
+    PopularSearchStore.track(cleanTerm);
+
+    if (!universityData || !universityData.universitas) return;
+
+    const lower = cleanTerm.toLowerCase();
+
+    // 1. Check if term matches a specific University (singkatan or nama)
+    const matchedUniv = universityData.universitas.find(u =>
+      u.singkatan.toLowerCase() === lower ||
+      u.nama.toLowerCase().includes(lower) ||
+      (lower.length <= 5 && lower.includes(u.singkatan.toLowerCase()))
+    );
+
+    if (matchedUniv && (matchedUniv.singkatan.toLowerCase() === lower || cleanTerm.length <= 5)) {
+      openDetail(matchedUniv.id);
+      showToast(`Menampilkan ${matchedUniv.nama} (${matchedUniv.singkatan})`);
+      return;
     }
-    PopularSearchStore.track(term);
+
+    // 2. Otherwise treat as Prodi Search -> Switch to Master View & filter immediately!
+    switchMainTab('master');
+    masterSearchKeyword = cleanTerm;
+
+    const searchMasterInput = document.getElementById('search-master-prodi');
+    if (searchMasterInput) searchMasterInput.value = cleanTerm;
+
+    renderMasterProdi();
+
+    const viewMaster = document.getElementById('view-master');
+    if (viewMaster) {
+      viewMaster.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    showToast(`Menampilkan daftar prodi "${cleanTerm}"`);
   }
 
   // =====================================================================
