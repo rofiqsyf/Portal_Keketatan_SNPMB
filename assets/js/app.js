@@ -666,7 +666,8 @@ const App = (() => {
     const univ = universityData.universitas.find(u => u.id === univId);
     if (!univ) return;
 
-    // Close autocomplete & clear search
+    // Close bookmark panel & autocomplete & clear search
+    closeBookmarkPanel();
     closeAutocomplete();
     const searchMain = document.getElementById('search-main');
     if (searchMain) searchMain.value = '';
