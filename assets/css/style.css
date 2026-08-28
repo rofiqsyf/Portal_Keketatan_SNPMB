@@ -1802,10 +1802,10 @@ input[type="number"] {
   }
 
   .filter-bar {
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    padding-bottom: var(--space-xs);
-    -webkit-overflow-scrolling: touch;
+    flex-wrap: wrap;
+    gap: var(--space-xs) var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    overflow-x: visible;
   }
 
   .header-brand h1 {
@@ -3080,6 +3080,13 @@ input[type="number"] {
   .nav-tabs-section {
     padding: 0 var(--space-md);
     margin: var(--space-md) auto;
+    position: relative;
+  }
+
+  .nav-tabs-container {
+    mask-image: linear-gradient(to right, #000 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, #000 85%, transparent 100%);
+    padding-right: 20px;
   }
 
   .nav-tab-btn {
