@@ -347,7 +347,7 @@ const App = (() => {
       viewSimulasi?.classList.add('hidden');
       document.getElementById('master-view-title').textContent = 'Eksplorasi Program Studi';
       document.getElementById('master-view-subtitle').textContent = `Menampilkan seluruh program studi PTN di Indonesia (${activeTahun})`;
-      masterSortState = { by: 'nama', asc: true };
+      masterSortState = { by: 'keketatan', asc: true };
       renderMasterProdi();
     } else if (tab === 'terketat') {
       viewPtn?.classList.add('hidden');
@@ -970,7 +970,11 @@ const App = (() => {
     const modal = document.getElementById('compare-modal');
     if (modal) {
       modal.classList.remove('active');
-      if (!document.getElementById('detail-panel').classList.contains('active')) {
+      const detailPanel = document.getElementById('detail-panel');
+      const bookmarkPanel = document.getElementById('bookmark-panel');
+      const anyPanelOpen = (detailPanel && detailPanel.classList.contains('active')) ||
+                           (bookmarkPanel && bookmarkPanel.classList.contains('active'));
+      if (!anyPanelOpen) {
         document.body.style.overflow = '';
       }
     }
@@ -1104,7 +1108,8 @@ const App = (() => {
     openDetailAndHighlight,
     closeDetail,
     filterDetailProdi,
-    sortProdiBy,
+    sortProdiBy: sortDetailProdiBy,   // alias for backward-compat with index.html
+    sortDetailProdiBy,
     filterMasterProdi,
     sortMasterProdiBy,
     toggleBookmark,
