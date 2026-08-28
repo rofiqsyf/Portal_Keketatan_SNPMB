@@ -3059,3 +3059,193 @@ input[type="number"] {
   color: #93c5fd;
 }
 
+/* ============================================================
+   MULTI-DEVICE & MOBILE RESPONSIVE OPTIMIZATIONS
+   ============================================================ */
+@media (max-width: 768px) {
+  /* --- DRAWERS & PANELS ON MOBILE --- */
+  .detail-panel,
+  .bookmark-panel {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    right: 0 !important;
+  }
+
+  .btn-close-detail {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* --- NAV TABS ON MOBILE --- */
+  .nav-tabs-section {
+    padding: 0 var(--space-md);
+    margin: var(--space-md) auto;
+  }
+
+  .nav-tab-btn {
+    padding: 10px 14px;
+    font-size: 13px;
+    min-height: 44px;
+  }
+
+  /* --- ANALYZER RESPONSIVE --- */
+  .analyzer-section {
+    padding: var(--space-md) var(--space-md) var(--space-2xl);
+  }
+
+  .analyzer-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .analyzer-input-panel {
+    position: static;
+    padding: var(--space-md);
+  }
+
+  .subtest-input-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .subtest-input-label {
+    flex: 1;
+    font-size: 0.78rem;
+    min-width: 0;
+  }
+
+  .subtest-score-input {
+    width: 84px;
+    height: 38px;
+    flex-shrink: 0;
+  }
+
+  .score-summary-card {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    padding: var(--space-md);
+  }
+
+  .score-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xs);
+  }
+
+  .score-stat-item {
+    padding: 8px 10px;
+  }
+
+  .score-stat-value {
+    font-size: 0.95rem;
+  }
+
+  /* --- SIMULASI RESPONSIVE --- */
+  .simulasi-section {
+    padding: 0 var(--space-md);
+  }
+
+  .simulasi-card-layout {
+    padding: var(--space-md);
+  }
+
+  .simulasi-header-box h2 {
+    font-size: 1.15rem;
+  }
+
+  .choice-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* --- COMPARE BAR ON MOBILE --- */
+  .compare-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-xs);
+  }
+
+  .btn-compare {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    height: 44px;
+  }
+
+  /* --- COMPARE MODAL TABLE ON MOBILE --- */
+  .compare-modal-content {
+    max-height: 90vh;
+  }
+
+  .compare-grid {
+    padding: var(--space-sm);
+  }
+
+  /* --- TABLE HORIZONTAL SCROLL ON MOBILE --- */
+  .detail-table-wrapper,
+  .master-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 480px) {
+  /* --- PELUANG CARDS ON NARROW MOBILE --- */
+  .peluang-card {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .peluang-card-rank {
+    width: 20px;
+    font-size: 0.65rem;
+  }
+
+  .peluang-card-prodi {
+    font-size: 0.8rem;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .peluang-card-univ {
+    font-size: 0.7rem;
+  }
+
+  .peluang-indicator {
+    font-size: 0.68rem;
+    padding: 2px 6px;
+  }
+
+  .peluang-keketatan {
+    font-size: 0.72rem;
+  }
+
+  .peluang-summary-bar {
+    gap: 6px;
+  }
+
+  .peluang-summary-chip {
+    font-size: 0.72rem;
+    padding: 4px 8px;
+  }
+
+  .akreditasi-label {
+    padding: 8px 4px;
+    font-size: 0.75rem;
+  }
+
+  .ak-grade {
+    font-size: 0.95rem;
+  }
+
+  .ak-quota {
+    font-size: 0.62rem;
+  }
+
+  .btn-run-analysis {
+    height: 44px;
+    font-size: 0.88rem;
+  }
+}
+
+
