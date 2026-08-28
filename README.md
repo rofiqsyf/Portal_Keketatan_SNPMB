@@ -44,11 +44,11 @@ Portal ini dibangun menggunakan pendekatan **Static Client-Side Web Application 
                               ▼
   ┌────────────────────────────────────────────────────────┐
   │              CLIENT-SIDE WEB APPLICATION               │
-  │  ┌──────────────┐   ┌───────────────┐   ┌────────────┐ │
-  │  │   data.js    │ ➔ │ components.js │ ➔ │   app.js   │ │
-  │  │(Data Utilities│   │(SVG Component │   │(Controller │ │
-  │  │ & Filters)   │   │  Renderers)   │   │  & State)  │ │
-  │  └──────────────┘   └───────────────┘   └────────────┘ │
+  │  ┌────────────┐ ┌─────────────┐ ┌─────────────┐ ┌────┐ │
+  │  │  data.js   │➔│components.js│➔│ analyzer.js │➔│app.│ │
+  │  │(Data Utils │ │ (UI Render) │ │ (Probabilistic│ │js  │ │
+  │  │ & Filters) │ │             │ │  Analyzer)  │ │    │ │
+  │  └────────────┘ └─────────────┘ └─────────────┘ └────┘ │
   │                           │                            │
   │                   [index.html & UI]                    │
   └───────────────────────────┬────────────────────────────┘
@@ -58,13 +58,14 @@ Portal ini dibangun menggunakan pendekatan **Static Client-Side Web Application 
 ```
 
 ### Mengapa Pendekatan Client-Side Digunakan?
-1. ⚡ **Zero Server Latency**: Seluruh proses pencarian, filtering 5-dimensi, sorting multi-kolom, dan simulasi dilakukan secara lokal di memori browser pengguna tanpa lag/delay HTTP request.
+1. ⚡ **Zero Server Latency**: Seluruh proses pencarian, filtering 5-dimensi, sorting multi-kolom, simulasi, dan analisis probabilistik peluang dilakukan secara lokal di memori browser pengguna tanpa lag/delay HTTP request.
 2. 💰 **Hosting Gratis Selamanya**: Tidak membutuhkan server backend (Node.js/Python/PHP) yang aktif 24 jam. Website dapat di-host secara gratis 100% pada **GitHub Pages**, **Vercel**, atau **Netlify**.
-3. 🔒 **Privasi Pengguna Terjamin**: Bookmark dan riwayat simulasi tersimpan aman di `localStorage` browser pengguna tanpa pengumpulan data pribadi.
+3. 🔒 **Privasi Pengguna Terjamin**: Skor UTBK, nilai rapor, bookmark, dan riwayat simulasi tersimpan aman di `localStorage` browser pengguna tanpa pengumpulan data pribadi.
 
 ### Modul Utama Frontend:
 - `assets/js/data.js` — Mengelola kalkulasi statistik, penyaringan 5-dimensi, rekomendasi tier keketatan, pencarian fuzzy, dan resolusi histori multi-tahun (2025, 2024, 2023).
-- `assets/js/components.js` — Modul pembangun elemen UI (Render kartu PTN, badge keketatan, tabel prodi, modal perbandingan, evaluator simulasi strategi, dan generator laporan PDF). Menggunakan sistem ikon vektor SVG murni (Lucide-style).
+- `assets/js/analyzer.js` — Modul analisis probabilistik peluang (konversi skor UTBK 7 subtest ke persentil nasional via distribusi normal CDF, kalkulasi skor tertimbang SNBP dari rapor + mapel pendukung + akreditasi sekolah, serta matching prodi).
+- `assets/js/components.js` — Modul pembangun elemen UI (Render kartu PTN, badge keketatan, tabel prodi, modal perbandingan, evaluator simulasi strategi, kalkulator analisis SNBT/SNBP, dan generator laporan PDF). Menggunakan sistem ikon vektor SVG murni (Lucide-style).
 - `assets/js/app.js` — Controller utama pengendali status aplikasi (*App State*), pengubah mode gelap/terang, pelacak pencarian populer real-time (`PopularSearchStore`), dan event listeners.
 - `assets/css/style.css` — Design system lengkap berbasis HSL CSS variables, tema terang/gelap high-contrast, stacking context z-index terstruktur, serta layout responsif.
 
@@ -72,27 +73,37 @@ Portal ini dibangun menggunakan pendekatan **Static Client-Side Web Application 
 
 ## 🚀 Fitur Unggulan v3.0
 
-### 🎯 1. Simulasi Strategi Pilihan 1 & 2 (SNBT/SNBP)
+### 🎯 1. Analisis Peluang UTBK-SNBT (7 Subtest)
+- **Input Skor UTBK 7 Subtest**: Memasukkan nilai 7 subtes lengkap (Penalaran Umum, PBM, PPU, Pengetahuan Kuantitatif, Literasi Bahasa Indonesia, Literasi Bahasa Inggris, dan Penalaran Matematika).
+- **Model Probabilistik IRT & CDF**: Mengonversi skor komposit ke estimasi persentil nasional berbasis distribusi Gauss standar UTBK 2025 (*mean=545,78*).
+- **Matching 2.257 Prodi**: Mengelompokkan prodi PTN ke dalam 5 tingkatan peluang (Sangat Berpeluang, Berpeluang, Kompetitif, Perlu Peningkatan, Kurang Berpeluang) dengan fitur load-more per 50 prodi.
+
+### 📋 2. Analisis Peluang SNBP (Jalur Prestasi)
+- **Kalkulator Rapor + Mapel Pendukung**: Menghitung skor tertimbang SNBP sesuai ketentuan resmi Kepmendikdasmen No. 102/M/2025 (min 50% rata-rata rapor + maks 50% mapel pendukung relevan).
+- **Penyesuaian Akreditasi Sekolah**: Memperhitungkan bobot akreditasi sekolah (A=40%, B=25%, C=5% kuota eligible).
+- **Rumpun Prodi Dinamis**: Pilihan rumpun IPA/Saintek, IPS/Soshum, atau Campuran yang menyesuaikan form input mapel pendukung secara otomatis.
+
+### 🎯 3. Simulasi Strategi Pilihan 1 & 2 (SNBT/SNBP)
 - **Evaluator Risiko Real-Time**: Menganalisis kombinasi 2 prodi target dan memberikan saran strategi:
   - 🟢 **Strategi Optimal & Aman**: Pilihan 1 Impian + Pilihan 2 dengan keketatan lebih longgar sebagai jaring pengaman (*Safety Net*).
   - 🟡 **Strategi Moderat**: Pilihan 1 Impian + Pilihan 2 Keketatan Sedang.
   - 🔴 **Strategi Risiko Tinggi**: Kedua pilihan tergolong Sangat Ketat (< 5%), berisiko gugur ganda jika nilai tidak di persentil teratas.
   - ⚠️ **Peringatan Pilihan Terbalik**: Memperingatkan jika Pilihan 2 lebih ketat dari Pilihan 1.
 
-### 🖨️ 2. Fitur Cetak & Ekspor PDF Laporan
+### 🖨️ 4. Fitur Cetak & Ekspor PDF Laporan
 - Tombol **`[ 🖨️ Cetak Laporan ]`** pada Modal Perbandingan dan Hasil Simulasi Strategi.
 - Menghasilkan dokumen cetak laporan PDF interaktif ber-kop resmi *Portal Keketatan SNPMB* untuk keperluan sesi bimbingan konseling dengan **Guru BK & Orang Tua**.
 
-### ⚡ 3. Pencarian Populer Real-Time
+### ⚡ 5. Pencarian Populer Real-Time
 - Modul `PopularSearchStore` yang secara otomatis melacak dan mengurutkan 7 kata kunci yang paling sering dicari oleh pengguna secara live dengan penyimpanan `localStorage`.
 
-### 🗓️ 4. Multi-Year Data Switcher (2025, 2024, 2023)
+### 🗓️ 6. Multi-Year Data Switcher (2025, 2024, 2023)
 - Beralih data tahun seleksi dalam 1-klik. Seluruh statistik daya tampung, peminat, dan rasio keketatan otomatis tersinkronisasi.
 
-### 🗺️ 5. Filter Suite 5-Dimensi
+### 🗺️ 7. Filter Suite 5-Dimensi
 - Filter komprehensif berdasarkan: **Tahun**, **Jalur Seleksi (SNBT/SNBP)**, **Tingkat Keketatan (<5%, 5-15%, 15-30%, >30%)**, **Jenjang (S1, D4, D3)**, dan **38 Provinsi Indonesia**.
 
-### 🌓 6. Mode Gelap High-Contrast (Dark Mode)
+### 🌓 8. Mode Gelap High-Contrast (Dark Mode)
 - Desain mode gelap dengan batas bidang (*border outline*) dan elevasi warna yang kontras, memastikan seluruh tombol filter, dropdown, dan teks terlihat jelas.
 
 ---
