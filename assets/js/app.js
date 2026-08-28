@@ -241,14 +241,46 @@ const App = (() => {
       }
     });
 
-    // Window resize for campus grid
+    // Nav tabs scroll buttons state listener
+    const navTabsContainer = document.getElementById('nav-tabs-container');
+    if (navTabsContainer) {
+      navTabsContainer.addEventListener('scroll', updateNavScrollButtons);
+      setTimeout(updateNavScrollButtons, 500);
+    }
+
+    // Window resize for campus grid & nav tabs
     let resizeTimer;
     window.addEventListener('resize', () => {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(() => {
         if (!showAllCampus && currentTab === 'ptn') renderCampusGrid();
+        updateNavScrollButtons();
       }, 250);
     });
+  }
+
+  // =====================================================================
+  // NAV TABS SCROLL CONTROLLER
+  // =====================================================================
+  function scrollNavTabs(direction) {
+    const container = document.getElementById('nav-tabs-container');
+    if (!container) return;
+    const amount = direction === 'left' ? -240 : 240;
+    container.scrollBy({ left: amount, behavior: 'smooth' });
+    setTimeout(updateNavScrollButtons, 350);
+  }
+
+  function updateNavScrollButtons() {
+    const container = document.getElementById('nav-tabs-container');
+    const btnLeft = document.getElementById('nav-scroll-left');
+    const btnRight = document.getElementById('nav-scroll-right');
+    if (!container || !btnLeft || !btnRight) return;
+
+    const scrollLeft = container.scrollLeft;
+    const maxScroll = container.scrollWidth - container.clientWidth;
+
+    btnLeft.classList.toggle('visible', scrollLeft > 10);
+    btnRight.classList.toggle('visible', maxScroll - scrollLeft > 10);
   }
 
   // =====================================================================
@@ -1285,6 +1317,7 @@ const App = (() => {
     toggleTheme,
     quickSearch,
     switchMainTab,
+    scrollNavTabs,
     setTahun,
     setJalur,
     setRegion,

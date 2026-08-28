@@ -99,30 +99,40 @@
          MAIN NAVIGATION TABS
          ============================================ -->
     <section class="nav-tabs-section">
-        <div class="nav-tabs-container">
-            <button class="nav-tab-btn active" id="tab-btn-ptn" onclick="App.switchMainTab('ptn')">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-                Jelajah Perguruan Tinggi
+        <div class="nav-tabs-wrapper">
+            <button class="nav-scroll-btn left" id="nav-scroll-left" onclick="App.scrollNavTabs('left')" aria-label="Geser tab ke kiri" title="Geser tab ke kiri">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><polyline points="15 18 9 12 15 6"/></svg>
             </button>
-            <button class="nav-tab-btn" id="tab-btn-master" onclick="App.switchMainTab('master')">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
-                Daftar Semua Prodi (2.257)
-            </button>
-            <button class="nav-tab-btn" id="tab-btn-terketat" onclick="App.switchMainTab('terketat')">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                Top Prodi Terketat
-            </button>
-            <button class="nav-tab-btn" id="tab-btn-simulasi" onclick="App.switchMainTab('simulasi')">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
-                Simulasi Pilihan
-            </button>
-            <button class="nav-tab-btn" id="tab-btn-analyzer-snbt" onclick="App.switchMainTab('analyzer-snbt')">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M2 20h20"/><path d="m6 17 4-8 4 8"/><path d="M16 3h6"/><path d="M19 6V3"/><circle cx="5" cy="5" r="2"/></svg>
-                Analisis SNBT
-            </button>
-            <button class="nav-tab-btn" id="tab-btn-analyzer-snbp" onclick="App.switchMainTab('analyzer-snbp')">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-                Analisis SNBP
+
+            <div class="nav-tabs-container" id="nav-tabs-container">
+                <button class="nav-tab-btn active" id="tab-btn-ptn" onclick="App.switchMainTab('ptn')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                    Jelajah Perguruan Tinggi
+                </button>
+                <button class="nav-tab-btn" id="tab-btn-master" onclick="App.switchMainTab('master')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+                    Daftar Semua Prodi (2.257)
+                </button>
+                <button class="nav-tab-btn" id="tab-btn-terketat" onclick="App.switchMainTab('terketat')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    Top Prodi Terketat
+                </button>
+                <button class="nav-tab-btn" id="tab-btn-simulasi" onclick="App.switchMainTab('simulasi')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                    Simulasi Pilihan
+                </button>
+                <button class="nav-tab-btn" id="tab-btn-analyzer-snbt" onclick="App.switchMainTab('analyzer-snbt')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M2 20h20"/><path d="m6 17 4-8 4 8"/><path d="M16 3h6"/><path d="M19 6V3"/><circle cx="5" cy="5" r="2"/></svg>
+                    Analisis SNBT
+                </button>
+                <button class="nav-tab-btn" id="tab-btn-analyzer-snbp" onclick="App.switchMainTab('analyzer-snbp')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                    Analisis SNBP
+                </button>
+            </div>
+
+            <button class="nav-scroll-btn right" id="nav-scroll-right" onclick="App.scrollNavTabs('right')" aria-label="Geser tab ke kanan" title="Geser tab ke kanan">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><polyline points="9 18 15 12 9 6"/></svg>
             </button>
         </div>
     </section>
