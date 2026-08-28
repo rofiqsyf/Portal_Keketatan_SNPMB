@@ -19,12 +19,12 @@ const AnalyzerUtils = (() => {
   'use strict';
 
   // =====================================================================
-  // CONSTANTS — UTBK SNBT
+  // CONSTANTS — UTBK SNBT (Skala 0–100)
   // =====================================================================
-  const SNBT_MEAN = 545.78;
-  const SNBT_SD   = 90;
-  const SNBT_MIN  = 200;
-  const SNBT_MAX  = 820;
+  const SNBT_MEAN = 50;
+  const SNBT_SD   = 12.8;
+  const SNBT_MIN  = 0;
+  const SNBT_MAX  = 100;
 
   // 7 Subtest UTBK-SNBT 2025
   const SNBT_SUBTESTS = [
@@ -131,23 +131,18 @@ const AnalyzerUtils = (() => {
   // =====================================================================
 
   /**
-   * Normalisasi skor UTBK SNBT:
-   * Mendukung dua skala masukan pengguna:
-   * 1. Skala 0 – 100 (Nilai Tryout / Persentase):
-   *    Dikonversi otomatis ke skala UTBK 200–1000 (contoh: 50 → 550, 75 → 725, 100 → 900)
-   * 2. Skala 200 – 1000 (Sertifikat UTBK Resmi SNPMB):
-   *    Langsung digunakan secara presisi.
+   * Normalisasi skor UTBK SNBT ke Skala 0–100:
+   * Jika dimasukkan angka > 100 (misal 650), otomatis diubah ke 0–100.
    */
   function normalizeSnbtScore(raw) {
     if (raw == null || raw === '') return null;
     const num = Number(raw);
     if (isNaN(num)) return null;
 
-    if (num <= 100) {
-      // Mapping linear: 0 -> 200, 50 -> 550, 100 -> 900
-      return Math.min(1000, Math.max(200, 200 + (num / 100) * 700));
+    if (num > 100) {
+      return Math.min(100, Math.max(0, (num - 200) / 7));
     }
-    return Math.min(1000, Math.max(200, num));
+    return Math.min(100, Math.max(0, num));
   }
 
   /**

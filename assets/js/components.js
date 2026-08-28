@@ -706,9 +706,9 @@ const Components = (() => {
               type="number"
               class="subtest-score-input ${scores[s.key] ? 'filled' : ''}"
               id="snbt-${s.key}"
-              min="0" max="1000"
+              min="0" max="100"
               step="0.01"
-              placeholder="0–100 atau 200–1000"
+              placeholder="0–100"
               value="${scores[s.key] || ''}"
               oninput="App.setSnbtScore('${s.key}', this.value)"
             >
@@ -735,7 +735,7 @@ const Components = (() => {
           <div class="analyzer-input-panel">
             <h3>📊 Input Skor 7 Subtest</h3>
             <p style="font-size:0.75rem;color:var(--text-tertiary);margin:-6px 0 12px 0;line-height:1.4;">
-              💡 <em>Dapat menginput skala <strong>0–100</strong> (Nilai Tryout) maupun <strong>200–1000</strong> (Sertifikat UTBK Resmi). Sistem akan menyesuaikan secara otomatis.</em>
+              💡 <em>Masukkan nilai 7 subtest dalam skala <strong>0–100</strong> (Nilai Tryout / Hasil Evaluasi).</em>
             </p>
             ${groupHtml}
 
