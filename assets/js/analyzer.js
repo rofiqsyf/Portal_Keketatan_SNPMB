@@ -131,31 +131,55 @@ const AnalyzerUtils = (() => {
   // =====================================================================
 
   /**
+   * Normalisasi skor UTBK SNBT:
+   * Mendukung dua skala masukan pengguna:
+   * 1. Skala 0 – 100 (Nilai Tryout / Persentase):
+   *    Dikonversi otomatis ke skala UTBK 200–1000 (contoh: 50 → 550, 75 → 725, 100 → 900)
+   * 2. Skala 200 – 1000 (Sertifikat UTBK Resmi SNPMB):
+   *    Langsung digunakan secara presisi.
+   */
+  function normalizeSnbtScore(raw) {
+    if (raw == null || raw === '') return null;
+    const num = Number(raw);
+    if (isNaN(num)) return null;
+
+    if (num <= 100) {
+      // Mapping linear: 0 -> 200, 50 -> 550, 100 -> 900
+      return Math.min(1000, Math.max(200, 200 + (num / 100) * 700));
+    }
+    return Math.min(1000, Math.max(200, num));
+  }
+
+  /**
    * Hitung skor komposit SNBT dari 7 subtest
-   * Menggunakan rata-rata sederhana (IRT makes all subtests comparable)
+   * Menggunakan rata-rata sederhana (IRT membuat seluruh subtest setara)
    * Optional: weighted average berdasarkan tipe prodi
    */
   function calcSnbtComposite(scores, prodiType = 'semua') {
     const keys = Object.keys(scores).filter(k => scores[k] != null && scores[k] !== '');
     if (keys.length === 0) return null;
 
-    // Base: simple average of all filled subtests
-    const values = keys.map(k => Number(scores[k]));
+    // Normalisasi tiap skor (mendukung skala 0-100 maupun 200-1000)
+    const normalizedScores = {};
+    keys.forEach(k => {
+      normalizedScores[k] = normalizeSnbtScore(scores[k]);
+    });
+
+    const values = keys.map(k => normalizedScores[k]).filter(v => v != null);
+    if (values.length === 0) return null;
     const base = values.reduce((a, b) => a + b, 0) / values.length;
 
     // Weighted adjustment based on prodi type (subtle boost for relevant subtests)
     if (prodiType === 'saintek') {
-      // SAINTEK: boost PM and PK subtests
-      const saintek_boost = ['pm', 'pk'].filter(k => scores[k]);
+      const saintek_boost = ['pm', 'pk'].filter(k => normalizedScores[k] != null);
       if (saintek_boost.length > 0) {
-        const boostAvg = saintek_boost.map(k => Number(scores[k])).reduce((a, b) => a + b, 0) / saintek_boost.length;
+        const boostAvg = saintek_boost.map(k => normalizedScores[k]).reduce((a, b) => a + b, 0) / saintek_boost.length;
         return base * 0.7 + boostAvg * 0.3;
       }
     } else if (prodiType === 'soshum') {
-      // SOSHUM: boost PBM and PPU subtests
-      const soshum_boost = ['pbm', 'ppu', 'lbi'].filter(k => scores[k]);
+      const soshum_boost = ['pbm', 'ppu', 'lbi'].filter(k => normalizedScores[k] != null);
       if (soshum_boost.length > 0) {
-        const boostAvg = soshum_boost.map(k => Number(scores[k])).reduce((a, b) => a + b, 0) / soshum_boost.length;
+        const boostAvg = soshum_boost.map(k => normalizedScores[k]).reduce((a, b) => a + b, 0) / soshum_boost.length;
         return base * 0.7 + boostAvg * 0.3;
       }
     }

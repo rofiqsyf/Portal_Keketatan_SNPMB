@@ -706,9 +706,9 @@ const Components = (() => {
               type="number"
               class="subtest-score-input ${scores[s.key] ? 'filled' : ''}"
               id="snbt-${s.key}"
-              min="${scoreMin}" max="${scoreMax}"
+              min="0" max="1000"
               step="0.01"
-              placeholder="200–820"
+              placeholder="0–100 atau 200–1000"
               value="${scores[s.key] || ''}"
               oninput="App.setSnbtScore('${s.key}', this.value)"
             >
@@ -728,12 +728,15 @@ const Components = (() => {
         </div>
         <div class="analyzer-disclaimer">
           <span class="analyzer-disclaimer-icon">⚠️</span>
-          <span><strong>Disclaimer:</strong> Hasil ini adalah <strong>estimasi statistik</strong> berdasarkan distribusi skor nasional UTBK 2025 (mean=545,78). SNPMB tidak merilis passing grade resmi — peluang aktual bergantung pada kualitas pendaftar tiap tahun. Gunakan sebagai panduan, bukan jaminan.</span>
+          <span><strong>Disclaimer:</strong> Hasil ini adalah <strong>estimasi statistik</strong> berdasarkan distribusi skor nasional UTBK 2025. SNPMB tidak merilis passing grade resmi — peluang aktual bergantung pada kualitas pendaftar tiap tahun.</span>
         </div>
         <div class="analyzer-layout">
           <!-- INPUT PANEL -->
           <div class="analyzer-input-panel">
             <h3>📊 Input Skor 7 Subtest</h3>
+            <p style="font-size:0.75rem;color:var(--text-tertiary);margin:-6px 0 12px 0;line-height:1.4;">
+              💡 <em>Dapat menginput skala <strong>0–100</strong> (Nilai Tryout) maupun <strong>200–1000</strong> (Sertifikat UTBK Resmi). Sistem akan menyesuaikan secara otomatis.</em>
+            </p>
             ${groupHtml}
 
             <!-- Prodi Type Filter -->
