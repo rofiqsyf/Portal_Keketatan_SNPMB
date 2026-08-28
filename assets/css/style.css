@@ -1,6 +1,6 @@
 /* ======================================================================
-   PORTAL KEKETATAN SNPMB — Design System & Styles
-   Version: 3.0 — Ultra-Premium Modern UI & Layout
+   PORTAL KEKETATAN SNPMB : Design System & Styles
+   Version: 3.0 : Ultra-Premium Modern UI & Layout
    ====================================================================== */
 
 /* --- IMPORTS --- */
@@ -31,7 +31,7 @@
   --accent: #6366F1;
   --accent-light: #EEF2FF;
 
-  /* Surface — Light Mode */
+  /* Surface : Light Mode */
   --bg-body: #F8FAFC;
   --bg-primary: #FFFFFF;
   --bg-card: #FFFFFF;
@@ -2164,7 +2164,7 @@ a {
 }
 
 /* ======================================================================
-   ANALYZER SECTION — SNBT & SNBP
+   ANALYZER SECTION : SNBT & SNBP
    ====================================================================== */
 
 .analyzer-section {

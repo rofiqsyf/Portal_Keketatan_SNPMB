@@ -1,5 +1,5 @@
 /* ======================================================================
-   COMPONENTS.JS — UI Component Renderers
+   COMPONENTS.JS : UI Component Renderers
    Portal Keketatan SNPMB
    ====================================================================== */
 
@@ -411,7 +411,7 @@ const Components = (() => {
           level: 'warning',
           title: 'Peringatan: Urutan Pilihan Terbalik',
           badgeClass: 'badge-warning',
-          desc: `Pilihan 2 (${prodi2.nama} — ${k2.toFixed(2)}%) memiliki rasio keketatan lebih kecil/ketat dibandingkan Pilihan 1 (${prodi1.nama} — ${k1.toFixed(2)}%). Dalam seleksi SNBT/SNBP, Pilihan 2 sebaiknya memiliki peluang penerimaan yang lebih besar/longgar dari Pilihan 1.`,
+          desc: `Pilihan 2 (${prodi2.nama} : ${k2.toFixed(2)}%) memiliki rasio keketatan lebih kecil/ketat dibandingkan Pilihan 1 (${prodi1.nama} : ${k1.toFixed(2)}%). Dalam seleksi SNBT/SNBP, Pilihan 2 sebaiknya memiliki peluang penerimaan yang lebih besar/longgar dari Pilihan 1.`,
           tips: [
             'Tukarkan posisi Pilihan 1 dan Pilihan 2 agar prodi yang paling ketat berada di Pilihan 1.',
             'Jika Pilihan 1 tidak lolos, Pilihan 2 dengan rasio lebih longgar akan menjadi penyelamat (Safety Net).'
@@ -433,7 +433,7 @@ const Components = (() => {
           level: 'moderate',
           title: 'Strategi Moderat: Pilihan 1 Target Impian & Pilihan 2 Cukup Ketat',
           badgeClass: 'badge-moderate',
-          desc: `Pilihan 1 (${prodi1.nama} — ${k1.toFixed(2)}%) merupakan Target Utama, sementara Pilihan 2 (${prodi2.nama} — ${k2.toFixed(2)}%) berada di tingkat keketatan sedang.`,
+          desc: `Pilihan 1 (${prodi1.nama} : ${k1.toFixed(2)}%) merupakan Target Utama, sementara Pilihan 2 (${prodi2.nama} : ${k2.toFixed(2)}%) berada di tingkat keketatan sedang.`,
           tips: [
             'Kombinasi ini baik jika kamu memiliki skor UTBK / nilai rapor yang konsisten tinggi.',
             'Untuk perlindungan maksimal, Pilihan 2 dapat digeser ke rasio > 15% agar peluang lolos semakin pasti.'
@@ -444,7 +444,7 @@ const Components = (() => {
           level: 'optimal',
           title: 'Strategi Optimal & Aman (Ideal Strategy)',
           badgeClass: 'badge-optimal',
-          desc: `Kombinasi Pilihan 1 (${prodi1.nama} — ${k1.toFixed(2)}%) dan Pilihan 2 (${prodi2.nama} — ${k2.toFixed(2)}%) memiliki rasio keketatan yang seimbang. Pilihan 2 berfungsi sebagai jaring pengaman (Safety Net) yang sangat baik.`,
+          desc: `Kombinasi Pilihan 1 (${prodi1.nama} : ${k1.toFixed(2)}%) dan Pilihan 2 (${prodi2.nama} : ${k2.toFixed(2)}%) memiliki rasio keketatan yang seimbang. Pilihan 2 berfungsi sebagai jaring pengaman (Safety Net) yang sangat baik.`,
           tips: [
             'Strategi ini meminimalkan risiko gugur total pada seleksi SNBT/SNBP.',
             'Fokus tingkatkan persiapan materi UTBK untuk menembus target Pilihan 1!'
@@ -491,7 +491,7 @@ const Components = (() => {
                 ${allProdiList.map(p => {
                   const key = `${p.univId}:::${p.nama}`;
                   const isSel = selectedPil1Key === key ? 'selected' : '';
-                  return `<option value="${key}" ${isSel}>${p.univSingkatan} — ${p.nama} (${p.keketatan.toFixed(2)}%)</option>`;
+                  return `<option value="${key}" ${isSel}>${p.univSingkatan} : ${p.nama} (${p.keketatan.toFixed(2)}%)</option>`;
                 }).join('')}
               </select>
             </div>
@@ -522,7 +522,7 @@ const Components = (() => {
                 ${allProdiList.map(p => {
                   const key = `${p.univId}:::${p.nama}`;
                   const isSel = selectedPil2Key === key ? 'selected' : '';
-                  return `<option value="${key}" ${isSel}>${p.univSingkatan} — ${p.nama} (${p.keketatan.toFixed(2)}%)</option>`;
+                  return `<option value="${key}" ${isSel}>${p.univSingkatan} : ${p.nama} (${p.keketatan.toFixed(2)}%)</option>`;
                 }).join('')}
               </select>
             </div>
@@ -632,7 +632,7 @@ const Components = (() => {
       <html lang="id">
       <head>
         <meta charset="UTF-8">
-        <title>${title} — Portal SNPMB</title>
+        <title>${title} | Portal SNPMB</title>
         <style>
           body { font-family: 'Inter', -apple-system, sans-serif; color: #0F172A; padding: 32px; margin: 0; background: #fff; }
           .report-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #2563EB; padding-bottom: 16px; margin-bottom: 24px; }
@@ -683,7 +683,7 @@ const Components = (() => {
         </div>
         ${bodyHTML}
         <div class="report-footer">
-          <div>Portal Keketatan SNPMB — Data Resmi SNPMB (portal.snpmb.id)</div>
+          <div>Portal Keketatan SNPMB | Data Resmi SNPMB (portal.snpmb.id)</div>
           <div>Halaman 1 dari 1</div>
         </div>
         <script>window.onload = function() { window.print(); };</script>
@@ -734,7 +734,7 @@ const Components = (() => {
         </div>
         <div class="analyzer-disclaimer">
           <span class="icon-inline">${Icons.info}</span>
-          <span><strong>Disclaimer:</strong> Hasil ini adalah <strong>estimasi statistik</strong> berdasarkan distribusi skor nasional UTBK 2025. SNPMB tidak merilis passing grade resmi — peluang aktual bergantung pada kualitas pendaftar tiap tahun.</span>
+          <span><strong>Disclaimer:</strong> Hasil ini adalah <strong>estimasi statistik</strong> berdasarkan distribusi skor nasional UTBK 2025. SNPMB tidak merilis passing grade resmi, peluang aktual bergantung pada kualitas pendaftar tiap tahun.</span>
         </div>
         <div class="analyzer-layout">
           <!-- INPUT PANEL -->
@@ -805,7 +805,7 @@ const Components = (() => {
         </div>
         <div class="analyzer-disclaimer">
           <span class="icon-inline">${Icons.info}</span>
-          <span><strong>Disclaimer:</strong> SNBP menggunakan penilaian holistik (rapor, prestasi, rekam jejak sekolah) yang tidak bisa direplikasi 100% secara otomatis. Estimasi ini berdasarkan komponen nilai rapor dan mapel pendukung saja — gunakan sebagai referensi awal.</span>
+          <span><strong>Disclaimer:</strong> SNBP menggunakan penilaian holistik (rapor, prestasi, rekam jejak sekolah) yang tidak bisa direplikasi 100% secara otomatis. Estimasi ini berdasarkan komponen nilai rapor dan mapel pendukung saja, gunakan sebagai referensi awal.</span>
         </div>
         <div class="analyzer-layout">
           <!-- INPUT PANEL -->

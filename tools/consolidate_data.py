@@ -134,7 +134,7 @@ def main():
         "meta": {
             "tahun_tersedia": ["2025", "2024", "2023"],
             "tahun_aktif": "2025",
-            "sumber": "SNPMB — snpmb.bppp.kemdikbud.go.id",
+            "sumber": "SNPMB | snpmb.bppp.kemdikbud.go.id",
             "terakhir_diperbarui": "2026-08-28",
             "total_universitas": len(universities),
             "total_prodi": total_prodi,

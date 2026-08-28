@@ -1,5 +1,5 @@
 /* ======================================================================
-   ANALYZER.JS — Modul Analisis Peluang SNBT & SNBP
+   ANALYZER.JS : Modul Analisis Peluang SNBT & SNBP
    Portal Keketatan SNPMB
    ====================================================================== */
 
@@ -19,7 +19,7 @@ const AnalyzerUtils = (() => {
   'use strict';
 
   // =====================================================================
-  // CONSTANTS — UTBK SNBT (Skala 0–100)
+  // CONSTANTS : UTBK SNBT (Skala 0–100)
   // =====================================================================
   const SNBT_MEAN = 50;
   const SNBT_SD   = 12.8;
@@ -38,7 +38,7 @@ const AnalyzerUtils = (() => {
   ];
 
   // =====================================================================
-  // CONSTANTS — SNBP
+  // CONSTANTS : SNBP
   // =====================================================================
   const SNBP_MEAN = 82;
   const SNBP_SD   = 7;
@@ -299,8 +299,8 @@ const AnalyzerUtils = (() => {
 
   /**
    * Hitung level peluang berdasarkan perbandingan studentPercentile vs keketatanProdi
-   * studentPercentile: "top X%" — semakin kecil semakin bagus
-   * keketatanProdi: "hanya X% yang diterima" — semakin kecil semakin sulit
+   * studentPercentile: "top X%" : semakin kecil semakin bagus
+   * keketatanProdi: "hanya X% yang diterima" : semakin kecil semakin sulit
    * Rasio = studentPercentile / keketatanProdi
    *   Rasio ≤ 0.5 → jauh lebih baik dari yang dibutuhkan → Sangat Berpeluang
    *   Rasio 0.5-0.8 → Berpeluang
@@ -346,7 +346,7 @@ const AnalyzerUtils = (() => {
    * Hitung skor komposit SNBT display
    */
   function formatSnbtComposite(composite) {
-    return composite ? composite.toFixed(2) : '—';
+    return composite ? composite.toFixed(2) : ' : ';
   }
 
   /**

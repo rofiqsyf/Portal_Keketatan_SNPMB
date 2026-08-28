@@ -1,5 +1,5 @@
 /* ======================================================================
-   DATA.JS — Data Processing Utilities
+   DATA.JS : Data Processing Utilities
    Portal Keketatan SNPMB
    ====================================================================== */
 
@@ -37,10 +37,10 @@ const DataUtils = (() => {
    */
   function getKeketanTooltip(level) {
     const tooltips = {
-      'sangat-ketat': 'Rasio < 5% — Sangat kompetitif, peluang kecil',
-      'ketat': 'Rasio 5-15% — Cukup kompetitif',
-      'kompetitif': 'Rasio 15-30% — Persaingan moderat',
-      'longgar': 'Rasio > 30% — Peluang relatif besar',
+      'sangat-ketat': 'Rasio < 5% : Sangat kompetitif, peluang kecil',
+      'ketat': 'Rasio 5-15% : Cukup kompetitif',
+      'kompetitif': 'Rasio 15-30% : Persaingan moderat',
+      'longgar': 'Rasio > 30% : Peluang relatif besar',
     };
     return tooltips[level] || '';
   }

@@ -1,6 +1,6 @@
 # 🎓 Portal Keketatan SNPMB v3.0
 
-> **Cek Peluang & Strategi Masuk PTN Impian** — Portal analitik data keketatan seleksi masuk Perguruan Tinggi Negeri ( jalur SNBT & SNBP ) di Indonesia.
+> **Cek Peluang & Strategi Masuk PTN Impian** : Portal analitik data keketatan seleksi masuk Perguruan Tinggi Negeri ( jalur SNBT & SNBP ) di Indonesia.
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-GitHub_Pages-2563EB?style=for-the-badge&logo=github)](https://rofiqsyf.github.io/Portal_Keketatan_SNPMB/)
 [![Official Reference](https://img.shields.io/badge/Referensi_Resmi-portal.snpmb.id-059669?style=for-the-badge)](https://portal.snpmb.id/)
@@ -63,11 +63,11 @@ Portal ini dibangun menggunakan pendekatan **Static Client-Side Web Application 
 3. 🔒 **Privasi Pengguna Terjamin**: Skor UTBK, nilai rapor, bookmark, dan riwayat simulasi tersimpan aman di `localStorage` browser pengguna tanpa pengumpulan data pribadi.
 
 ### Modul Utama Frontend:
-- `assets/js/data.js` — Mengelola kalkulasi statistik, penyaringan 5-dimensi, rekomendasi tier keketatan, pencarian fuzzy, dan resolusi histori multi-tahun (2025, 2024, 2023).
-- `assets/js/analyzer.js` — Modul analisis probabilistik peluang (konversi skor UTBK 7 subtest ke persentil nasional via distribusi normal CDF, kalkulasi skor tertimbang SNBP dari rapor + mapel pendukung + akreditasi sekolah, serta matching prodi).
-- `assets/js/components.js` — Modul pembangun elemen UI (Render kartu PTN, badge keketatan, tabel prodi, modal perbandingan, evaluator simulasi strategi, kalkulator analisis SNBT/SNBP, dan generator laporan PDF). Menggunakan sistem ikon vektor SVG murni (Lucide-style).
-- `assets/js/app.js` — Controller utama pengendali status aplikasi (*App State*), pengubah mode gelap/terang, pelacak pencarian populer real-time (`PopularSearchStore`), dan event listeners.
-- `assets/css/style.css` — Design system lengkap berbasis HSL CSS variables, tema terang/gelap high-contrast, stacking context z-index terstruktur, serta layout responsif.
+- `assets/js/data.js` : Mengelola kalkulasi statistik, penyaringan 5-dimensi, rekomendasi tier keketatan, pencarian fuzzy, dan resolusi histori multi-tahun (2025, 2024, 2023).
+- `assets/js/analyzer.js` : Modul analisis probabilistik peluang (konversi skor UTBK 7 subtest ke persentil nasional via distribusi normal CDF, kalkulasi skor tertimbang SNBP dari rapor + mapel pendukung + akreditasi sekolah, serta matching prodi).
+- `assets/js/components.js` : Modul pembangun elemen UI (Render kartu PTN, badge keketatan, tabel prodi, modal perbandingan, evaluator simulasi strategi, kalkulator analisis SNBT/SNBP, dan generator laporan PDF). Menggunakan sistem ikon vektor SVG murni (Lucide-style).
+- `assets/js/app.js` : Controller utama pengendali status aplikasi (*App State*), pengubah mode gelap/terang, pelacak pencarian populer real-time (`PopularSearchStore`), dan event listeners.
+- `assets/css/style.css` : Design system lengkap berbasis HSL CSS variables, tema terang/gelap high-contrast, stacking context z-index terstruktur, serta layout responsif.
 
 ---
 

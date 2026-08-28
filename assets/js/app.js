@@ -1,5 +1,5 @@
 /* ======================================================================
-   APP.JS — Main Application Logic
+   APP.JS : Main Application Logic
    Portal Keketatan SNPMB
    ====================================================================== */
 
@@ -79,7 +79,7 @@ const CompareStore = (() => {
 })();
 
 // =====================================================================
-// APP — Main Controller
+// APP : Main Controller
 // =====================================================================
 const App = (() => {
   'use strict';
@@ -1063,7 +1063,7 @@ const App = (() => {
     const html = Components.generatePrintReportHTML(
       'compare',
       'Laporan Perbandingan Program Studi PTN',
-      `Data Resmi SNPMB ${activeTahun} — Jalur ${activeJalur.toUpperCase()}`,
+      `Data Resmi SNPMB ${activeTahun} : Jalur ${activeJalur.toUpperCase()}`,
       items
     );
 
@@ -1093,7 +1093,7 @@ const App = (() => {
     let tips = [];
 
     if (k2 < k1) {
-      desc = `PERINGATAN: Pilihan 2 (${p2.nama} — ${k2.toFixed(2)}%) lebih ketat daripada Pilihan 1 (${p1.nama} — ${k1.toFixed(2)}%). Urutan disarankan untuk dibalik.`;
+      desc = `PERINGATAN: Pilihan 2 (${p2.nama} : ${k2.toFixed(2)}%) lebih ketat daripada Pilihan 1 (${p1.nama} : ${k1.toFixed(2)}%). Urutan disarankan untuk dibalik.`;
       tips = ['Tukarkan posisi Pilihan 1 dan Pilihan 2.'];
     } else if (k1 < 5 && k2 < 5) {
       desc = `RISIKO TINGGI: Kedua pilihan (${p1.nama} dan ${p2.nama}) tergolong Sangat Ketat (< 5%).`;
@@ -1119,7 +1119,7 @@ const App = (() => {
   }
 
   // =====================================================================
-  // ANALYZER — SNBT & SNBP
+  // ANALYZER : SNBT & SNBP
   // =====================================================================
 
   function getAnalyzerRegions() {
