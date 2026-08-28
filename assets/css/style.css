@@ -1820,7 +1820,21 @@ input[type="number"] {
    ============================================================ */
 @media (max-width: 768px) {
   .hero {
-    padding: var(--space-2xl) var(--space-md) var(--space-xl);
+    padding: var(--space-2xl) var(--space-md) 68px;
+  }
+
+  .stats-bar {
+    margin: -24px auto var(--space-xl);
+  }
+
+  .quick-search-container {
+    gap: 6px;
+    margin-top: var(--space-sm);
+  }
+
+  .quick-pill {
+    padding: 4px 10px;
+    font-size: 11px;
   }
 
   .stats-grid {
@@ -1866,6 +1880,15 @@ input[type="number"] {
 }
 
 @media (max-width: 480px) {
+  .hero {
+    padding: var(--space-xl) var(--space-sm) 60px;
+  }
+
+  .stats-bar {
+    margin: -16px auto var(--space-lg);
+    padding: 0 var(--space-sm);
+  }
+
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-xs);
