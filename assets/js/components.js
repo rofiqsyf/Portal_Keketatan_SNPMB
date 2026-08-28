@@ -17,7 +17,15 @@ const Icons = {
   info: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>`,
   scale: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h18"/></svg>`,
   pen: `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>`,
-  chart: `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><line x1="12" x2="12" y1="20" y2="10"/><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg>`
+  chart: `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><line x1="12" x2="12" y1="20" y2="10"/><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg>`,
+  target: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>`,
+  fileText: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>`,
+  zap: `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>`,
+  sparkles: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>`,
+  alertTriangle: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>`,
+  checkCircle: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>`,
+  layers: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>`,
+  activity: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`,
 };
 
 const Components = (() => {
@@ -401,7 +409,7 @@ const Components = (() => {
       if (isReverse) {
         status = {
           level: 'warning',
-          title: '⚠️ Peringatan: Urutan Pilihan Terbalik',
+          title: 'Peringatan: Urutan Pilihan Terbalik',
           badgeClass: 'badge-warning',
           desc: `Pilihan 2 (${prodi2.nama} — ${k2.toFixed(2)}%) memiliki rasio keketatan lebih kecil/ketat dibandingkan Pilihan 1 (${prodi1.nama} — ${k1.toFixed(2)}%). Dalam seleksi SNBT/SNBP, Pilihan 2 sebaiknya memiliki peluang penerimaan yang lebih besar/longgar dari Pilihan 1.`,
           tips: [
@@ -412,7 +420,7 @@ const Components = (() => {
       } else if (k1 < 5 && k2 < 5) {
         status = {
           level: 'danger',
-          title: '🔴 Risiko Tinggi: Kedua Pilihan Sangat Ketat',
+          title: 'Risiko Tinggi: Kedua Pilihan Sangat Ketat',
           badgeClass: 'badge-danger',
           desc: `Kedua prodi target (${prodi1.nama} [${k1.toFixed(2)}%] dan ${prodi2.nama} [${k2.toFixed(2)}%]) tergolong Sangat Ketat (< 5%). Jika nilai/skor berada di bawah persentil teratas, berisiko gugur di kedua pilihan sekaligus.`,
           tips: [
@@ -423,7 +431,7 @@ const Components = (() => {
       } else if (k1 < 5 && k2 >= 5 && k2 <= 15) {
         status = {
           level: 'moderate',
-          title: '🟡 Strategi Moderat: Pilihan 1 Target Impian & Pilihan 2 Cukup Ketat',
+          title: 'Strategi Moderat: Pilihan 1 Target Impian & Pilihan 2 Cukup Ketat',
           badgeClass: 'badge-moderate',
           desc: `Pilihan 1 (${prodi1.nama} — ${k1.toFixed(2)}%) merupakan Target Utama, sementara Pilihan 2 (${prodi2.nama} — ${k2.toFixed(2)}%) berada di tingkat keketatan sedang.`,
           tips: [
@@ -434,7 +442,7 @@ const Components = (() => {
       } else {
         status = {
           level: 'optimal',
-          title: '🟢 Strategi Optimal & Aman (Ideal Strategy)',
+          title: 'Strategi Optimal & Aman (Ideal Strategy)',
           badgeClass: 'badge-optimal',
           desc: `Kombinasi Pilihan 1 (${prodi1.nama} — ${k1.toFixed(2)}%) dan Pilihan 2 (${prodi2.nama} — ${k2.toFixed(2)}%) memiliki rasio keketatan yang seimbang. Pilihan 2 berfungsi sebagai jaring pengaman (Safety Net) yang sangat baik.`,
           tips: [
@@ -448,7 +456,7 @@ const Components = (() => {
     return `
       <div class="simulasi-card-layout">
         <div class="simulasi-header-box">
-          <h2>🎯 Simulasi Strategi Pilihan 1 & Pilihan 2 (SNBT ${activeTahun})</h2>
+          <h2>Simulasi Strategi Pilihan 1 & Pilihan 2 (SNBT ${activeTahun})</h2>
           <p>Uji kombinasi dua prodi impianmu untuk melihat tingkat keamanan dan rasio risiko kelolosan.</p>
         </div>
 
@@ -645,44 +653,44 @@ const Components = (() => {
           .report-footer { margin-top: 40px; border-top: 1px solid #E2E8F0; padding-top: 16px; font-size: 11px; color: #94A3B8; display: flex; justify-content: space-between; }
           @media print {
             body { padding: 0; }
-            .no-print { display: none; }
-          }
+          @page { size: A4 portrait; margin: 15mm; }
+          body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #0F172A; margin: 0; padding: 0; font-size: 10pt; line-height: 1.5; }
+          .report-header { display: flex; justify-content: space-between; align-items: flex-end; padding-bottom: 16px; border-bottom: 2px solid #0F172A; margin-bottom: 20px; }
+          .report-logo { font-size: 16pt; font-weight: 800; color: #2563EB; }
+          .report-meta { text-align: right; font-size: 8.5pt; color: #64748B; }
+          .report-title-box { margin-bottom: 20px; }
+          .report-title-box h1 { font-size: 18pt; margin: 0 0 4px 0; color: #0F172A; }
+          .report-title-box p { font-size: 10pt; margin: 0; color: #475569; }
+          .report-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 9.5pt; }
+          .report-table th { background: #0F172A; color: #FFFFFF; text-align: left; padding: 8px 12px; font-size: 8.5pt; text-transform: uppercase; letter-spacing: 0.05em; }
+          .report-table td { padding: 8px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: middle; }
+          .report-table tbody tr:nth-child(even) { background: #F8FAFC; }
+          .report-footer { margin-top: 30px; padding-top: 12px; border-top: 1px solid #CBD5E1; display: flex; justify-content: space-between; font-size: 8pt; color: #94A3B8; }
+          @media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
         </style>
       </head>
       <body>
         <div class="report-header">
-          <div class="report-logo">🎓 Portal Keketatan SNPMB</div>
+          <div class="report-logo">Portal Keketatan SNPMB</div>
           <div class="report-meta">
-            <div>Tanggal Cetak: ${today}</div>
-            <div>Dokumen Resmi Analisis Pilihan</div>
+            <div>Dicetak pada: ${today}</div>
+            <div>Dokumen Resmi Bimbingan Konseling</div>
           </div>
         </div>
-
-        <h2>${title}</h2>
-        <p class="sub">${subtitle}</p>
-
-        ${tableRowsHtml}
-
+        <div class="report-title-box">
+          <h1>${title}</h1>
+          <p>${subtitle}</p>
+        </div>
+        ${bodyHTML}
         <div class="report-footer">
           <div>Portal Keketatan SNPMB — Data Resmi SNPMB (portal.snpmb.id)</div>
           <div>Halaman 1 dari 1</div>
         </div>
-
-        <script>
-          window.onload = function() {
-            setTimeout(function() {
-              window.print();
-            }, 300);
-          };
-        </script>
+        <script>window.onload = function() { window.print(); };</script>
       </body>
       </html>
     `;
   }
-
-  // =====================================================================
-  // ANALYZER COMPONENTS — SNBT & SNBP
-  // =====================================================================
 
   /**
    * Render the full SNBT analyzer view
@@ -690,8 +698,6 @@ const Components = (() => {
   function renderSnbtAnalyzer(state, regions) {
     const { scores = {}, prodiType = 'semua', jenjang = '', wilayah = '', results = null } = state;
     const groups = AnalyzerUtils.getSnbtSubtestGroups();
-    const scoreMin = AnalyzerUtils.SNBT_MIN;
-    const scoreMax = AnalyzerUtils.SNBT_MAX;
 
     const groupHtml = Object.entries(groups).map(([groupName, subtests]) => `
       <div class="subtest-group">
@@ -723,19 +729,19 @@ const Components = (() => {
     return `
       <section class="analyzer-section" id="view-analyzer-snbt-inner">
         <div class="analyzer-header">
-          <h2>🎯 Analisis Peluang Jalur UTBK-SNBT</h2>
+          <h2><span class="icon-inline-title">${Icons.target}</span> Analisis Peluang Jalur UTBK-SNBT</h2>
           <p>Masukkan skor UTBK-SNBT dari 7 subtest. Sistem akan mengestimasi peluangmu masuk ke 2.257 prodi PTN berdasarkan data keketatan resmi SNPMB 2025.</p>
         </div>
         <div class="analyzer-disclaimer">
-          <span class="analyzer-disclaimer-icon">⚠️</span>
+          <span class="icon-inline">${Icons.info}</span>
           <span><strong>Disclaimer:</strong> Hasil ini adalah <strong>estimasi statistik</strong> berdasarkan distribusi skor nasional UTBK 2025. SNPMB tidak merilis passing grade resmi — peluang aktual bergantung pada kualitas pendaftar tiap tahun.</span>
         </div>
         <div class="analyzer-layout">
           <!-- INPUT PANEL -->
           <div class="analyzer-input-panel">
-            <h3>📊 Input Skor 7 Subtest</h3>
+            <h3><span class="icon-inline">${Icons.layers}</span> Input Skor 7 Subtest</h3>
             <p style="font-size:0.75rem;color:var(--text-tertiary);margin:-6px 0 12px 0;line-height:1.4;">
-              💡 <em>Masukkan nilai 7 subtest dalam skala <strong>0–100</strong> (Nilai Tryout / Hasil Evaluasi).</em>
+              <em>Masukkan nilai 7 subtest dalam skala <strong>0–100</strong> (Nilai Tryout / Hasil Evaluasi).</em>
             </p>
             ${groupHtml}
 
@@ -770,7 +776,7 @@ const Components = (() => {
             </div>
 
             <button class="btn-run-analysis" onclick="App.runSnbtAnalysis()" ${btnDisabled}>
-              🔍 Analisis Peluang Saya
+              <span class="icon-inline">${Icons.sparkles}</span> Analisis Peluang Saya
             </button>
             ${filledCount < 3 ? `<p style="font-size:0.72rem;text-align:center;color:var(--text-tertiary);margin-top:8px;">Isi minimal 3 subtest untuk memulai</p>` : ''}
           </div>
@@ -794,17 +800,17 @@ const Components = (() => {
     return `
       <section class="analyzer-section" id="view-analyzer-snbp-inner">
         <div class="analyzer-header">
-          <h2>📋 Analisis Peluang Jalur SNBP (Prestasi)</h2>
+          <h2><span class="icon-inline-title">${Icons.fileText}</span> Analisis Peluang Jalur SNBP (Prestasi)</h2>
           <p>Masukkan rata-rata rapor semester 1–5, akreditasi sekolah, dan nilai mapel pendukung. Sistem akan mengestimasi peluangmu untuk jalur prestasi SNBP.</p>
         </div>
         <div class="analyzer-disclaimer">
-          <span class="analyzer-disclaimer-icon">⚠️</span>
+          <span class="icon-inline">${Icons.info}</span>
           <span><strong>Disclaimer:</strong> SNBP menggunakan penilaian holistik (rapor, prestasi, rekam jejak sekolah) yang tidak bisa direplikasi 100% secara otomatis. Estimasi ini berdasarkan komponen nilai rapor dan mapel pendukung saja — gunakan sebagai referensi awal.</span>
         </div>
         <div class="analyzer-layout">
           <!-- INPUT PANEL -->
           <div class="analyzer-input-panel">
-            <h3>📝 Input Data Rapor</h3>
+            <h3><span class="icon-inline">${Icons.pen}</span> Input Data Rapor</h3>
 
             <!-- Akreditasi -->
             <div class="snbp-input-section">
@@ -878,7 +884,7 @@ const Components = (() => {
             </div>
 
             <button class="btn-run-analysis" onclick="App.runSnbpAnalysis()" ${!rataRapor ? 'disabled style="opacity:0.6;cursor:not-allowed;"' : ''}>
-              🔍 Analisis Peluang Saya
+              <span class="icon-inline">${Icons.sparkles}</span> Analisis Peluang Saya
             </button>
             ${!rataRapor ? `<p style="font-size:0.72rem;text-align:center;color:var(--text-tertiary);margin-top:8px;">Isi rata-rata rapor untuk memulai</p>` : ''}
           </div>
@@ -898,7 +904,7 @@ const Components = (() => {
   function renderAnalyzerEmptyState(mode) {
     return `
       <div class="analyzer-empty-state">
-        <div class="analyzer-empty-icon">${mode === 'snbt' ? '🎯' : '📋'}</div>
+        <div class="analyzer-empty-icon-svg">${mode === 'snbt' ? Icons.target : Icons.fileText}</div>
         <h3>Belum Ada Hasil Analisis</h3>
         <p>${mode === 'snbt'
           ? 'Isi minimal 3 skor subtest UTBK, lalu klik "Analisis Peluang Saya" untuk melihat prodi yang sesuai profil skormu.'
@@ -916,7 +922,7 @@ const Components = (() => {
 
     if (!prodiResults || prodiResults.length === 0) {
       return `<div class="analyzer-empty-state">
-        <div class="analyzer-empty-icon">😔</div>
+        <div class="analyzer-empty-icon-svg">${Icons.info}</div>
         <h3>Tidak Ada Prodi Ditemukan</h3>
         <p>Coba ubah filter wilayah atau jenjang untuk memperluas hasil pencarian.</p>
       </div>`;
@@ -925,9 +931,9 @@ const Components = (() => {
     // Score summary card
     const displayScore = mode === 'snbt' ? composite : scoreTertimbang;
     const scoreLabel = mode === 'snbt' ? 'Skor Komposit SNBT' : 'Skor Tertimbang SNBP';
-    const scoreRange = mode === 'snbt' ? `${AnalyzerUtils.SNBT_MIN}–${AnalyzerUtils.SNBT_MAX}` : '0–100';
-    const scoreMax = mode === 'snbt' ? AnalyzerUtils.SNBT_MAX : 100;
-    const scoreMin = mode === 'snbt' ? AnalyzerUtils.SNBT_MIN : 0;
+    const scoreRange = '0–100';
+    const scoreMax = 100;
+    const scoreMin = 0;
     const gaugePercent = Math.round(((displayScore - scoreMin) / (scoreMax - scoreMin)) * 100);
     const formattedPercent = AnalyzerUtils.formatPercentile(percentile);
 
@@ -944,7 +950,7 @@ const Components = (() => {
       .filter(l => groups[l.key].length > 0)
       .map(l => `
         <span class="peluang-summary-chip ${l.key}" onclick="document.getElementById('section-${l.key}')?.scrollIntoView({behavior:'smooth'})">
-          ${l.emoji} ${l.label} <strong>${groups[l.key].length}</strong>
+          <span class="status-dot-pulse"></span> ${l.label} <strong>${groups[l.key].length}</strong>
         </span>
       `).join('');
 
@@ -966,8 +972,8 @@ const Components = (() => {
               ${p.jenjang ? `<span class="peluang-card-jenjang">${escapeHtml(p.jenjang)}</span>` : ''}
             </div>
             <div class="peluang-card-meta">
-              <span class="peluang-indicator ${l.key}">${l.emoji} ${l.label}</span>
-              <span class="peluang-keketatan">⚡ ${p.keketatan.toFixed(2)}%</span>
+              <span class="peluang-indicator ${l.key}"><span class="status-dot-pulse"></span> ${l.label}</span>
+              <span class="peluang-keketatan"><span class="icon-inline-sm">${Icons.zap}</span> Keketatan ${p.keketatan.toFixed(2)}%</span>
             </div>
           </div>
         `).join('');
@@ -976,7 +982,7 @@ const Components = (() => {
           <div class="peluang-section" id="section-${l.key}">
             <div class="peluang-section-header ${l.key}">
               <div class="peluang-section-title ${l.key}">
-                ${l.emoji} ${l.label}
+                <span class="status-dot-pulse"></span> ${l.label}
               </div>
               <span class="peluang-section-count">${list.length} prodi</span>
             </div>

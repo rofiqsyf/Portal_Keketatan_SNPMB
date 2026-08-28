@@ -88,11 +88,11 @@ const AnalyzerUtils = (() => {
 
   // Peluang category definitions
   const PELUANG_LEVELS = [
-    { key: 'sangat-berpeluang', label: 'Sangat Berpeluang', emoji: '✅', color: '#22c55e', threshold: 0.5  },
-    { key: 'berpeluang',        label: 'Berpeluang',        emoji: '🔵', color: '#3b82f6', threshold: 0.8  },
-    { key: 'kompetitif',        label: 'Kompetitif',        emoji: '🟡', color: '#eab308', threshold: 1.2  },
-    { key: 'perlu-peningkatan', label: 'Perlu Peningkatan', emoji: '🟠', color: '#f97316', threshold: 2.0  },
-    { key: 'kurang-berpeluang', label: 'Kurang Berpeluang', emoji: '🔴', color: '#ef4444', threshold: Infinity },
+    { key: 'sangat-berpeluang', label: 'Sangat Berpeluang', emoji: '', color: '#22c55e', threshold: 0.5  },
+    { key: 'berpeluang',        label: 'Berpeluang',        emoji: '', color: '#3b82f6', threshold: 0.8  },
+    { key: 'kompetitif',        label: 'Kompetitif',        emoji: '', color: '#eab308', threshold: 1.2  },
+    { key: 'perlu-peningkatan', label: 'Perlu Peningkatan', emoji: '', color: '#f97316', threshold: 2.0  },
+    { key: 'kurang-berpeluang', label: 'Kurang Berpeluang', emoji: '', color: '#ef4444', threshold: Infinity },
   ];
 
   // =====================================================================

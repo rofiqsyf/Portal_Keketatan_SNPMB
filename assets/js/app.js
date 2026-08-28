@@ -1257,8 +1257,8 @@ const App = (() => {
           ${p.jenjang ? `<span class="peluang-card-jenjang">${Components.escapeHtml(p.jenjang)}</span>` : ''}
         </div>
         <div class="peluang-card-meta">
-          <span class="peluang-indicator ${levelKey}">${level.emoji} ${level.label}</span>
-          <span class="peluang-keketatan">⚡ ${p.keketatan.toFixed(2)}%</span>
+          <span class="peluang-indicator ${levelKey}"><span class="status-dot-pulse"></span> ${level.label}</span>
+          <span class="peluang-keketatan"><span class="icon-inline-sm">${Components.Icons.zap}</span> Keketatan ${p.keketatan.toFixed(2)}%</span>
         </div>
       `;
       listEl.appendChild(card);
