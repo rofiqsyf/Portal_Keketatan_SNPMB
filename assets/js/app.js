@@ -670,7 +670,7 @@ const App = (() => {
   // =====================================================================
   // DETAIL PANEL
   // =====================================================================
-  function openDetail(univId) {
+  function openDetail(univId, initialProdiSearch = '') {
     activeUnivId = univId;
     const univ = universityData.universitas.find(u => u.id === univId);
     if (!univ) return;
@@ -701,12 +701,12 @@ const App = (() => {
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
 
-    // Reset search
+    // Set search input value immediately before rendering table
     const searchProdi = document.getElementById('search-prodi');
-    if (searchProdi) searchProdi.value = '';
+    if (searchProdi) searchProdi.value = initialProdiSearch;
 
-    // Render table
-    renderDetailProdi(univId);
+    // Render table instantly with exact prodi filter
+    renderDetailProdi(univId, initialProdiSearch);
 
     // Update campus grid active state
     document.querySelectorAll('.campus-card').forEach(card => {
@@ -715,16 +715,7 @@ const App = (() => {
   }
 
   function openDetailAndHighlight(univId, prodiNama) {
-    openDetail(univId);
-
-    // Highlight the prodi after render
-    setTimeout(() => {
-      const searchProdi = document.getElementById('search-prodi');
-      if (searchProdi) {
-        searchProdi.value = prodiNama;
-        filterDetailProdi(prodiNama);
-      }
-    }, 300);
+    openDetail(univId, prodiNama);
   }
 
   function closeDetail() {
