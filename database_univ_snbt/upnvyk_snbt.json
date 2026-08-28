@@ -1,0 +1,156 @@
+[
+    {
+        "prodi": "TEKNIK GEOLOGI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 161,
+        "peminat": 2777,
+        "keketatan": "5.80%"
+    },
+    {
+        "prodi": "TEKNIK PERTAMBANGAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 129,
+        "peminat": 4322,
+        "keketatan": "2.98%"
+    },
+    {
+        "prodi": "TEKNIK PERMINYAKAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 106,
+        "peminat": 2734,
+        "keketatan": "3.88%"
+    },
+    {
+        "prodi": "TEKNIK LINGKUNGAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 99,
+        "peminat": 1619,
+        "keketatan": "6.11%"
+    },
+    {
+        "prodi": "TEKNIK GEOFISIKA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 66,
+        "peminat": 784,
+        "keketatan": "8.42%"
+    },
+    {
+        "prodi": "TEKNIK KIMIA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 137,
+        "peminat": 1087,
+        "keketatan": "12.60%"
+    },
+    {
+        "prodi": "TEKNIK INDUSTRI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 139,
+        "peminat": 2377,
+        "keketatan": "5.85%"
+    },
+    {
+        "prodi": "TEKNIK INFORMATIKA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 130,
+        "peminat": 1589,
+        "keketatan": "8.18%"
+    },
+    {
+        "prodi": "AGROTEKNOLOGI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 173,
+        "peminat": 1065,
+        "keketatan": "16.24%"
+    },
+    {
+        "prodi": "AGRIBISNIS",
+        "jenjang": "Sarjana",
+        "daya_tampung": 133,
+        "peminat": 1083,
+        "keketatan": "12.28%"
+    },
+    {
+        "prodi": "METALURGI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 68,
+        "peminat": 1334,
+        "keketatan": "5.10%"
+    },
+    {
+        "prodi": "ILMU TANAH",
+        "jenjang": "Sarjana",
+        "daya_tampung": 86,
+        "peminat": 595,
+        "keketatan": "14.45%"
+    },
+    {
+        "prodi": "SISTEM INFORMASI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 101,
+        "peminat": 1140,
+        "keketatan": "8.86%"
+    },
+    {
+        "prodi": "TEKNIK GEOMATIKA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 62,
+        "peminat": 457,
+        "keketatan": "13.57%"
+    },
+    {
+        "prodi": "MANAJEMEN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 354,
+        "peminat": 2832,
+        "keketatan": "12.50%"
+    },
+    {
+        "prodi": "AKUNTANSI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 216,
+        "peminat": 2005,
+        "keketatan": "10.77%"
+    },
+    {
+        "prodi": "EKONOMI PEMBANGUNAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 192,
+        "peminat": 1191,
+        "keketatan": "16.12%"
+    },
+    {
+        "prodi": "ILMU HUBUNGAN INTERNASIONAL",
+        "jenjang": "Sarjana",
+        "daya_tampung": 137,
+        "peminat": 868,
+        "keketatan": "15.78%"
+    },
+    {
+        "prodi": "ILMU ADMINISTRASI BISNIS",
+        "jenjang": "Sarjana",
+        "daya_tampung": 138,
+        "peminat": 1641,
+        "keketatan": "8.41%"
+    },
+    {
+        "prodi": "ILMU KOMUNIKASI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 139,
+        "peminat": 1928,
+        "keketatan": "7.21%"
+    },
+    {
+        "prodi": "HUBUNGAN MASYARAKAT",
+        "jenjang": "Sarjana",
+        "daya_tampung": 111,
+        "peminat": 1241,
+        "keketatan": "8.94%"
+    },
+    {
+        "prodi": "TEKNIK KIMIA",
+        "jenjang": "Diploma Tiga",
+        "daya_tampung": 60,
+        "peminat": 2615,
+        "keketatan": "2.29%"
+    }
+]

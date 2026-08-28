@@ -1,0 +1,107 @@
+[
+    {
+        "prodi": "TARI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 30,
+        "peminat": 33,
+        "keketatan": "90.91%"
+    },
+    {
+        "prodi": "SENI KARAWITAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 28,
+        "peminat": 8,
+        "keketatan": "350.00%"
+    },
+    {
+        "prodi": "PENDIDIKAN SENI PERTUNJUKAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 46,
+        "peminat": 21,
+        "keketatan": "219.05%"
+    },
+    {
+        "prodi": "MUSIK",
+        "jenjang": "Sarjana",
+        "daya_tampung": 32,
+        "peminat": 37,
+        "keketatan": "86.49%"
+    },
+    {
+        "prodi": "SENI MURNI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 32,
+        "peminat": 38,
+        "keketatan": "84.21%"
+    },
+    {
+        "prodi": "DESAIN INTERIOR",
+        "jenjang": "Sarjana",
+        "daya_tampung": 59,
+        "peminat": 80,
+        "keketatan": "73.75%"
+    },
+    {
+        "prodi": "DESAIN KOMUNIKASI VISUAL",
+        "jenjang": "Sarjana",
+        "daya_tampung": 104,
+        "peminat": 264,
+        "keketatan": "39.39%"
+    },
+    {
+        "prodi": "KRIYA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 8,
+        "peminat": 10,
+        "keketatan": "80.00%"
+    },
+    {
+        "prodi": "FOTOGRAFI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 34,
+        "peminat": 46,
+        "keketatan": "73.91%"
+    },
+    {
+        "prodi": "SENI PEDALANGAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 6,
+        "peminat": 1,
+        "keketatan": "600.00%"
+    },
+    {
+        "prodi": "DESAIN PRODUK",
+        "jenjang": "Sarjana",
+        "daya_tampung": 20,
+        "peminat": 26,
+        "keketatan": "76.92%"
+    },
+    {
+        "prodi": "TEATER",
+        "jenjang": "Sarjana",
+        "daya_tampung": 6,
+        "peminat": 4,
+        "keketatan": "150.00%"
+    },
+    {
+        "prodi": "DESAIN MODE",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 46,
+        "peminat": 56,
+        "keketatan": "82.14%"
+    },
+    {
+        "prodi": "PRODUKSI FILM DAN TELEVISI",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 43,
+        "peminat": 82,
+        "keketatan": "52.44%"
+    },
+    {
+        "prodi": "ANIMASI",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 38,
+        "peminat": 57,
+        "keketatan": "66.67%"
+    }
+]

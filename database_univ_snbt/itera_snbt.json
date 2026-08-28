@@ -1,0 +1,289 @@
+[
+    {
+        "prodi": "TEKNIK GEOMATIKA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 90,
+        "peminat": 157,
+        "keketatan": "57.32%"
+    },
+    {
+        "prodi": "TEKNIK ELEKTRO",
+        "jenjang": "Sarjana",
+        "daya_tampung": 102,
+        "peminat": 567,
+        "keketatan": "17.99%"
+    },
+    {
+        "prodi": "PERENCANAAN WILAYAH DAN KOTA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 126,
+        "peminat": 436,
+        "keketatan": "28.90%"
+    },
+    {
+        "prodi": "TEKNIK GEOFISIKA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 120,
+        "peminat": 410,
+        "keketatan": "29.27%"
+    },
+    {
+        "prodi": "TEKNIK SIPIL",
+        "jenjang": "Sarjana",
+        "daya_tampung": 117,
+        "peminat": 750,
+        "keketatan": "15.60%"
+    },
+    {
+        "prodi": "TEKNIK INFORMATIKA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 126,
+        "peminat": 1195,
+        "keketatan": "10.54%"
+    },
+    {
+        "prodi": "FISIKA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 45,
+        "peminat": 42,
+        "keketatan": "107.14%"
+    },
+    {
+        "prodi": "ARSITEKTUR",
+        "jenjang": "Sarjana",
+        "daya_tampung": 90,
+        "peminat": 486,
+        "keketatan": "18.52%"
+    },
+    {
+        "prodi": "TEKNIK LINGKUNGAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 87,
+        "peminat": 625,
+        "keketatan": "13.92%"
+    },
+    {
+        "prodi": "TEKNIK GEOLOGI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 75,
+        "peminat": 745,
+        "keketatan": "10.07%"
+    },
+    {
+        "prodi": "MATEMATIKA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 60,
+        "peminat": 98,
+        "keketatan": "61.22%"
+    },
+    {
+        "prodi": "TEKNIK MESIN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 72,
+        "peminat": 511,
+        "keketatan": "14.09%"
+    },
+    {
+        "prodi": "BIOLOGI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 60,
+        "peminat": 159,
+        "keketatan": "37.74%"
+    },
+    {
+        "prodi": "TEKNIK INDUSTRI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 102,
+        "peminat": 1081,
+        "keketatan": "9.44%"
+    },
+    {
+        "prodi": "FARMASI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 105,
+        "peminat": 1437,
+        "keketatan": "7.31%"
+    },
+    {
+        "prodi": "TEKNIK KIMIA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 93,
+        "peminat": 319,
+        "keketatan": "29.15%"
+    },
+    {
+        "prodi": "KIMIA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 60,
+        "peminat": 128,
+        "keketatan": "46.88%"
+    },
+    {
+        "prodi": "TEKNIK FISIKA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 57,
+        "peminat": 68,
+        "keketatan": "83.82%"
+    },
+    {
+        "prodi": "TEKNIK KELAUTAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 57,
+        "peminat": 170,
+        "keketatan": "33.53%"
+    },
+    {
+        "prodi": "SAINS ATMOSFIR DAN KEPLANETAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 69,
+        "peminat": 65,
+        "keketatan": "106.15%"
+    },
+    {
+        "prodi": "TEKNIK BIOSISTEM",
+        "jenjang": "Sarjana",
+        "daya_tampung": 75,
+        "peminat": 122,
+        "keketatan": "61.48%"
+    },
+    {
+        "prodi": "TEKNOLOGI INDUSTRI PERTANIAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 87,
+        "peminat": 315,
+        "keketatan": "27.62%"
+    },
+    {
+        "prodi": "TEKNIK SISTEM ENERGI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 60,
+        "peminat": 191,
+        "keketatan": "31.41%"
+    },
+    {
+        "prodi": "TEKNOLOGI PANGAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 87,
+        "peminat": 552,
+        "keketatan": "15.76%"
+    },
+    {
+        "prodi": "TEKNIK MATERIAL",
+        "jenjang": "Sarjana",
+        "daya_tampung": 75,
+        "peminat": 233,
+        "keketatan": "32.19%"
+    },
+    {
+        "prodi": "TEKNIK PERTAMBANGAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 111,
+        "peminat": 1724,
+        "keketatan": "6.44%"
+    },
+    {
+        "prodi": "ARSITEKTUR LANSKAP",
+        "jenjang": "Sarjana",
+        "daya_tampung": 60,
+        "peminat": 98,
+        "keketatan": "61.22%"
+    },
+    {
+        "prodi": "DESAIN KOMUNIKASI VISUAL",
+        "jenjang": "Sarjana",
+        "daya_tampung": 75,
+        "peminat": 213,
+        "keketatan": "35.21%"
+    },
+    {
+        "prodi": "TEKNIK TELEKOMUNIKASI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 57,
+        "peminat": 219,
+        "keketatan": "26.03%"
+    },
+    {
+        "prodi": "SAINS AKTUARIA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 78,
+        "peminat": 152,
+        "keketatan": "51.32%"
+    },
+    {
+        "prodi": "REKAYASA KEHUTANAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 78,
+        "peminat": 149,
+        "keketatan": "52.35%"
+    },
+    {
+        "prodi": "TEKNIK BIOMEDIS",
+        "jenjang": "Sarjana",
+        "daya_tampung": 87,
+        "peminat": 531,
+        "keketatan": "16.38%"
+    },
+    {
+        "prodi": "SAINS LINGKUNGAN KELAUTAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 45,
+        "peminat": 57,
+        "keketatan": "78.95%"
+    },
+    {
+        "prodi": "SAINS DATA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 78,
+        "peminat": 236,
+        "keketatan": "33.05%"
+    },
+    {
+        "prodi": "TEKNIK PERKERETAAPIAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 54,
+        "peminat": 447,
+        "keketatan": "12.08%"
+    },
+    {
+        "prodi": "REKAYASA TATA KELOLA AIR TERPADU",
+        "jenjang": "Sarjana",
+        "daya_tampung": 54,
+        "peminat": 99,
+        "keketatan": "54.55%"
+    },
+    {
+        "prodi": "REKAYASA INSTRUMENTASI DAN AUTOMASI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 63,
+        "peminat": 111,
+        "keketatan": "56.76%"
+    },
+    {
+        "prodi": "REKAYASA MINYAK DAN GAS",
+        "jenjang": "Sarjana",
+        "daya_tampung": 57,
+        "peminat": 466,
+        "keketatan": "12.23%"
+    },
+    {
+        "prodi": "REKAYASA KOSMETIK",
+        "jenjang": "Sarjana",
+        "daya_tampung": 63,
+        "peminat": 421,
+        "keketatan": "14.96%"
+    },
+    {
+        "prodi": "PARIWISATA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 54,
+        "peminat": 314,
+        "keketatan": "17.20%"
+    },
+    {
+        "prodi": "REKAYASA KEOLAHRAGAAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 45,
+        "peminat": 79,
+        "keketatan": "56.96%"
+    }
+]

@@ -1,0 +1,184 @@
+[
+    {
+        "prodi": "TEKNIK PERAWATAN DAN PERBAIKAN GEDUNG",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 32,
+        "peminat": 503,
+        "keketatan": "6.36%"
+    },
+    {
+        "prodi": "PERANCANGAN JALAN DAN JEMBATAN",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 21,
+        "peminat": 453,
+        "keketatan": "4.64%"
+    },
+    {
+        "prodi": "TEKNIK MESIN PRODUKSI DAN PERAWATAN",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 29,
+        "peminat": 600,
+        "keketatan": "4.83%"
+    },
+    {
+        "prodi": "TEKNOLOGI REKAYASA PEMBANGKIT ENERGI",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 29,
+        "peminat": 486,
+        "keketatan": "5.97%"
+    },
+    {
+        "prodi": "TEKNIK TELEKOMUNIKASI",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 48,
+        "peminat": 607,
+        "keketatan": "7.91%"
+    },
+    {
+        "prodi": "TEKNOLOGI REKAYASA INSTALASI LISTRIK",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 29,
+        "peminat": 290,
+        "keketatan": "10.00%"
+    },
+    {
+        "prodi": "TEKNOLOGI REKAYASA KOMPUTER",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 32,
+        "peminat": 632,
+        "keketatan": "5.06%"
+    },
+    {
+        "prodi": "KOMPUTERISASI AKUNTANSI",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 48,
+        "peminat": 792,
+        "keketatan": "6.06%"
+    },
+    {
+        "prodi": "TEKNOLOGI REKAYASA ELEKTRONIKA",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 42,
+        "peminat": 424,
+        "keketatan": "9.91%"
+    },
+    {
+        "prodi": "PERBANKAN SYARIAH",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 48,
+        "peminat": 449,
+        "keketatan": "10.69%"
+    },
+    {
+        "prodi": "ANALISIS KEUANGAN",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 48,
+        "peminat": 906,
+        "keketatan": "5.30%"
+    },
+    {
+        "prodi": "AKUNTANSI MANAJERIAL",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 48,
+        "peminat": 694,
+        "keketatan": "6.92%"
+    },
+    {
+        "prodi": "MANAJEMEN BISNIS INTERNASIONAL",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 48,
+        "peminat": 864,
+        "keketatan": "5.56%"
+    },
+    {
+        "prodi": "ADMINISTRASI BISNIS TERAPAN",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 48,
+        "peminat": 1286,
+        "keketatan": "3.73%"
+    },
+    {
+        "prodi": "MANAJEMEN PEMASARAN/MARKETING",
+        "jenjang": "Diploma Tiga",
+        "daya_tampung": 48,
+        "peminat": 1530,
+        "keketatan": "3.14%"
+    },
+    {
+        "prodi": "ADMINISTRASI BISNIS",
+        "jenjang": "Diploma Tiga",
+        "daya_tampung": 48,
+        "peminat": 2300,
+        "keketatan": "2.09%"
+    },
+    {
+        "prodi": "TEKNIK INFORMATIKA",
+        "jenjang": "Diploma Tiga",
+        "daya_tampung": 42,
+        "peminat": 1873,
+        "keketatan": "2.24%"
+    },
+    {
+        "prodi": "KEUANGAN DAN PERBANKAN",
+        "jenjang": "Diploma Tiga",
+        "daya_tampung": 48,
+        "peminat": 1263,
+        "keketatan": "3.80%"
+    },
+    {
+        "prodi": "TEKNIK MESIN",
+        "jenjang": "Diploma Tiga",
+        "daya_tampung": 77,
+        "peminat": 1584,
+        "keketatan": "4.86%"
+    },
+    {
+        "prodi": "TEKNIK LISTRIK",
+        "jenjang": "Diploma Tiga",
+        "daya_tampung": 39,
+        "peminat": 661,
+        "keketatan": "5.90%"
+    },
+    {
+        "prodi": "KONSTRUKSI SIPIL",
+        "jenjang": "Diploma Tiga",
+        "daya_tampung": 42,
+        "peminat": 1482,
+        "keketatan": "2.83%"
+    },
+    {
+        "prodi": "TEKNIK KONVERSI ENERGI",
+        "jenjang": "Diploma Tiga",
+        "daya_tampung": 48,
+        "peminat": 727,
+        "keketatan": "6.60%"
+    },
+    {
+        "prodi": "AKUNTANSI",
+        "jenjang": "Diploma Tiga",
+        "daya_tampung": 72,
+        "peminat": 1971,
+        "keketatan": "3.65%"
+    },
+    {
+        "prodi": "TEKNIK ELEKTRONIKA",
+        "jenjang": "Diploma Tiga",
+        "daya_tampung": 42,
+        "peminat": 864,
+        "keketatan": "4.86%"
+    },
+    {
+        "prodi": "TEKNIK TELEKOMUNIKASI",
+        "jenjang": "Diploma Tiga",
+        "daya_tampung": 39,
+        "peminat": 555,
+        "keketatan": "7.03%"
+    },
+    {
+        "prodi": "KONSTRUKSI GEDUNG",
+        "jenjang": "Diploma Tiga",
+        "daya_tampung": 42,
+        "peminat": 646,
+        "keketatan": "6.50%"
+    }
+]

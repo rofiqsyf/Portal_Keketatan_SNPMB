@@ -1,0 +1,142 @@
+[
+    {
+        "prodi": "TARI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 52,
+        "peminat": 148,
+        "keketatan": "35.14%"
+    },
+    {
+        "prodi": "ETNOMUSIKOLOGI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 32,
+        "peminat": 18,
+        "keketatan": "177.78%"
+    },
+    {
+        "prodi": "TEATER",
+        "jenjang": "Sarjana",
+        "daya_tampung": 16,
+        "peminat": 27,
+        "keketatan": "59.26%"
+    },
+    {
+        "prodi": "KRIYA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 28,
+        "peminat": 31,
+        "keketatan": "90.32%"
+    },
+    {
+        "prodi": "SENI MURNI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 32,
+        "peminat": 101,
+        "keketatan": "31.68%"
+    },
+    {
+        "prodi": "DESAIN INTERIOR",
+        "jenjang": "Sarjana",
+        "daya_tampung": 44,
+        "peminat": 162,
+        "keketatan": "27.16%"
+    },
+    {
+        "prodi": "DESAIN KOMUNIKASI VISUAL",
+        "jenjang": "Sarjana",
+        "daya_tampung": 72,
+        "peminat": 737,
+        "keketatan": "9.77%"
+    },
+    {
+        "prodi": "FILM DAN TELEVISI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 60,
+        "peminat": 319,
+        "keketatan": "18.81%"
+    },
+    {
+        "prodi": "FOTOGRAFI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 48,
+        "peminat": 139,
+        "keketatan": "34.53%"
+    },
+    {
+        "prodi": "SENI KARAWITAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 44,
+        "peminat": 71,
+        "keketatan": "61.97%"
+    },
+    {
+        "prodi": "SENI PEDALANGAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 20,
+        "peminat": 25,
+        "keketatan": "80.00%"
+    },
+    {
+        "prodi": "SENI INTERMEDIA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 10,
+        "peminat": 46,
+        "keketatan": "21.74%"
+    },
+    {
+        "prodi": "KOREOGRAFI INKUIRI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 10,
+        "peminat": 18,
+        "keketatan": "55.56%"
+    },
+    {
+        "prodi": "DESAIN PRODUK INDUSTRI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 12,
+        "peminat": 52,
+        "keketatan": "23.08%"
+    },
+    {
+        "prodi": "ARSITEKTUR",
+        "jenjang": "Sarjana",
+        "daya_tampung": 10,
+        "peminat": 129,
+        "keketatan": "7.75%"
+    },
+    {
+        "prodi": "SENJATA TRADISIONAL KERIS",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 10,
+        "peminat": 5,
+        "keketatan": "200.00%"
+    },
+    {
+        "prodi": "DESAIN MODE BATIK",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 36,
+        "peminat": 55,
+        "keketatan": "65.45%"
+    },
+    {
+        "prodi": "ANIMASI",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 16,
+        "peminat": 221,
+        "keketatan": "7.24%"
+    },
+    {
+        "prodi": "TATA KELOLA SENI",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 10,
+        "peminat": 137,
+        "keketatan": "7.30%"
+    },
+    {
+        "prodi": "DESTINASI PARIWISATA",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 10,
+        "peminat": 25,
+        "keketatan": "40.00%"
+    }
+]

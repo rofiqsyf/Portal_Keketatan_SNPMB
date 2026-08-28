@@ -1,0 +1,205 @@
+[
+    {
+        "prodi": "AGRIBISNIS",
+        "jenjang": "Sarjana",
+        "daya_tampung": 114,
+        "peminat": 646,
+        "keketatan": "17.65%"
+    },
+    {
+        "prodi": "AGROTEKNOLOGI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 116,
+        "peminat": 622,
+        "keketatan": "18.65%"
+    },
+    {
+        "prodi": "TEKNIK KIMIA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 120,
+        "peminat": 639,
+        "keketatan": "18.78%"
+    },
+    {
+        "prodi": "TEKNIK INDUSTRI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 120,
+        "peminat": 1341,
+        "keketatan": "8.95%"
+    },
+    {
+        "prodi": "TEKNOLOGI PANGAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 78,
+        "peminat": 850,
+        "keketatan": "9.18%"
+    },
+    {
+        "prodi": "INFORMATIKA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 140,
+        "peminat": 742,
+        "keketatan": "18.87%"
+    },
+    {
+        "prodi": "SISTEM INFORMASI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 120,
+        "peminat": 769,
+        "keketatan": "15.60%"
+    },
+    {
+        "prodi": "ARSITEKTUR",
+        "jenjang": "Sarjana",
+        "daya_tampung": 74,
+        "peminat": 475,
+        "keketatan": "15.58%"
+    },
+    {
+        "prodi": "TEKNIK LINGKUNGAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 80,
+        "peminat": 900,
+        "keketatan": "8.89%"
+    },
+    {
+        "prodi": "TEKNIK SIPIL",
+        "jenjang": "Sarjana",
+        "daya_tampung": 80,
+        "peminat": 778,
+        "keketatan": "10.28%"
+    },
+    {
+        "prodi": "DESAIN KOMUNIKASI VISUAL",
+        "jenjang": "Sarjana",
+        "daya_tampung": 74,
+        "peminat": 372,
+        "keketatan": "19.89%"
+    },
+    {
+        "prodi": "SAINS DATA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 60,
+        "peminat": 384,
+        "keketatan": "15.62%"
+    },
+    {
+        "prodi": "TEKNIK MESIN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 60,
+        "peminat": 626,
+        "keketatan": "9.58%"
+    },
+    {
+        "prodi": "EKONOMI PEMBANGUNAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 120,
+        "peminat": 610,
+        "keketatan": "19.67%"
+    },
+    {
+        "prodi": "MANAJEMEN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 220,
+        "peminat": 1243,
+        "keketatan": "17.70%"
+    },
+    {
+        "prodi": "AKUNTANSI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 178,
+        "peminat": 1087,
+        "keketatan": "16.38%"
+    },
+    {
+        "prodi": "ADMINISTRASI PUBLIK",
+        "jenjang": "Sarjana",
+        "daya_tampung": 140,
+        "peminat": 1013,
+        "keketatan": "13.82%"
+    },
+    {
+        "prodi": "ADMINISTRASI BISNIS",
+        "jenjang": "Sarjana",
+        "daya_tampung": 140,
+        "peminat": 1269,
+        "keketatan": "11.03%"
+    },
+    {
+        "prodi": "ILMU KOMUNIKASI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 160,
+        "peminat": 1302,
+        "keketatan": "12.29%"
+    },
+    {
+        "prodi": "HUBUNGAN INTERNASIONAL",
+        "jenjang": "Sarjana",
+        "daya_tampung": 72,
+        "peminat": 417,
+        "keketatan": "17.27%"
+    },
+    {
+        "prodi": "HUKUM",
+        "jenjang": "Sarjana",
+        "daya_tampung": 158,
+        "peminat": 1038,
+        "keketatan": "15.22%"
+    },
+    {
+        "prodi": "PARIWISATA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 60,
+        "peminat": 478,
+        "keketatan": "12.55%"
+    },
+    {
+        "prodi": "KEWIRAUSAHAAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 52,
+        "peminat": 469,
+        "keketatan": "11.09%"
+    },
+    {
+        "prodi": "FISIKA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 32,
+        "peminat": 41,
+        "keketatan": "78.05%"
+    },
+    {
+        "prodi": "DESAIN INTERIOR",
+        "jenjang": "Sarjana",
+        "daya_tampung": 36,
+        "peminat": 127,
+        "keketatan": "28.35%"
+    },
+    {
+        "prodi": "LINGUISTIK INDONESIA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 24,
+        "peminat": 128,
+        "keketatan": "18.75%"
+    },
+    {
+        "prodi": "BISNIS DIGITAL",
+        "jenjang": "Sarjana",
+        "daya_tampung": 32,
+        "peminat": 646,
+        "keketatan": "4.95%"
+    },
+    {
+        "prodi": "KEDOKTERAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 40,
+        "peminat": 590,
+        "keketatan": "6.78%"
+    },
+    {
+        "prodi": "BAHASA INGGRIS UNTUK KOMUNIKASI BISNIS DAN PROFESIONAL",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 24,
+        "peminat": 915,
+        "keketatan": "2.62%"
+    }
+]

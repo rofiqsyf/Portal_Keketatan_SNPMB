@@ -1,0 +1,772 @@
+[
+    {
+        "prodi": "PENDIDIKAN MATEMATIKA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 125,
+        "peminat": 405,
+        "keketatan": "30.86%"
+    },
+    {
+        "prodi": "PENDIDIKAN FISIKA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 65,
+        "peminat": 149,
+        "keketatan": "43.62%"
+    },
+    {
+        "prodi": "PENDIDIKAN KIMIA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 70,
+        "peminat": 227,
+        "keketatan": "30.84%"
+    },
+    {
+        "prodi": "PENDIDIKAN BIOLOGI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 115,
+        "peminat": 452,
+        "keketatan": "25.44%"
+    },
+    {
+        "prodi": "MATEMATIKA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 93,
+        "peminat": 287,
+        "keketatan": "32.40%"
+    },
+    {
+        "prodi": "FISIKA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 45,
+        "peminat": 138,
+        "keketatan": "32.61%"
+    },
+    {
+        "prodi": "KIMIA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 65,
+        "peminat": 320,
+        "keketatan": "20.31%"
+    },
+    {
+        "prodi": "BIOLOGI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 82,
+        "peminat": 444,
+        "keketatan": "18.47%"
+    },
+    {
+        "prodi": "PENDIDIKAN ILMU PENGETAHUAN ALAM",
+        "jenjang": "Sarjana",
+        "daya_tampung": 105,
+        "peminat": 405,
+        "keketatan": "25.93%"
+    },
+    {
+        "prodi": "PENDIDIKAN TEKNIK ELEKTRO",
+        "jenjang": "Sarjana",
+        "daya_tampung": 60,
+        "peminat": 172,
+        "keketatan": "34.88%"
+    },
+    {
+        "prodi": "PENDIDIKAN TEKNIK MESIN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 60,
+        "peminat": 177,
+        "keketatan": "33.90%"
+    },
+    {
+        "prodi": "PENDIDIKAN TEKNIK BANGUNAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 51,
+        "peminat": 162,
+        "keketatan": "31.48%"
+    },
+    {
+        "prodi": "ILMU KEOLAHRAGAAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 87,
+        "peminat": 286,
+        "keketatan": "30.42%"
+    },
+    {
+        "prodi": "TEKNIK SIPIL",
+        "jenjang": "Sarjana",
+        "daya_tampung": 105,
+        "peminat": 1177,
+        "keketatan": "8.92%"
+    },
+    {
+        "prodi": "PENDIDIKAN TEKNOLOGI INFORMASI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 100,
+        "peminat": 286,
+        "keketatan": "34.97%"
+    },
+    {
+        "prodi": "TEKNIK ELEKTRO",
+        "jenjang": "Sarjana",
+        "daya_tampung": 85,
+        "peminat": 889,
+        "keketatan": "9.56%"
+    },
+    {
+        "prodi": "TEKNIK MESIN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 90,
+        "peminat": 1068,
+        "keketatan": "8.43%"
+    },
+    {
+        "prodi": "SISTEM INFORMASI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 85,
+        "peminat": 1005,
+        "keketatan": "8.46%"
+    },
+    {
+        "prodi": "TEKNIK INFORMATIKA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 85,
+        "peminat": 1364,
+        "keketatan": "6.23%"
+    },
+    {
+        "prodi": "GIZI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 60,
+        "peminat": 1399,
+        "keketatan": "4.29%"
+    },
+    {
+        "prodi": "BIMBINGAN DAN KONSELING",
+        "jenjang": "Sarjana",
+        "daya_tampung": 105,
+        "peminat": 907,
+        "keketatan": "11.58%"
+    },
+    {
+        "prodi": "TEKNOLOGI PENDIDIKAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 90,
+        "peminat": 343,
+        "keketatan": "26.24%"
+    },
+    {
+        "prodi": "PENDIDIKAN LUAR SEKOLAH",
+        "jenjang": "Sarjana",
+        "daya_tampung": 74,
+        "peminat": 125,
+        "keketatan": "59.20%"
+    },
+    {
+        "prodi": "PENDIDIKAN LUAR BIASA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 60,
+        "peminat": 217,
+        "keketatan": "27.65%"
+    },
+    {
+        "prodi": "PENDIDIKAN GURU SEKOLAH DASAR",
+        "jenjang": "Sarjana",
+        "daya_tampung": 144,
+        "peminat": 1772,
+        "keketatan": "8.13%"
+    },
+    {
+        "prodi": "PSIKOLOGI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 171,
+        "peminat": 2633,
+        "keketatan": "6.49%"
+    },
+    {
+        "prodi": "PENDIDIKAN GURU PENDIDIKAN ANAK USIA DINI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 120,
+        "peminat": 376,
+        "keketatan": "31.91%"
+    },
+    {
+        "prodi": "PENDIDIKAN BAHASA DAN SASTRA INDONESIA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 105,
+        "peminat": 749,
+        "keketatan": "14.02%"
+    },
+    {
+        "prodi": "PENDIDIKAN BAHASA INGGRIS",
+        "jenjang": "Sarjana",
+        "daya_tampung": 110,
+        "peminat": 715,
+        "keketatan": "15.38%"
+    },
+    {
+        "prodi": "PENDIDIKAN BAHASA JERMAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 30,
+        "peminat": 117,
+        "keketatan": "25.64%"
+    },
+    {
+        "prodi": "PENDIDIKAN BAHASA JEPANG",
+        "jenjang": "Sarjana",
+        "daya_tampung": 110,
+        "peminat": 499,
+        "keketatan": "22.04%"
+    },
+    {
+        "prodi": "PENDIDIKAN BAHASA DAN SASTRA JAWA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 50,
+        "peminat": 259,
+        "keketatan": "19.31%"
+    },
+    {
+        "prodi": "PENDIDIKAN SENI RUPA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 45,
+        "peminat": 150,
+        "keketatan": "30.00%"
+    },
+    {
+        "prodi": "PENDIDIKAN SENI DRAMA, TARI, DAN MUSIK",
+        "jenjang": "Sarjana",
+        "daya_tampung": 45,
+        "peminat": 129,
+        "keketatan": "34.88%"
+    },
+    {
+        "prodi": "SASTRA INDONESIA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 100,
+        "peminat": 417,
+        "keketatan": "23.98%"
+    },
+    {
+        "prodi": "SASTRA INGGRIS",
+        "jenjang": "Sarjana",
+        "daya_tampung": 90,
+        "peminat": 721,
+        "keketatan": "12.48%"
+    },
+    {
+        "prodi": "SASTRA JERMAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 49,
+        "peminat": 180,
+        "keketatan": "27.22%"
+    },
+    {
+        "prodi": "PENDIDIKAN PANCASILA DAN KEWARGANEGARAAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 85,
+        "peminat": 361,
+        "keketatan": "23.55%"
+    },
+    {
+        "prodi": "PENDIDIKAN GEOGRAFI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 90,
+        "peminat": 353,
+        "keketatan": "25.50%"
+    },
+    {
+        "prodi": "PENDIDIKAN SEJARAH",
+        "jenjang": "Sarjana",
+        "daya_tampung": 90,
+        "peminat": 332,
+        "keketatan": "27.11%"
+    },
+    {
+        "prodi": "SOSIOLOGI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 120,
+        "peminat": 656,
+        "keketatan": "18.29%"
+    },
+    {
+        "prodi": "ILMU ADMINISTRASI NEGARA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 105,
+        "peminat": 1145,
+        "keketatan": "9.17%"
+    },
+    {
+        "prodi": "PENDIDIKAN JASMANI, KESEHATAN, DAN REKREASI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 106,
+        "peminat": 760,
+        "keketatan": "13.95%"
+    },
+    {
+        "prodi": "PENDIDIKAN KEPELATIHAN OLAHRAGA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 138,
+        "peminat": 618,
+        "keketatan": "22.33%"
+    },
+    {
+        "prodi": "PENDIDIKAN EKONOMI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 80,
+        "peminat": 303,
+        "keketatan": "26.40%"
+    },
+    {
+        "prodi": "MANAJEMEN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 104,
+        "peminat": 1970,
+        "keketatan": "5.28%"
+    },
+    {
+        "prodi": "AKUNTANSI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 117,
+        "peminat": 1552,
+        "keketatan": "7.54%"
+    },
+    {
+        "prodi": "PENDIDIKAN TATA RIAS",
+        "jenjang": "Sarjana",
+        "daya_tampung": 70,
+        "peminat": 602,
+        "keketatan": "11.63%"
+    },
+    {
+        "prodi": "MANAJEMEN PENDIDIKAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 120,
+        "peminat": 440,
+        "keketatan": "27.27%"
+    },
+    {
+        "prodi": "ILMU HUKUM",
+        "jenjang": "Sarjana",
+        "daya_tampung": 161,
+        "peminat": 1842,
+        "keketatan": "8.74%"
+    },
+    {
+        "prodi": "PENDIDIKAN BAHASA MANDARIN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 65,
+        "peminat": 332,
+        "keketatan": "19.58%"
+    },
+    {
+        "prodi": "PENDIDIKAN TATA BOGA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 125,
+        "peminat": 602,
+        "keketatan": "20.76%"
+    },
+    {
+        "prodi": "PENDIDIKAN TATA BUSANA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 110,
+        "peminat": 366,
+        "keketatan": "30.05%"
+    },
+    {
+        "prodi": "PENDIDIKAN AKUNTANSI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 80,
+        "peminat": 367,
+        "keketatan": "21.80%"
+    },
+    {
+        "prodi": "PENDIDIKAN BISNIS",
+        "jenjang": "Sarjana",
+        "daya_tampung": 55,
+        "peminat": 321,
+        "keketatan": "17.13%"
+    },
+    {
+        "prodi": "PENDIDIKAN ADMINISTRASI PERKANTORAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 130,
+        "peminat": 686,
+        "keketatan": "18.95%"
+    },
+    {
+        "prodi": "ILMU KOMUNIKASI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 90,
+        "peminat": 1712,
+        "keketatan": "5.26%"
+    },
+    {
+        "prodi": "MUSIK",
+        "jenjang": "Sarjana",
+        "daya_tampung": 40,
+        "peminat": 84,
+        "keketatan": "47.62%"
+    },
+    {
+        "prodi": "DESAIN KOMUNIKASI VISUAL",
+        "jenjang": "Sarjana",
+        "daya_tampung": 80,
+        "peminat": 746,
+        "keketatan": "10.72%"
+    },
+    {
+        "prodi": "SENI RUPA MURNI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 27,
+        "peminat": 73,
+        "keketatan": "36.99%"
+    },
+    {
+        "prodi": "EKONOMI ISLAM",
+        "jenjang": "Sarjana",
+        "daya_tampung": 122,
+        "peminat": 561,
+        "keketatan": "21.75%"
+    },
+    {
+        "prodi": "PENDIDIKAN IPS",
+        "jenjang": "Sarjana",
+        "daya_tampung": 90,
+        "peminat": 356,
+        "keketatan": "25.28%"
+    },
+    {
+        "prodi": "EKONOMI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 120,
+        "peminat": 838,
+        "keketatan": "14.32%"
+    },
+    {
+        "prodi": "BISNIS DIGITAL",
+        "jenjang": "Sarjana",
+        "daya_tampung": 155,
+        "peminat": 1621,
+        "keketatan": "9.56%"
+    },
+    {
+        "prodi": "SAINS DATA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 63,
+        "peminat": 722,
+        "keketatan": "8.73%"
+    },
+    {
+        "prodi": "MANAJEMEN OLAHRAGA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 40,
+        "peminat": 131,
+        "keketatan": "30.53%"
+    },
+    {
+        "prodi": "ILMU POLITIK",
+        "jenjang": "Sarjana",
+        "daya_tampung": 95,
+        "peminat": 450,
+        "keketatan": "21.11%"
+    },
+    {
+        "prodi": "KEDOKTERAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 15,
+        "peminat": 767,
+        "keketatan": "1.96%"
+    },
+    {
+        "prodi": "PENDIDIKAN JASMANI, KESEHATAN, DAN REKREASI (UNESA KAMPUS MAGETAN)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 41,
+        "peminat": 223,
+        "keketatan": "18.39%"
+    },
+    {
+        "prodi": "PENDIDIKAN GURU SEKOLAH DASAR (UNESA KAMPUS MAGETAN)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 60,
+        "peminat": 633,
+        "keketatan": "9.48%"
+    },
+    {
+        "prodi": "PENDIDIKAN MATEMATIKA (UNESA KAMPUS MAGETAN)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 39,
+        "peminat": 161,
+        "keketatan": "24.22%"
+    },
+    {
+        "prodi": "ILMU HUKUM (UNESA KAMPUS MAGETAN)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 81,
+        "peminat": 417,
+        "keketatan": "19.42%"
+    },
+    {
+        "prodi": "ILMU KOMUNIKASI (UNESA KAMPUS MAGETAN)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 65,
+        "peminat": 479,
+        "keketatan": "13.57%"
+    },
+    {
+        "prodi": "MANAJEMEN (UNESA KAMPUS MAGETAN)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 65,
+        "peminat": 601,
+        "keketatan": "10.82%"
+    },
+    {
+        "prodi": "SASTRA INGGRIS (UNESA KAMPUS MAGETAN)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 35,
+        "peminat": 165,
+        "keketatan": "21.21%"
+    },
+    {
+        "prodi": "PENDIDIKAN TATA RIAS (UNESA KAMPUS MAGETAN)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 30,
+        "peminat": 186,
+        "keketatan": "16.13%"
+    },
+    {
+        "prodi": "MASASE",
+        "jenjang": "Sarjana",
+        "daya_tampung": 40,
+        "peminat": 38,
+        "keketatan": "105.26%"
+    },
+    {
+        "prodi": "FISIOTERAPI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 15,
+        "peminat": 674,
+        "keketatan": "2.23%"
+    },
+    {
+        "prodi": "KEBIDANAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 16,
+        "peminat": 301,
+        "keketatan": "5.32%"
+    },
+    {
+        "prodi": "KEPERAWATAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 16,
+        "peminat": 984,
+        "keketatan": "1.63%"
+    },
+    {
+        "prodi": "HUBUNGAN INTERNASIONAL",
+        "jenjang": "Sarjana",
+        "daya_tampung": 55,
+        "peminat": 538,
+        "keketatan": "10.22%"
+    },
+    {
+        "prodi": "PERENCANAAN WILAYAH DAN KOTA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 45,
+        "peminat": 453,
+        "keketatan": "9.93%"
+    },
+    {
+        "prodi": "SAINS AKTUARIA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 50,
+        "peminat": 123,
+        "keketatan": "40.65%"
+    },
+    {
+        "prodi": "PENDIDIKAN GURU PENDIDIKAN ANAK USIA DINI (KAMPUS KABUPATEN MAGETAN)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 20,
+        "peminat": 48,
+        "keketatan": "41.67%"
+    },
+    {
+        "prodi": "TEKNOLOGI PENDIDIKAN (KAMPUS KABUPATEN MAGETAN)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 35,
+        "peminat": 78,
+        "keketatan": "44.87%"
+    },
+    {
+        "prodi": "BIMBINGAN DAN KONSELING (KAMPUS KABUPATEN MAGETAN)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 35,
+        "peminat": 316,
+        "keketatan": "11.08%"
+    },
+    {
+        "prodi": "PENDIDIKAN KEPELATIHAN OLAHRAGA (KAMPUS KABUPATEN MAGETAN)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 35,
+        "peminat": 88,
+        "keketatan": "39.77%"
+    },
+    {
+        "prodi": "PENDIDIKAN BAHASA DAN SASTRA INDONESIA (KAMPUS KABUPATEN MAGETAN)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 40,
+        "peminat": 219,
+        "keketatan": "18.26%"
+    },
+    {
+        "prodi": "TEKNOLOGI PANGAN DAN HASIL PERTANIAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 35,
+        "peminat": 507,
+        "keketatan": "6.90%"
+    },
+    {
+        "prodi": "AKUAKULTUR",
+        "jenjang": "Sarjana",
+        "daya_tampung": 35,
+        "peminat": 92,
+        "keketatan": "38.04%"
+    },
+    {
+        "prodi": "PARIWISATA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 30,
+        "peminat": 537,
+        "keketatan": "5.59%"
+    },
+    {
+        "prodi": "FILM DAN ANIMASI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 30,
+        "peminat": 84,
+        "keketatan": "35.71%"
+    },
+    {
+        "prodi": "BIOSAINS HEWAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 35,
+        "peminat": 59,
+        "keketatan": "59.32%"
+    },
+    {
+        "prodi": "AGRIBISNIS DIGITAL",
+        "jenjang": "Sarjana",
+        "daya_tampung": 30,
+        "peminat": 289,
+        "keketatan": "10.38%"
+    },
+    {
+        "prodi": "KECERDASAN ARTIFISIAL",
+        "jenjang": "Sarjana",
+        "daya_tampung": 30,
+        "peminat": 210,
+        "keketatan": "14.29%"
+    },
+    {
+        "prodi": "ILMU ADMINISTRASI NEGARA (PSDKU MAGETAN)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 41,
+        "peminat": 343,
+        "keketatan": "11.95%"
+    },
+    {
+        "prodi": "AKUNTANSI (KAMPUS KABUPATEN MAGETAN)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 33,
+        "peminat": 229,
+        "keketatan": "14.41%"
+    },
+    {
+        "prodi": "MANAJEMEN INFORMATIKA",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 66,
+        "peminat": 1668,
+        "keketatan": "3.96%"
+    },
+    {
+        "prodi": "TEKNIK MESIN",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 40,
+        "peminat": 991,
+        "keketatan": "4.04%"
+    },
+    {
+        "prodi": "TEKNIK SIPIL",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 57,
+        "peminat": 1715,
+        "keketatan": "3.32%"
+    },
+    {
+        "prodi": "TRANSPORTASI",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 46,
+        "peminat": 487,
+        "keketatan": "9.45%"
+    },
+    {
+        "prodi": "KEPELATIHAN OLAHRAGA",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 42,
+        "peminat": 619,
+        "keketatan": "6.79%"
+    },
+    {
+        "prodi": "TEKNIK LISTRIK",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 45,
+        "peminat": 478,
+        "keketatan": "9.41%"
+    },
+    {
+        "prodi": "DESAIN GRAFIS",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 35,
+        "peminat": 613,
+        "keketatan": "5.71%"
+    },
+    {
+        "prodi": "ADMINISTRASI NEGARA",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 75,
+        "peminat": 4281,
+        "keketatan": "1.75%"
+    },
+    {
+        "prodi": "TATA BOGA",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 75,
+        "peminat": 1847,
+        "keketatan": "4.06%"
+    },
+    {
+        "prodi": "TATA BUSANA",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 75,
+        "peminat": 700,
+        "keketatan": "10.71%"
+    },
+    {
+        "prodi": "TEKNOLOGI REKAYASA OTOMOTIF",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 50,
+        "peminat": 221,
+        "keketatan": "22.62%"
+    },
+    {
+        "prodi": "PRODUKSI MEDIA",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 50,
+        "peminat": 1090,
+        "keketatan": "4.59%"
+    },
+    {
+        "prodi": "ANALISIS PERFORMA OLAHRAGA",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 42,
+        "peminat": 95,
+        "keketatan": "44.21%"
+    }
+]

@@ -1,0 +1,373 @@
+[
+    {
+        "prodi": "KEDOKTERAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 130,
+        "peminat": 2092,
+        "keketatan": "6.21%"
+    },
+    {
+        "prodi": "KEDOKTERAN HEWAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 90,
+        "peminat": 590,
+        "keketatan": "15.25%"
+    },
+    {
+        "prodi": "ARSITEKTUR",
+        "jenjang": "Sarjana",
+        "daya_tampung": 80,
+        "peminat": 434,
+        "keketatan": "18.43%"
+    },
+    {
+        "prodi": "TEKNIK SIPIL",
+        "jenjang": "Sarjana",
+        "daya_tampung": 105,
+        "peminat": 575,
+        "keketatan": "18.26%"
+    },
+    {
+        "prodi": "TEKNOLOGI PANGAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 44,
+        "peminat": 306,
+        "keketatan": "14.38%"
+    },
+    {
+        "prodi": "TEKNOLOGI INDUSTRI PERTANIAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 40,
+        "peminat": 96,
+        "keketatan": "41.67%"
+    },
+    {
+        "prodi": "TEKNIK PERTANIAN DAN BIOSISTEM",
+        "jenjang": "Sarjana",
+        "daya_tampung": 32,
+        "peminat": 131,
+        "keketatan": "24.43%"
+    },
+    {
+        "prodi": "BIOLOGI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 28,
+        "peminat": 72,
+        "keketatan": "38.89%"
+    },
+    {
+        "prodi": "KIMIA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 28,
+        "peminat": 77,
+        "keketatan": "36.36%"
+    },
+    {
+        "prodi": "FISIKA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 40,
+        "peminat": 52,
+        "keketatan": "76.92%"
+    },
+    {
+        "prodi": "TEKNIK MESIN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 72,
+        "peminat": 282,
+        "keketatan": "25.53%"
+    },
+    {
+        "prodi": "TEKNIK ELEKTRO",
+        "jenjang": "Sarjana",
+        "daya_tampung": 64,
+        "peminat": 279,
+        "keketatan": "22.94%"
+    },
+    {
+        "prodi": "AGRIBISNIS",
+        "jenjang": "Sarjana",
+        "daya_tampung": 105,
+        "peminat": 284,
+        "keketatan": "36.97%"
+    },
+    {
+        "prodi": "AGROEKOTEKNOLOGI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 95,
+        "peminat": 214,
+        "keketatan": "44.39%"
+    },
+    {
+        "prodi": "PETERNAKAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 80,
+        "peminat": 151,
+        "keketatan": "52.98%"
+    },
+    {
+        "prodi": "MATEMATIKA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 36,
+        "peminat": 74,
+        "keketatan": "48.65%"
+    },
+    {
+        "prodi": "ILMU KESEHATAN MASYARAKAT",
+        "jenjang": "Sarjana",
+        "daya_tampung": 72,
+        "peminat": 662,
+        "keketatan": "10.88%"
+    },
+    {
+        "prodi": "FARMASI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 57,
+        "peminat": 920,
+        "keketatan": "6.20%"
+    },
+    {
+        "prodi": "KEPERAWATAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 48,
+        "peminat": 592,
+        "keketatan": "8.11%"
+    },
+    {
+        "prodi": "INFORMATIKA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 76,
+        "peminat": 615,
+        "keketatan": "12.36%"
+    },
+    {
+        "prodi": "TEKNOLOGI INFORMASI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 97,
+        "peminat": 599,
+        "keketatan": "16.19%"
+    },
+    {
+        "prodi": "FISIOTERAPI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 32,
+        "peminat": 459,
+        "keketatan": "6.97%"
+    },
+    {
+        "prodi": "ILMU KELAUTAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 60,
+        "peminat": 134,
+        "keketatan": "44.78%"
+    },
+    {
+        "prodi": "ARSITEKTUR LANSKAP",
+        "jenjang": "Sarjana",
+        "daya_tampung": 20,
+        "peminat": 63,
+        "keketatan": "31.75%"
+    },
+    {
+        "prodi": "MANAJEMEN SUMBER DAYA PERAIRAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 60,
+        "peminat": 91,
+        "keketatan": "65.93%"
+    },
+    {
+        "prodi": "KEDOKTERAN GIGI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 48,
+        "peminat": 882,
+        "keketatan": "5.44%"
+    },
+    {
+        "prodi": "TEKNIK LINGKUNGAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 60,
+        "peminat": 295,
+        "keketatan": "20.34%"
+    },
+    {
+        "prodi": "TEKNIK INDUSTRI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 60,
+        "peminat": 423,
+        "keketatan": "14.18%"
+    },
+    {
+        "prodi": "ARKEOLOGI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 24,
+        "peminat": 90,
+        "keketatan": "26.67%"
+    },
+    {
+        "prodi": "ANTROPOLOGI BUDAYA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 24,
+        "peminat": 82,
+        "keketatan": "29.27%"
+    },
+    {
+        "prodi": "ILMU SEJARAH",
+        "jenjang": "Sarjana",
+        "daya_tampung": 24,
+        "peminat": 50,
+        "keketatan": "48.00%"
+    },
+    {
+        "prodi": "ILMU HUKUM",
+        "jenjang": "Sarjana",
+        "daya_tampung": 297,
+        "peminat": 1524,
+        "keketatan": "19.49%"
+    },
+    {
+        "prodi": "EKONOMI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 150,
+        "peminat": 414,
+        "keketatan": "36.23%"
+    },
+    {
+        "prodi": "AKUNTANSI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 200,
+        "peminat": 1041,
+        "keketatan": "19.21%"
+    },
+    {
+        "prodi": "MANAJEMEN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 213,
+        "peminat": 1389,
+        "keketatan": "15.33%"
+    },
+    {
+        "prodi": "SASTRA INDONESIA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 28,
+        "peminat": 71,
+        "keketatan": "39.44%"
+    },
+    {
+        "prodi": "SASTRA INGGRIS",
+        "jenjang": "Sarjana",
+        "daya_tampung": 105,
+        "peminat": 451,
+        "keketatan": "23.28%"
+    },
+    {
+        "prodi": "SASTRA JAWA KUNO",
+        "jenjang": "Sarjana",
+        "daya_tampung": 10,
+        "peminat": 20,
+        "keketatan": "50.00%"
+    },
+    {
+        "prodi": "SASTRA BALI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 16,
+        "peminat": 10,
+        "keketatan": "160.00%"
+    },
+    {
+        "prodi": "SASTRA JEPANG",
+        "jenjang": "Sarjana",
+        "daya_tampung": 40,
+        "peminat": 143,
+        "keketatan": "27.97%"
+    },
+    {
+        "prodi": "PARIWISATA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 90,
+        "peminat": 1041,
+        "keketatan": "8.65%"
+    },
+    {
+        "prodi": "INDUSTRI PERJALANAN WISATA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 60,
+        "peminat": 227,
+        "keketatan": "26.43%"
+    },
+    {
+        "prodi": "HUBUNGAN INTERNASIONAL",
+        "jenjang": "Sarjana",
+        "daya_tampung": 48,
+        "peminat": 517,
+        "keketatan": "9.28%"
+    },
+    {
+        "prodi": "SOSIOLOGI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 48,
+        "peminat": 154,
+        "keketatan": "31.17%"
+    },
+    {
+        "prodi": "PSIKOLOGI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 67,
+        "peminat": 910,
+        "keketatan": "7.36%"
+    },
+    {
+        "prodi": "ADMINISTRASI PUBLIK",
+        "jenjang": "Sarjana",
+        "daya_tampung": 49,
+        "peminat": 418,
+        "keketatan": "11.72%"
+    },
+    {
+        "prodi": "ILMU KOMUNIKASI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 49,
+        "peminat": 689,
+        "keketatan": "7.11%"
+    },
+    {
+        "prodi": "ILMU POLITIK",
+        "jenjang": "Sarjana",
+        "daya_tampung": 48,
+        "peminat": 182,
+        "keketatan": "26.37%"
+    },
+    {
+        "prodi": "AKUAKULTUR",
+        "jenjang": "Sarjana",
+        "daya_tampung": 35,
+        "peminat": 16,
+        "keketatan": "218.75%"
+    },
+    {
+        "prodi": "PENGELOLAAN PERHOTELAN",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 60,
+        "peminat": 811,
+        "keketatan": "7.40%"
+    },
+    {
+        "prodi": "PERPUSTAKAAN",
+        "jenjang": "Diploma Tiga",
+        "daya_tampung": 13,
+        "peminat": 259,
+        "keketatan": "5.02%"
+    },
+    {
+        "prodi": "PERPAJAKAN",
+        "jenjang": "Diploma Tiga",
+        "daya_tampung": 28,
+        "peminat": 1104,
+        "keketatan": "2.54%"
+    },
+    {
+        "prodi": "AKUNTANSI",
+        "jenjang": "Diploma Tiga",
+        "daya_tampung": 28,
+        "peminat": 775,
+        "keketatan": "3.61%"
+    }
+]

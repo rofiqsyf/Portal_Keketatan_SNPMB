@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Keketatan SNPMB — Cek Peluangmu Masuk PTN</title>
+    <meta name="description" content="Portal data keketatan seleksi masuk PTN jalur SNBT & SNBP. Cari, bandingkan, dan strategi pilihan prodi terbaikmu dengan data akurat.">
+    <meta name="keywords" content="SNPMB, SNBT, SNBP, keketatan, PTN, prodi, seleksi masuk, universitas, data 2025, daya tampung, peminat">
+    <meta name="author" content="Portal Keketatan SNPMB">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Portal Keketatan SNPMB — Cek Peluangmu">
+    <meta property="og:description" content="Data keketatan seleksi masuk PTN jalur SNBT & SNBP. Cari dan bandingkan prodi impianmu.">
+    <meta property="og:type" content="website">
+
+    <!-- SVG Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563EB' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M22 10v6M2 10l10-5 10 5-10 5z'/><path d='M6 12v5c3 3 9 3 12 0v-5'/></svg>">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- ============================================
+         HEADER
+         ============================================ -->
+    <header class="site-header" id="site-header">
+        <div class="header-inner">
+            <div class="header-brand">
+                <span class="brand-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon-brand"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                </span>
+                <h1>Portal SNPMB</h1>
+            </div>
+            <div class="header-actions">
+                <button class="btn-icon" id="btn-bookmark-open" onclick="App.openBookmarkPanel()" title="Bookmark" aria-label="Buka bookmark">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+                    <span class="badge-count" id="bookmark-count" style="display:none;">0</span>
+                </button>
+                <button class="btn-icon" id="btn-theme" onclick="App.toggleTheme()" title="Mode Gelap" aria-label="Toggle tema">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="live-pulse"></span> Data Resmi SNPMB 2025/2026
+            </div>
+            <h2>Cek <span class="highlight">Peluangmu</span> Masuk PTN Impian</h2>
+            <p>Analisis data keketatan, rasio penerimaan, daya tampung, dan tren peminat prodi di seluruh Indonesia.</p>
+
+            <div class="search-wrapper">
+                <span class="search-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                </span>
+                <input type="text"
+                       class="search-bar"
+                       id="search-main"
+                       placeholder="Cari program studi atau universitas..."
+                       autocomplete="off"
+                       aria-label="Cari program studi atau universitas">
+                <span class="search-shortcut">Ctrl+K</span>
+                <div class="autocomplete-dropdown" id="autocomplete-dropdown" role="listbox"></div>
+            </div>
+
+            <!-- Quick Search Pills (Real-Time Dynamic) -->
+            <div class="quick-search-container">
+                <span class="quick-title">Pencarian Populer:</span>
+                <div id="quick-search-pills" style="display:inline-flex;gap:6px;flex-wrap:wrap;align-items:center;">
+                    <!-- Rendered in real-time by JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         STATS BAR
+         ============================================ -->
+    <section class="stats-bar" id="stats-bar">
+        <div id="stats-container">
+            <!-- Rendered by JS -->
+            <div class="stats-grid">
+                <div class="stat-card"><div class="skeleton" style="width:60px;height:28px;margin:0 auto 8px;"></div><div class="skeleton" style="width:100px;height:14px;margin:0 auto;"></div></div>
+                <div class="stat-card"><div class="skeleton" style="width:60px;height:28px;margin:0 auto 8px;"></div><div class="skeleton" style="width:100px;height:14px;margin:0 auto;"></div></div>
+                <div class="stat-card"><div class="skeleton" style="width:60px;height:28px;margin:0 auto 8px;"></div><div class="skeleton" style="width:100px;height:14px;margin:0 auto;"></div></div>
+                <div class="stat-card"><div class="skeleton" style="width:60px;height:28px;margin:0 auto 8px;"></div><div class="skeleton" style="width:100px;height:14px;margin:0 auto;"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         MAIN NAVIGATION TABS
+         ============================================ -->
+    <section class="nav-tabs-section">
+        <div class="nav-tabs-container">
+            <button class="nav-tab-btn active" id="tab-btn-ptn" onclick="App.switchMainTab('ptn')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                Jelajah Perguruan Tinggi
+            </button>
+            <button class="nav-tab-btn" id="tab-btn-master" onclick="App.switchMainTab('master')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+                Daftar Semua Prodi (2.257)
+            </button>
+            <button class="nav-tab-btn" id="tab-btn-terketat" onclick="App.switchMainTab('terketat')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Top Prodi Terketat
+            </button>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FILTER BAR
+         ============================================ -->
+    <section class="filter-section" id="filter-section">
+        <div id="filter-container">
+            <!-- Rendered by JS -->
+        </div>
+    </section>
+
+    <!-- ============================================
+         VIEW 1: CAMPUS GRID
+         ============================================ -->
+    <section class="campus-section view-pane" id="view-ptn">
+        <div class="section-header">
+            <h2 class="section-title">Daftar Perguruan Tinggi Negeri</h2>
+            <span class="section-count" id="campus-count">Memuat...</span>
+        </div>
+
+        <div class="campus-grid" id="campus-grid">
+            <!-- Rendered by JS — skeleton placeholder -->
+            <div class="campus-card" style="pointer-events:none;"><div class="skeleton" style="width:56px;height:56px;margin:0 auto 12px;border-radius:8px;"></div><div class="skeleton" style="width:60px;height:14px;margin:0 auto 4px;"></div><div class="skeleton" style="width:80px;height:12px;margin:0 auto;"></div></div>
+            <div class="campus-card" style="pointer-events:none;"><div class="skeleton" style="width:56px;height:56px;margin:0 auto 12px;border-radius:8px;"></div><div class="skeleton" style="width:60px;height:14px;margin:0 auto 4px;"></div><div class="skeleton" style="width:80px;height:12px;margin:0 auto;"></div></div>
+            <div class="campus-card" style="pointer-events:none;"><div class="skeleton" style="width:56px;height:56px;margin:0 auto 12px;border-radius:8px;"></div><div class="skeleton" style="width:60px;height:14px;margin:0 auto 4px;"></div><div class="skeleton" style="width:80px;height:12px;margin:0 auto;"></div></div>
+            <div class="campus-card" style="pointer-events:none;"><div class="skeleton" style="width:56px;height:56px;margin:0 auto 12px;border-radius:8px;"></div><div class="skeleton" style="width:60px;height:14px;margin:0 auto 4px;"></div><div class="skeleton" style="width:80px;height:12px;margin:0 auto;"></div></div>
+            <div class="campus-card" style="pointer-events:none;"><div class="skeleton" style="width:56px;height:56px;margin:0 auto 12px;border-radius:8px;"></div><div class="skeleton" style="width:60px;height:14px;margin:0 auto 4px;"></div><div class="skeleton" style="width:80px;height:12px;margin:0 auto;"></div></div>
+            <div class="campus-card" style="pointer-events:none;"><div class="skeleton" style="width:56px;height:56px;margin:0 auto 12px;border-radius:8px;"></div><div class="skeleton" style="width:60px;height:14px;margin:0 auto 4px;"></div><div class="skeleton" style="width:80px;height:12px;margin:0 auto;"></div></div>
+        </div>
+
+        <button class="btn-show-more hidden" id="btn-show-more" onclick="App.toggleShowAll()">
+            Lihat Semua PTN
+        </button>
+    </section>
+
+    <!-- ============================================
+         VIEW 2: MASTER PRODI EXPLORER
+         ============================================ -->
+    <section class="master-prodi-section view-pane hidden" id="view-master">
+        <div class="section-header">
+            <div>
+                <h2 class="section-title" id="master-view-title">Eksplorasi Program Studi</h2>
+                <div class="section-subtitle" id="master-view-subtitle">Menampilkan seluruh program studi PTN di Indonesia</div>
+            </div>
+            <span class="section-count" id="master-prodi-count">0 Prodi</span>
+        </div>
+
+        <!-- Master Filter Bar -->
+        <div class="master-filter-wrapper">
+            <div class="search-prodi-wrapper" style="margin-bottom:0;flex:1;">
+                <span class="search-prodi-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                </span>
+                <input type="text"
+                       class="search-prodi"
+                       id="search-master-prodi"
+                       placeholder="Filter nama prodi atau kampus di sini..."
+                       oninput="App.filterMasterProdi(this.value)"
+                       autocomplete="off">
+            </div>
+            <div class="sort-controls" style="margin-bottom:0;">
+                <button class="sort-btn active" data-mastersort="keketatan" onclick="App.sortMasterProdiBy('keketatan')">Terketat</button>
+                <button class="sort-btn" data-mastersort="peminat" onclick="App.sortMasterProdiBy('peminat')">Peminat Terbanyak</button>
+                <button class="sort-btn" data-mastersort="daya_tampung" onclick="App.sortMasterProdiBy('daya_tampung')">Daya Tampung</button>
+                <button class="sort-btn" data-mastersort="nama" onclick="App.sortMasterProdiBy('nama')">A-Z</button>
+            </div>
+        </div>
+
+        <!-- Master Data Table -->
+        <div class="table-container" style="margin-top:16px;">
+            <div class="table-scroll">
+                <table class="data-table" id="master-data-table">
+                    <thead>
+                        <tr>
+                            <th onclick="App.sortMasterProdiBy('nama')">Program Studi & Universitas</th>
+                            <th>Jenjang</th>
+                            <th onclick="App.sortMasterProdiBy('daya_tampung')" style="text-align:right;">Daya Tampung</th>
+                            <th onclick="App.sortMasterProdiBy('peminat')" style="text-align:right;">Peminat</th>
+                            <th onclick="App.sortMasterProdiBy('keketatan')">Keketatan</th>
+                            <th style="text-align:center;width:80px;">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="master-prodi-tbody">
+                        <!-- Rendered by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         VIEW 3: SIMULASI PILIHAN 1 & 2
+         ============================================ -->
+    <section class="simulasi-section view-pane hidden" id="view-simulasi">
+        <div class="simulasi-container" id="simulasi-container">
+            <!-- Rendered by JS -->
+        </div>
+    </section>
+
+    <!-- ============================================
+         DETAIL PANEL (Slide-in)
+         ============================================ -->
+    <div class="detail-overlay" id="detail-overlay"></div>
+    <aside class="detail-panel" id="detail-panel" role="dialog" aria-label="Detail Universitas">
+        <div class="detail-header">
+            <div class="detail-title-area">
+                <img class="detail-logo" id="detail-logo" src="" alt="Logo" onerror="this.style.display='none'">
+                <div>
+                    <div class="detail-title" id="detail-title">Universitas</div>
+                    <div class="detail-subtitle" id="detail-subtitle">Wilayah · Jalur</div>
+                </div>
+            </div>
+            <button class="btn-close-detail" onclick="App.closeDetail()" aria-label="Tutup panel">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+        </div>
+        <div class="detail-body">
+            <!-- Search Prodi -->
+            <div class="search-prodi-wrapper">
+                <span class="search-prodi-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                </span>
+                <input type="text"
+                       class="search-prodi"
+                       id="search-prodi"
+                       placeholder="Cari program studi..."
+                       oninput="App.filterDetailProdi(this.value)"
+                       autocomplete="off">
+            </div>
+
+            <!-- Sort Controls -->
+            <div class="sort-controls">
+                <button class="sort-btn active" data-sort="nama" onclick="App.sortProdiBy('nama')">A-Z</button>
+                <button class="sort-btn" data-sort="keketatan" onclick="App.sortProdiBy('keketatan')">Keketatan</button>
+                <button class="sort-btn" data-sort="peminat" onclick="App.sortProdiBy('peminat')">Peminat</button>
+                <button class="sort-btn" data-sort="daya_tampung" onclick="App.sortProdiBy('daya_tampung')">Daya Tampung</button>
+            </div>
+
+            <!-- Data Table -->
+            <div class="table-container">
+                <div class="table-scroll">
+                    <table class="data-table" id="data-table">
+                        <thead>
+                            <tr>
+                                <th onclick="App.sortProdiBy('nama')">Program Studi <span class="sort-indicator">↑</span></th>
+                                <th>Jenjang</th>
+                                <th onclick="App.sortProdiBy('daya_tampung')" style="text-align:right;">Daya Tampung <span class="sort-indicator">↓</span></th>
+                                <th onclick="App.sortProdiBy('peminat')" style="text-align:right;">Peminat <span class="sort-indicator">↓</span></th>
+                                <th onclick="App.sortProdiBy('keketatan')">Keketatan <span class="sort-indicator">↓</span></th>
+                                <th style="text-align:center;width:80px;">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="prodi-tbody">
+                            <!-- Rendered by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Data Source Label -->
+            <div style="margin-top:16px;padding:12px;background:var(--bg-badge);border-radius:var(--radius-md);font-size:12px;color:var(--text-tertiary);text-align:center;">
+                Data tahun 2025/2026 · Sumber: <a href="https://portal.snpmb.id/" target="_blank" rel="noopener" style="color:var(--text-link);">portal.snpmb.id</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ============================================
+         BOOKMARK PANEL
+         ============================================ -->
+    <aside class="bookmark-panel" id="bookmark-panel" role="dialog" aria-label="Bookmark Prodi">
+        <div class="bookmark-header">
+            <h3 style="display:flex;align-items:center;gap:8px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+                Bookmark Prodi
+            </h3>
+            <button class="btn-close-detail" onclick="App.closeBookmarkPanel()" aria-label="Tutup bookmark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+        </div>
+        <div class="bookmark-list" id="bookmark-list">
+            <!-- Rendered by JS -->
+        </div>
+    </aside>
+
+    <!-- ============================================
+         COMPARE BAR (Fixed Bottom)
+         ============================================ -->
+    <div class="compare-bar" id="compare-bar">
+        <div class="compare-inner">
+            <div class="compare-items" id="compare-items"></div>
+            <div style="display:flex;gap:8px;">
+                <button class="btn-compare" id="btn-compare-action" onclick="App.openCompareModal()" disabled>
+                    Bandingkan (0)
+                </button>
+                <button class="btn-icon" onclick="App.clearCompare()" title="Hapus semua" style="color:var(--rasio-sangat-ketat);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         COMPARE MODAL
+         ============================================ -->
+    <div class="compare-modal" id="compare-modal" role="dialog" aria-label="Perbandingan Prodi">
+        <div class="compare-modal-content">
+            <div class="compare-modal-header">
+                <h3 style="display:flex;align-items:center;gap:8px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h18"/></svg>
+                    Perbandingan Prodi
+                </h3>
+                <div style="display:flex;align-items:center;gap:8px;">
+                    <button class="btn-print-report" onclick="App.printCompareReport()" title="Cetak / Simpan PDF Laporan">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+                        Cetak Laporan
+                    </button>
+                    <button class="btn-close-detail" onclick="App.closeCompareModal()" aria-label="Tutup perbandingan">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                    </button>
+                </div>
+            </div>
+            <div id="compare-content" style="padding:24px;">
+                <!-- Rendered by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="site-footer">
+        <div class="footer-disclaimer">
+            <strong>DISCLAIMER:</strong> Portal ini <strong>BUKAN situs resmi SNPMB</strong>.
+            Data disajikan untuk keperluan informasi dan edukasi. Keakuratan data tidak dijamin —
+            selalu verifikasi dengan sumber resmi. Untuk informasi resmi, kunjungi
+            <a href="https://portal.snpmb.id/" target="_blank" rel="noopener">portal.snpmb.id</a>
+        </div>
+        <div class="footer-links">
+            <a href="https://portal.snpmb.id/" target="_blank" rel="noopener">SNPMB Resmi</a>
+            <a href="docs/PRD-SDD-Portal-Keketatan-SNPMB.md" target="_blank">Dokumentasi</a>
+        </div>
+        <p class="footer-copy">
+            © 2026 Portal Keketatan SNPMB · Dibuat untuk membantu calon mahasiswa Indonesia
+        </p>
+    </footer>
+
+    <!-- ============================================
+         TOAST
+         ============================================ -->
+    <div class="toast" id="toast"></div>
+
+    <!-- ============================================
+         SCRIPTS
+         ============================================ -->
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/app.js"></script>
+
+</body>
+</html>

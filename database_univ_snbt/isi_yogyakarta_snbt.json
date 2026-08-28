@@ -1,0 +1,170 @@
+[
+    {
+        "prodi": "SENI TARI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 32,
+        "peminat": 181,
+        "keketatan": "17.68%"
+    },
+    {
+        "prodi": "SENI MUSIK",
+        "jenjang": "Sarjana",
+        "daya_tampung": 50,
+        "peminat": 182,
+        "keketatan": "27.47%"
+    },
+    {
+        "prodi": "PENDIDIKAN MUSIK",
+        "jenjang": "Sarjana",
+        "daya_tampung": 36,
+        "peminat": 160,
+        "keketatan": "22.50%"
+    },
+    {
+        "prodi": "PENCIPTAAN MUSIK",
+        "jenjang": "Sarjana",
+        "daya_tampung": 18,
+        "peminat": 100,
+        "keketatan": "18.00%"
+    },
+    {
+        "prodi": "SENI TEATER",
+        "jenjang": "Sarjana",
+        "daya_tampung": 28,
+        "peminat": 66,
+        "keketatan": "42.42%"
+    },
+    {
+        "prodi": "PENDIDIKAN SENI DRAMA, TARI, DAN MUSIK",
+        "jenjang": "Sarjana",
+        "daya_tampung": 18,
+        "peminat": 51,
+        "keketatan": "35.29%"
+    },
+    {
+        "prodi": "SENI RUPA MURNI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 48,
+        "peminat": 263,
+        "keketatan": "18.25%"
+    },
+    {
+        "prodi": "KRIYA SENI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 48,
+        "peminat": 76,
+        "keketatan": "63.16%"
+    },
+    {
+        "prodi": "DESAIN INTERIOR",
+        "jenjang": "Sarjana",
+        "daya_tampung": 58,
+        "peminat": 329,
+        "keketatan": "17.63%"
+    },
+    {
+        "prodi": "DESAIN KOMUNIKASI VISUAL",
+        "jenjang": "Sarjana",
+        "daya_tampung": 48,
+        "peminat": 1421,
+        "keketatan": "3.38%"
+    },
+    {
+        "prodi": "DESAIN PRODUK",
+        "jenjang": "Sarjana",
+        "daya_tampung": 32,
+        "peminat": 189,
+        "keketatan": "16.93%"
+    },
+    {
+        "prodi": "TELEVISI DAN FILM",
+        "jenjang": "Sarjana",
+        "daya_tampung": 40,
+        "peminat": 519,
+        "keketatan": "7.71%"
+    },
+    {
+        "prodi": "FOTOGRAFI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 48,
+        "peminat": 228,
+        "keketatan": "21.05%"
+    },
+    {
+        "prodi": "SENI KARAWITAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 20,
+        "peminat": 26,
+        "keketatan": "76.92%"
+    },
+    {
+        "prodi": "ETNOMUSIKOLOGI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 20,
+        "peminat": 25,
+        "keketatan": "80.00%"
+    },
+    {
+        "prodi": "SENI PEDALANGAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 6,
+        "peminat": 13,
+        "keketatan": "46.15%"
+    },
+    {
+        "prodi": "TATA KELOLA SENI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 30,
+        "peminat": 140,
+        "keketatan": "21.43%"
+    },
+    {
+        "prodi": "KONSERVASI SENI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 14,
+        "peminat": 28,
+        "keketatan": "50.00%"
+    },
+    {
+        "prodi": "PENYAJIAN MUSIK",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 18,
+        "peminat": 208,
+        "keketatan": "8.65%"
+    },
+    {
+        "prodi": "ANIMASI",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 48,
+        "peminat": 619,
+        "keketatan": "7.75%"
+    },
+    {
+        "prodi": "DESAIN MODE KRIYA BATIK",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 30,
+        "peminat": 96,
+        "keketatan": "31.25%"
+    },
+    {
+        "prodi": "DESAIN MEDIA",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 30,
+        "peminat": 489,
+        "keketatan": "6.13%"
+    },
+    {
+        "prodi": "PRODUKSI FILM DAN TELEVISI",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 14,
+        "peminat": 389,
+        "keketatan": "3.60%"
+    },
+    {
+        "prodi": "TEATER MUSIKAL",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 10,
+        "peminat": 19,
+        "keketatan": "52.63%"
+    }
+]

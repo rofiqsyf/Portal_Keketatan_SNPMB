@@ -1,0 +1,198 @@
+[
+    {
+        "prodi": "AGROTEKNOLOGI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 75,
+        "peminat": 408,
+        "keketatan": "18.38%"
+    },
+    {
+        "prodi": "TEKNIK SIPIL",
+        "jenjang": "Sarjana",
+        "daya_tampung": 88,
+        "peminat": 493,
+        "keketatan": "17.85%"
+    },
+    {
+        "prodi": "TEKNIK MESIN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 88,
+        "peminat": 442,
+        "keketatan": "19.91%"
+    },
+    {
+        "prodi": "TEKNIK ELEKTRO",
+        "jenjang": "Sarjana",
+        "daya_tampung": 66,
+        "peminat": 270,
+        "keketatan": "24.44%"
+    },
+    {
+        "prodi": "PETERNAKAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 75,
+        "peminat": 365,
+        "keketatan": "20.55%"
+    },
+    {
+        "prodi": "PENDIDIKAN ILMU PENGETAHUAN ALAM",
+        "jenjang": "Sarjana",
+        "daya_tampung": 96,
+        "peminat": 191,
+        "keketatan": "50.26%"
+    },
+    {
+        "prodi": "PENDIDIKAN BIOLOGI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 72,
+        "peminat": 211,
+        "keketatan": "34.12%"
+    },
+    {
+        "prodi": "PENDIDIKAN MATEMATIKA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 96,
+        "peminat": 209,
+        "keketatan": "45.93%"
+    },
+    {
+        "prodi": "AKUAKULTUR",
+        "jenjang": "Sarjana",
+        "daya_tampung": 75,
+        "peminat": 169,
+        "keketatan": "44.38%"
+    },
+    {
+        "prodi": "EKONOMI PEMBANGUNAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 120,
+        "peminat": 537,
+        "keketatan": "22.35%"
+    },
+    {
+        "prodi": "ILMU ADMINISTRASI NEGARA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 138,
+        "peminat": 591,
+        "keketatan": "23.35%"
+    },
+    {
+        "prodi": "PENDIDIKAN BAHASA INGGRIS",
+        "jenjang": "Sarjana",
+        "daya_tampung": 120,
+        "peminat": 342,
+        "keketatan": "35.09%"
+    },
+    {
+        "prodi": "PENDIDIKAN BAHASA DAN SASTRA INDONESIA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 120,
+        "peminat": 533,
+        "keketatan": "22.51%"
+    },
+    {
+        "prodi": "HUKUM",
+        "jenjang": "Sarjana",
+        "daya_tampung": 138,
+        "peminat": 552,
+        "keketatan": "25.00%"
+    },
+    {
+        "prodi": "MANAJEMEN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 120,
+        "peminat": 802,
+        "keketatan": "14.96%"
+    },
+    {
+        "prodi": "ILMU KOMUNIKASI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 127,
+        "peminat": 772,
+        "keketatan": "16.45%"
+    },
+    {
+        "prodi": "AKUNTANSI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 120,
+        "peminat": 596,
+        "keketatan": "20.13%"
+    },
+    {
+        "prodi": "PARIWISATA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 69,
+        "peminat": 535,
+        "keketatan": "12.90%"
+    },
+    {
+        "prodi": "TEKNOLOGI PANGAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 50,
+        "peminat": 481,
+        "keketatan": "10.40%"
+    },
+    {
+        "prodi": "TEKNOLOGI INFORMASI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 44,
+        "peminat": 437,
+        "keketatan": "10.07%"
+    },
+    {
+        "prodi": "TEKNIK MEKATRONIKA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 44,
+        "peminat": 121,
+        "keketatan": "36.36%"
+    },
+    {
+        "prodi": "TEKNIK INDUSTRI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 44,
+        "peminat": 473,
+        "keketatan": "9.30%"
+    },
+    {
+        "prodi": "AGRIBISNIS",
+        "jenjang": "Sarjana",
+        "daya_tampung": 50,
+        "peminat": 398,
+        "keketatan": "12.56%"
+    },
+    {
+        "prodi": "GIZI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 50,
+        "peminat": 669,
+        "keketatan": "7.47%"
+    },
+    {
+        "prodi": "TEKNOLOGI REKAYASA PERANCANGAN MANUFAKTUR",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 33,
+        "peminat": 494,
+        "keketatan": "6.68%"
+    },
+    {
+        "prodi": "AKUNTANSI PERPAJAKAN",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 60,
+        "peminat": 1269,
+        "keketatan": "4.73%"
+    },
+    {
+        "prodi": "AKUNTANSI",
+        "jenjang": "Diploma Tiga",
+        "daya_tampung": 70,
+        "peminat": 1647,
+        "keketatan": "4.25%"
+    },
+    {
+        "prodi": "FARMASI",
+        "jenjang": "Diploma Tiga",
+        "daya_tampung": 40,
+        "peminat": 2155,
+        "keketatan": "1.86%"
+    }
+]

@@ -1,0 +1,149 @@
+[
+    {
+        "prodi": "FAKULTAS ILMU DAN TEKNOLOGI KEBUMIAN (FITB)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 130,
+        "peminat": 2703,
+        "keketatan": "4.81%"
+    },
+    {
+        "prodi": "FAKULTAS TEKNIK PERTAMBANGAN DAN PERMINYAKAN (FTTM)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 115,
+        "peminat": 4975,
+        "keketatan": "2.31%"
+    },
+    {
+        "prodi": "SEKOLAH FARMASI (SF)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 56,
+        "peminat": 1138,
+        "keketatan": "4.92%"
+    },
+    {
+        "prodi": "SEKOLAH ILMU DAN TEKNOLOGI HAYATI - SAINS (SITH-S)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 42,
+        "peminat": 413,
+        "keketatan": "10.17%"
+    },
+    {
+        "prodi": "FAKULTAS TEKNIK MESIN DAN DIRGANTARA (FTMD)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 100,
+        "peminat": 2586,
+        "keketatan": "3.87%"
+    },
+    {
+        "prodi": "SEKOLAH ILMU DAN TEKNOLOGI HAYATI - REKAYASA (SITH-R)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 75,
+        "peminat": 788,
+        "keketatan": "9.52%"
+    },
+    {
+        "prodi": "FAKULTAS TEKNOLOGI INDUSTRI - KAMPUS CIREBON (FTI-C)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 33,
+        "peminat": 567,
+        "keketatan": "5.82%"
+    },
+    {
+        "prodi": "FAKULTAS TEKNIK PERTAMBANGAN DAN PERMINYAKAN - KAMPUS CIREBON (FTTM-C)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 30,
+        "peminat": 1584,
+        "keketatan": "1.89%"
+    },
+    {
+        "prodi": "FAKULTAS ILMU DAN TEKNOLOGI KEBUMIAN - KAMPUS CIREBON (FITB-C)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 30,
+        "peminat": 373,
+        "keketatan": "8.04%"
+    },
+    {
+        "prodi": "FAKULTAS MATEMATIKA DAN ILMU PENGETAHUAN ALAM - MATEMATIKA (FMIPA-M)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 60,
+        "peminat": 609,
+        "keketatan": "9.85%"
+    },
+    {
+        "prodi": "FAKULTAS MATEMATIKA DAN ILMU PENGETAHUAN ALAM - IPA (FMIPA-IPA)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 98,
+        "peminat": 901,
+        "keketatan": "10.88%"
+    },
+    {
+        "prodi": "SEKOLAH TEKNIK ELEKTRO DAN INFORMATIKA - KOMPUTASI (STEI-K)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 67,
+        "peminat": 3526,
+        "keketatan": "1.90%"
+    },
+    {
+        "prodi": "SEKOLAH TEKNIK ELEKTRO DAN INFORMATIKA - REKAYASA (STEI-R)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 75,
+        "peminat": 1802,
+        "keketatan": "4.16%"
+    },
+    {
+        "prodi": "FAKULTAS SENIRUPA DAN DESAIN (FSRD)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 110,
+        "peminat": 1840,
+        "keketatan": "5.98%"
+    },
+    {
+        "prodi": "SEKOLAH BISNIS DAN MANAJEMEN (SBM)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 55,
+        "peminat": 2483,
+        "keketatan": "2.22%"
+    },
+    {
+        "prodi": "FAKULTAS SENIRUPA DAN DESAIN - KAMPUS CIREBON (FSRD-C)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 51,
+        "peminat": 369,
+        "keketatan": "13.82%"
+    },
+    {
+        "prodi": "FAKULTAS TEKNIK SIPIL DAN LINGKUNGAN - INFRASTRUKTUR SIPIL, LINGKUNGAN, DAN KELAUTAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 90,
+        "peminat": 1554,
+        "keketatan": "5.79%"
+    },
+    {
+        "prodi": "FAKULTAS TEKNIK SIPIL DAN LINGKUNGAN - INFRASTRUKTUR SUMBER DAYA AIR DAN SANITASI LINGKUNGAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 40,
+        "peminat": 1173,
+        "keketatan": "3.41%"
+    },
+    {
+        "prodi": "FAKULTAS TEKNOLOGI INDUSTRI - SISTEM DAN PROSES (FTI-SP)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 105,
+        "peminat": 1485,
+        "keketatan": "7.07%"
+    },
+    {
+        "prodi": "FAKULTAS TEKNOLOGI INDUSTRI - REKAYASA INDUSTRI (FTI-RI)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 55,
+        "peminat": 1406,
+        "keketatan": "3.91%"
+    },
+    {
+        "prodi": "SEKOLAH ILMU DAN TEKNOLOGI HAYATI - KAMPUS CIREBON (SITH-C)",
+        "jenjang": "Sarjana",
+        "daya_tampung": 18,
+        "peminat": 176,
+        "keketatan": "10.23%"
+    }
+]

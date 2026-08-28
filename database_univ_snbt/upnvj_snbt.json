@@ -1,0 +1,198 @@
+[
+    {
+        "prodi": "TEKNIK MESIN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 70,
+        "peminat": 1000,
+        "keketatan": "7.00%"
+    },
+    {
+        "prodi": "TEKNIK PERKAPALAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 35,
+        "peminat": 658,
+        "keketatan": "5.32%"
+    },
+    {
+        "prodi": "TEKNIK INDUSTRI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 70,
+        "peminat": 1744,
+        "keketatan": "4.01%"
+    },
+    {
+        "prodi": "INFORMATIKA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 105,
+        "peminat": 1442,
+        "keketatan": "7.28%"
+    },
+    {
+        "prodi": "SISTEM INFORMASI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 105,
+        "peminat": 1844,
+        "keketatan": "5.69%"
+    },
+    {
+        "prodi": "KEDOKTERAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 103,
+        "peminat": 2138,
+        "keketatan": "4.82%"
+    },
+    {
+        "prodi": "KEPERAWATAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 70,
+        "peminat": 1407,
+        "keketatan": "4.98%"
+    },
+    {
+        "prodi": "KESEHATAN MASYARAKAT",
+        "jenjang": "Sarjana",
+        "daya_tampung": 105,
+        "peminat": 2063,
+        "keketatan": "5.09%"
+    },
+    {
+        "prodi": "GIZI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 70,
+        "peminat": 1165,
+        "keketatan": "6.01%"
+    },
+    {
+        "prodi": "TEKNIK ELEKTRO",
+        "jenjang": "Sarjana",
+        "daya_tampung": 60,
+        "peminat": 761,
+        "keketatan": "7.88%"
+    },
+    {
+        "prodi": "FARMASI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 30,
+        "peminat": 1126,
+        "keketatan": "2.66%"
+    },
+    {
+        "prodi": "FISIOTERAPI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 35,
+        "peminat": 880,
+        "keketatan": "3.98%"
+    },
+    {
+        "prodi": "MANAJEMEN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 160,
+        "peminat": 2386,
+        "keketatan": "6.71%"
+    },
+    {
+        "prodi": "AKUNTANSI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 160,
+        "peminat": 2254,
+        "keketatan": "7.10%"
+    },
+    {
+        "prodi": "HUBUNGAN INTERNASIONAL",
+        "jenjang": "Sarjana",
+        "daya_tampung": 120,
+        "peminat": 1264,
+        "keketatan": "9.49%"
+    },
+    {
+        "prodi": "ILMU KOMUNIKASI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 180,
+        "peminat": 3832,
+        "keketatan": "4.70%"
+    },
+    {
+        "prodi": "HUKUM",
+        "jenjang": "Sarjana",
+        "daya_tampung": 240,
+        "peminat": 2762,
+        "keketatan": "8.69%"
+    },
+    {
+        "prodi": "EKONOMI PEMBANGUNAN",
+        "jenjang": "Sarjana",
+        "daya_tampung": 60,
+        "peminat": 1085,
+        "keketatan": "5.53%"
+    },
+    {
+        "prodi": "EKONOMI SYARIAH",
+        "jenjang": "Sarjana",
+        "daya_tampung": 60,
+        "peminat": 760,
+        "keketatan": "7.89%"
+    },
+    {
+        "prodi": "ILMU POLITIK",
+        "jenjang": "Sarjana",
+        "daya_tampung": 100,
+        "peminat": 928,
+        "keketatan": "10.78%"
+    },
+    {
+        "prodi": "SAINS INFORMASI",
+        "jenjang": "Sarjana",
+        "daya_tampung": 60,
+        "peminat": 651,
+        "keketatan": "9.22%"
+    },
+    {
+        "prodi": "KAJIAN FILM, TELEVISI, DAN MEDIA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 20,
+        "peminat": 974,
+        "keketatan": "2.05%"
+    },
+    {
+        "prodi": "SAINS DATA",
+        "jenjang": "Sarjana",
+        "daya_tampung": 18,
+        "peminat": 334,
+        "keketatan": "5.39%"
+    },
+    {
+        "prodi": "KEPERAWATAN",
+        "jenjang": "Diploma Tiga",
+        "daya_tampung": 35,
+        "peminat": 3162,
+        "keketatan": "1.11%"
+    },
+    {
+        "prodi": "FISIOTERAPI",
+        "jenjang": "Diploma Tiga",
+        "daya_tampung": 35,
+        "peminat": 3007,
+        "keketatan": "1.16%"
+    },
+    {
+        "prodi": "SISTEM INFORMASI",
+        "jenjang": "Diploma Tiga",
+        "daya_tampung": 70,
+        "peminat": 3829,
+        "keketatan": "1.83%"
+    },
+    {
+        "prodi": "PERBANKAN DAN KEUANGAN",
+        "jenjang": "Diploma Tiga",
+        "daya_tampung": 60,
+        "peminat": 2578,
+        "keketatan": "2.33%"
+    },
+    {
+        "prodi": "AKUNTANSI",
+        "jenjang": "Diploma Tiga",
+        "daya_tampung": 60,
+        "peminat": 2606,
+        "keketatan": "2.30%"
+    }
+]

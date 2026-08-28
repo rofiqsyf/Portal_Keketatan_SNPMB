@@ -1,0 +1,114 @@
+[
+    {
+        "prodi": "TEKNIK KESELAMATAN DAN KESEHATAN KERJA",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 127,
+        "peminat": 3255,
+        "keketatan": "3.90%"
+    },
+    {
+        "prodi": "TEKNIK DESAIN DAN MANUFAKTUR",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 48,
+        "peminat": 278,
+        "keketatan": "17.27%"
+    },
+    {
+        "prodi": "TEKNIK PENGELASAN",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 48,
+        "peminat": 556,
+        "keketatan": "8.63%"
+    },
+    {
+        "prodi": "TEKNIK PERPIPAAN",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 67,
+        "peminat": 321,
+        "keketatan": "20.87%"
+    },
+    {
+        "prodi": "TEKNIK OTOMASI",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 67,
+        "peminat": 314,
+        "keketatan": "21.34%"
+    },
+    {
+        "prodi": "TEKNIK PENGOLAHAN LIMBAH",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 67,
+        "peminat": 566,
+        "keketatan": "11.84%"
+    },
+    {
+        "prodi": "TEKNIK PERANCANGAN DAN KONSTRUKSI KAPAL",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 54,
+        "peminat": 363,
+        "keketatan": "14.88%"
+    },
+    {
+        "prodi": "TEKNIK PERMESINAN KAPAL",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 54,
+        "peminat": 455,
+        "keketatan": "11.87%"
+    },
+    {
+        "prodi": "TEKNIK KELISTRIKAN KAPAL",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 54,
+        "peminat": 256,
+        "keketatan": "21.09%"
+    },
+    {
+        "prodi": "MANAJEMEN BISNIS",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 102,
+        "peminat": 1219,
+        "keketatan": "8.37%"
+    },
+    {
+        "prodi": "TEKNOLOGI REKAYASA ENERGI BERKELANJUTAN",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 31,
+        "peminat": 211,
+        "keketatan": "14.69%"
+    },
+    {
+        "prodi": "TEKNOLOGI REKAYASA KONSTRUKSI PERKAPALAN",
+        "jenjang": "Sarjana Terapan",
+        "daya_tampung": 31,
+        "peminat": 191,
+        "keketatan": "16.23%"
+    },
+    {
+        "prodi": "TEKNIK KELISTRIKAN KAPAL",
+        "jenjang": "Diploma Tiga",
+        "daya_tampung": 45,
+        "peminat": 504,
+        "keketatan": "8.93%"
+    },
+    {
+        "prodi": "TEKNIK PERMESINAN KAPAL",
+        "jenjang": "Diploma Tiga",
+        "daya_tampung": 45,
+        "peminat": 799,
+        "keketatan": "5.63%"
+    },
+    {
+        "prodi": "TEKNIK PERANCANGAN DAN KONSTRUKSI KAPAL",
+        "jenjang": "Diploma Tiga",
+        "daya_tampung": 45,
+        "peminat": 803,
+        "keketatan": "5.60%"
+    },
+    {
+        "prodi": "TEKNIK BANGUNAN KAPAL",
+        "jenjang": "Diploma Tiga",
+        "daya_tampung": 45,
+        "peminat": 452,
+        "keketatan": "9.96%"
+    }
+]
