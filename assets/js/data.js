@@ -207,7 +207,13 @@ const DataUtils = (() => {
 
     if (keyword) {
       const q = keyword.toLowerCase().trim();
-      result = result.filter(p => p.nama.toLowerCase().includes(q));
+      // Check if any prodi name matches keyword exactly
+      const hasExactNameMatch = result.some(p => p.nama.toLowerCase().trim() === q);
+      if (hasExactNameMatch) {
+        result = result.filter(p => p.nama.toLowerCase().trim() === q);
+      } else {
+        result = result.filter(p => p.nama.toLowerCase().includes(q));
+      }
     }
 
     if (tier) {

@@ -64,7 +64,7 @@ const Components = (() => {
    * Render a single prodi table row
    */
   function renderProdiRow(prodi, univId, univNama, index) {
-    const isBookmarked = BookmarkStore.has(univId, prodi.nama);
+    const isBookmarked = BookmarkStore.has(univId, prodi.nama, prodi.jenjang);
     const isCompared = CompareStore.has(univId, prodi.nama);
 
     return `
@@ -77,7 +77,7 @@ const Components = (() => {
         <td>
           <div class="prodi-actions">
             <button class="btn-bookmark ${isBookmarked ? 'bookmarked' : ''}"
-                    onclick="App.toggleBookmark('${univId}', '${escapeAttr(prodi.nama)}', '${escapeAttr(univNama)}')"
+                    onclick="App.toggleBookmark('${univId}', '${escapeAttr(prodi.nama)}', '${escapeAttr(univNama)}', ${prodi.keketatan}, '${escapeAttr(prodi.jenjang || '')}')"
                     aria-label="${isBookmarked ? 'Hapus bookmark' : 'Bookmark'} ${prodi.nama}"
                     title="${isBookmarked ? 'Hapus bookmark' : 'Bookmark prodi ini'}">
               ${isBookmarked ? Icons.bookmarkFilled : Icons.bookmarkOutline}
@@ -98,7 +98,7 @@ const Components = (() => {
    * Render master prodi explorer table row
    */
   function renderMasterProdiRow(prodi, index) {
-    const isBookmarked = BookmarkStore.has(prodi.univId, prodi.nama);
+    const isBookmarked = BookmarkStore.has(prodi.univId, prodi.nama, prodi.jenjang);
     const isCompared = CompareStore.has(prodi.univId, prodi.nama);
 
     return `
@@ -117,7 +117,7 @@ const Components = (() => {
         <td>
           <div class="prodi-actions">
             <button class="btn-bookmark ${isBookmarked ? 'bookmarked' : ''}"
-                    onclick="App.toggleBookmark('${prodi.univId}', '${escapeAttr(prodi.nama)}', '${escapeAttr(prodi.univNama)}')"
+                    onclick="App.toggleBookmark('${prodi.univId}', '${escapeAttr(prodi.nama)}', '${escapeAttr(prodi.univNama)}', ${prodi.keketatan}, '${escapeAttr(prodi.jenjang || '')}')"
                     aria-label="${isBookmarked ? 'Hapus bookmark' : 'Bookmark'} ${prodi.nama}"
                     title="${isBookmarked ? 'Hapus bookmark' : 'Bookmark prodi ini'}">
               ${isBookmarked ? Icons.bookmarkFilled : Icons.bookmarkOutline}
@@ -331,16 +331,16 @@ const Components = (() => {
     bookmarks.forEach(bm => {
       const info = DataUtils.classifyKeketatan(bm.keketatan || 0);
       html += `
-        <div class="bookmark-item" onclick="App.openDetailAndHighlight('${bm.univId}', '${escapeAttr(bm.prodiNama)}')">
+        <div class="bookmark-item" onclick="App.openDetailAndHighlight('${bm.univId}', '${escapeAttr(bm.prodiNama)}', '${escapeAttr(bm.jenjang || '')}')">
           <div class="bm-info">
-            <div class="bm-prodi">${bm.prodiNama}</div>
+            <div class="bm-prodi">${bm.prodiNama} ${bm.jenjang ? `<span style="font-size:11px;opacity:0.7;font-weight:normal;margin-left:4px;">(${bm.jenjang})</span>` : ''}</div>
             <div class="bm-univ">${bm.univNama}</div>
           </div>
           ${bm.keketatan ? `<span class="keketatan-badge ${info.cssClass}" style="font-size:11px;padding:2px 8px;">
             <span class="dot"></span>${bm.keketatan.toFixed(1)}%
           </span>` : ''}
           <button class="btn-bookmark bookmarked" style="margin-left:8px;"
-                  onclick="event.stopPropagation(); App.toggleBookmark('${bm.univId}', '${escapeAttr(bm.prodiNama)}', '${escapeAttr(bm.univNama)}')"
+                  onclick="event.stopPropagation(); App.toggleBookmark('${bm.univId}', '${escapeAttr(bm.prodiNama)}', '${escapeAttr(bm.univNama)}', ${bm.keketatan}, '${escapeAttr(bm.jenjang || '')}')"
                   aria-label="Hapus bookmark">${Icons.bookmarkFilled}</button>
         </div>
       `;

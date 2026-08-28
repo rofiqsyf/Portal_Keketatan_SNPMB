@@ -19,19 +19,22 @@ const BookmarkStore = (() => {
     localStorage.setItem(KEY, JSON.stringify(bookmarks));
   }
 
-  function has(univId, prodiNama) {
+  function has(univId, prodiNama, jenjang = '') {
+    if (jenjang) {
+      return getAll().some(b => b.univId === univId && b.prodiNama === prodiNama && (b.jenjang === jenjang || !b.jenjang));
+    }
     return getAll().some(b => b.univId === univId && b.prodiNama === prodiNama);
   }
 
-  function toggle(univId, prodiNama, univNama, keketatan) {
+  function toggle(univId, prodiNama, univNama, keketatan, jenjang = '') {
     let bookmarks = getAll();
-    const idx = bookmarks.findIndex(b => b.univId === univId && b.prodiNama === prodiNama);
+    const idx = bookmarks.findIndex(b => b.univId === univId && b.prodiNama === prodiNama && (!jenjang || b.jenjang === jenjang));
     if (idx >= 0) {
       bookmarks.splice(idx, 1);
       save(bookmarks);
       return false; // removed
     } else {
-      bookmarks.push({ univId, prodiNama, univNama, keketatan });
+      bookmarks.push({ univId, prodiNama, univNama, keketatan, jenjang });
       save(bookmarks);
       return true; // added
     }
@@ -670,7 +673,7 @@ const App = (() => {
   // =====================================================================
   // DETAIL PANEL
   // =====================================================================
-  function openDetail(univId, initialProdiSearch = '') {
+  function openDetail(univId, initialProdiSearch = '', initialJenjang = '') {
     activeUnivId = univId;
     const univ = universityData.universitas.find(u => u.id === univId);
     if (!univ) return;
@@ -705,8 +708,8 @@ const App = (() => {
     const searchProdi = document.getElementById('search-prodi');
     if (searchProdi) searchProdi.value = initialProdiSearch;
 
-    // Render table instantly with exact prodi filter
-    renderDetailProdi(univId, initialProdiSearch);
+    // Render table instantly with exact prodi & jenjang filter
+    renderDetailProdi(univId, initialProdiSearch, initialJenjang);
 
     // Update campus grid active state
     document.querySelectorAll('.campus-card').forEach(card => {
@@ -714,8 +717,8 @@ const App = (() => {
     });
   }
 
-  function openDetailAndHighlight(univId, prodiNama) {
-    openDetail(univId, prodiNama);
+  function openDetailAndHighlight(univId, prodiNama, jenjang = '') {
+    openDetail(univId, prodiNama, jenjang);
   }
 
   function closeDetail() {
@@ -737,7 +740,7 @@ const App = (() => {
     });
   }
 
-  function renderDetailProdi(univId, searchKeyword = '') {
+  function renderDetailProdi(univId, searchKeyword = '', targetJenjang = '') {
     const univ = universityData.universitas.find(u => u.id === univId);
     if (!univ) return;
 
@@ -750,7 +753,7 @@ const App = (() => {
     let prodiList = rawList.map(p => DataUtils.getProdiDataForYear(p, activeTahun));
 
     // Filter by search, tier, jenjang
-    prodiList = DataUtils.filterProdi(prodiList, searchKeyword, activeTier, activeJenjang);
+    prodiList = DataUtils.filterProdi(prodiList, searchKeyword, activeTier, targetJenjang || activeJenjang);
 
     // Sort
     prodiList = DataUtils.sortProdi(prodiList, sortState.by, sortState.asc);
@@ -779,7 +782,7 @@ const App = (() => {
     }
   }
 
-  function sortProdiBy(field) {
+  function sortDetailProdiBy(field) {
     if (sortState.by === field) {
       sortState.asc = !sortState.asc;
     } else {
@@ -787,8 +790,10 @@ const App = (() => {
       sortState.asc = field === 'nama'; // default asc for nama, desc for numbers
     }
 
-    const searchProdi = document.getElementById('search-prodi');
-    renderDetailProdi(activeUnivId, searchProdi?.value || '');
+    if (activeUnivId) {
+      const searchProdi = document.getElementById('search-prodi');
+      renderDetailProdi(activeUnivId, searchProdi ? searchProdi.value : '');
+    }
   }
 
   function updateSortButtons() {
@@ -798,15 +803,16 @@ const App = (() => {
   }
 
   // =====================================================================
-  // BOOKMARKS
+  // BOOKMARKS & COMPARE ACTIONS
   // =====================================================================
-  function toggleBookmark(univId, prodiNama, univNama) {
-    // Get keketatan for storage
+  function toggleBookmark(univId, prodiNama, univNama, keketatanVal = null, jenjangVal = '') {
+    // Get keketatan & jenjang if not passed
     const univ = universityData.universitas.find(u => u.id === univId);
     const prodi = univ?.prodi[activeJalur]?.find(p => p.nama === prodiNama);
-    const keketatan = prodi?.keketatan || 0;
+    const keketatan = keketatanVal !== null ? keketatanVal : (prodi?.keketatan || 0);
+    const jenjang = jenjangVal || (prodi?.jenjang || '');
 
-    const added = BookmarkStore.toggle(univId, prodiNama, univNama, keketatan);
+    const added = BookmarkStore.toggle(univId, prodiNama, univNama, keketatan, jenjang);
     updateBookmarkCount();
     showToast(added ? `${prodiNama} disimpan` : `Bookmark ${prodiNama} dihapus`);
 
