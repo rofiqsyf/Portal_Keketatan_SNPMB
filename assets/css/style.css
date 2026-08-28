@@ -974,15 +974,25 @@ a {
   max-width: 740px;
   height: 100vh;
   background: var(--bg-primary);
-  z-index: 501;
+  z-index: 505;
   transform: translateX(100%);
-  transition: transform var(--transition-slow);
+  transition: transform var(--transition-slow), right var(--transition-slow), max-width var(--transition-slow);
   overflow-y: auto;
   box-shadow: -8px 0 30px rgba(0, 0, 0, 0.15);
 }
 
 .detail-panel.active {
   transform: translateX(0);
+}
+
+@media (min-width: 992px) {
+  .detail-panel.with-bookmark {
+    right: 380px;
+    max-width: calc(100vw - 380px - 24px);
+    width: 700px;
+    border-right: 1px solid var(--border-light);
+    box-shadow: -6px 0 24px rgba(0, 0, 0, 0.12);
+  }
 }
 
 .detail-header {
@@ -1512,7 +1522,7 @@ a {
   top: 0;
   right: 0;
   width: 100%;
-  max-width: 400px;
+  max-width: 380px;
   height: 100vh;
   background: var(--bg-primary);
   z-index: 502;
@@ -1520,6 +1530,7 @@ a {
   transition: transform var(--transition-slow);
   overflow-y: auto;
   box-shadow: -8px 0 30px rgba(0, 0, 0, 0.15);
+  border-left: 1px solid var(--border-light);
 }
 
 .bookmark-panel.active {

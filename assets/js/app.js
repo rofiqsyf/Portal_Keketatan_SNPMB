@@ -204,8 +204,17 @@ const App = (() => {
       }
     });
 
-    // Overlay click
-    document.getElementById('detail-overlay')?.addEventListener('click', closeDetail);
+    // Overlay click (smart handler for dual drawer)
+    document.getElementById('detail-overlay')?.addEventListener('click', () => {
+      const detailPanel = document.getElementById('detail-panel');
+      const bookmarkPanel = document.getElementById('bookmark-panel');
+
+      if (detailPanel && detailPanel.classList.contains('active')) {
+        closeDetail();
+      } else if (bookmarkPanel && bookmarkPanel.classList.contains('active')) {
+        closeBookmarkPanel();
+      }
+    });
 
     // Window resize for campus grid
     let resizeTimer;
@@ -666,15 +675,23 @@ const App = (() => {
     const univ = universityData.universitas.find(u => u.id === univId);
     if (!univ) return;
 
-    // Close bookmark panel & autocomplete & clear search
-    closeBookmarkPanel();
+    // Close autocomplete & clear main search
     closeAutocomplete();
     const searchMain = document.getElementById('search-main');
     if (searchMain) searchMain.value = '';
 
-    // Update header
     const panel = document.getElementById('detail-panel');
     const overlay = document.getElementById('detail-overlay');
+    const bookmarkPanel = document.getElementById('bookmark-panel');
+
+    // Check if bookmark panel is active for side-by-side positioning
+    if (bookmarkPanel && bookmarkPanel.classList.contains('active')) {
+      panel.classList.add('with-bookmark');
+    } else {
+      panel.classList.remove('with-bookmark');
+    }
+
+    // Update header
     document.getElementById('detail-logo').src = univ.logo_url;
     document.getElementById('detail-title').textContent = univ.nama;
     document.getElementById('detail-subtitle').textContent = `${univ.wilayah} · Jalur ${activeJalur.toUpperCase()} (${activeTahun})`;
@@ -714,9 +731,15 @@ const App = (() => {
     activeUnivId = null;
     const panel = document.getElementById('detail-panel');
     const overlay = document.getElementById('detail-overlay');
+    const bookmarkPanel = document.getElementById('bookmark-panel');
+
     panel.classList.remove('active');
-    overlay.classList.remove('active');
-    document.body.style.overflow = '';
+    panel.classList.remove('with-bookmark');
+
+    if (!bookmarkPanel || !bookmarkPanel.classList.contains('active')) {
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
 
     document.querySelectorAll('.campus-card').forEach(card => {
       card.classList.remove('active');
@@ -823,8 +846,13 @@ const App = (() => {
   function openBookmarkPanel() {
     const panel = document.getElementById('bookmark-panel');
     const overlay = document.getElementById('detail-overlay');
+    const detailPanel = document.getElementById('detail-panel');
+
     if (panel) {
       panel.classList.add('active');
+      if (detailPanel && detailPanel.classList.contains('active')) {
+        detailPanel.classList.add('with-bookmark');
+      }
       overlay.classList.add('active');
       document.body.style.overflow = 'hidden';
       renderBookmarkPanel();
@@ -834,9 +862,14 @@ const App = (() => {
   function closeBookmarkPanel() {
     const panel = document.getElementById('bookmark-panel');
     const overlay = document.getElementById('detail-overlay');
+    const detailPanel = document.getElementById('detail-panel');
+
     if (panel) {
       panel.classList.remove('active');
-      if (!document.getElementById('detail-panel').classList.contains('active')) {
+      if (detailPanel) {
+        detailPanel.classList.remove('with-bookmark');
+      }
+      if (!detailPanel || !detailPanel.classList.contains('active')) {
         overlay.classList.remove('active');
         document.body.style.overflow = '';
       }
