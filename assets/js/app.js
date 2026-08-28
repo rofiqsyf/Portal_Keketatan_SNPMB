@@ -104,6 +104,28 @@ const App = (() => {
   const CAMPUS_LIMIT_DESKTOP = 12;
   let debounceTimer = null;
 
+  // Analyzer State
+  let snbtState = {
+    scores: {},
+    prodiType: 'semua',
+    jenjang: '',
+    wilayah: '',
+    results: null,
+    allProdiCache: null,
+  };
+  let snbpState = {
+    rataRapor: '',
+    akreditasi: 'A',
+    prodiType: 'saintek',
+    jenjang: '',
+    wilayah: '',
+    nilaiMapelPendukung: {},
+    results: null,
+    allProdiCache: null,
+  };
+  // Store full results for load-more
+  let analyzerFullResults = { snbt: [], snbp: [] };
+
   // =====================================================================
   // INITIALIZATION
   // =====================================================================
@@ -332,36 +354,43 @@ const App = (() => {
     const activeBtn = document.getElementById(`tab-btn-${tab}`);
     if (activeBtn) activeBtn.classList.add('active');
 
-    const viewPtn = document.getElementById('view-ptn');
-    const viewMaster = document.getElementById('view-master');
-    const viewSimulasi = document.getElementById('view-simulasi');
+    const viewPtn       = document.getElementById('view-ptn');
+    const viewMaster    = document.getElementById('view-master');
+    const viewSimulasi  = document.getElementById('view-simulasi');
+    const viewSnbt      = document.getElementById('view-analyzer-snbt');
+    const viewSnbp      = document.getElementById('view-analyzer-snbp');
+
+    // Hide all views first
+    viewPtn?.classList.add('hidden');
+    viewMaster?.classList.add('hidden');
+    viewSimulasi?.classList.add('hidden');
+    viewSnbt?.classList.add('hidden');
+    viewSnbp?.classList.add('hidden');
 
     if (tab === 'ptn') {
       viewPtn?.classList.remove('hidden');
-      viewMaster?.classList.add('hidden');
-      viewSimulasi?.classList.add('hidden');
       renderCampusGrid();
     } else if (tab === 'master') {
-      viewPtn?.classList.add('hidden');
       viewMaster?.classList.remove('hidden');
-      viewSimulasi?.classList.add('hidden');
       document.getElementById('master-view-title').textContent = 'Eksplorasi Program Studi';
       document.getElementById('master-view-subtitle').textContent = `Menampilkan seluruh program studi PTN di Indonesia (${activeTahun})`;
       masterSortState = { by: 'keketatan', asc: true };
       renderMasterProdi();
     } else if (tab === 'terketat') {
-      viewPtn?.classList.add('hidden');
       viewMaster?.classList.remove('hidden');
-      viewSimulasi?.classList.add('hidden');
       document.getElementById('master-view-title').textContent = 'Top Program Studi Terketat';
       document.getElementById('master-view-subtitle').textContent = `Diurutkan berdasarkan rasio keketatan penerimaan terkecil (${activeTahun})`;
       masterSortState = { by: 'keketatan', asc: true };
       renderMasterProdi();
     } else if (tab === 'simulasi') {
-      viewPtn?.classList.add('hidden');
-      viewMaster?.classList.add('hidden');
       viewSimulasi?.classList.remove('hidden');
       renderSimulasi();
+    } else if (tab === 'analyzer-snbt') {
+      viewSnbt?.classList.remove('hidden');
+      renderSnbtAnalyzer();
+    } else if (tab === 'analyzer-snbp') {
+      viewSnbp?.classList.remove('hidden');
+      renderSnbpAnalyzer();
     }
   }
 
@@ -1090,6 +1119,165 @@ const App = (() => {
   }
 
   // =====================================================================
+  // ANALYZER — SNBT & SNBP
+  // =====================================================================
+
+  function getAnalyzerRegions() {
+    return universityData ? DataUtils.getRegions(universityData.universitas) : [];
+  }
+
+  function renderSnbtAnalyzer() {
+    const container = document.getElementById('view-analyzer-snbt');
+    if (!container) return;
+    container.innerHTML = Components.renderSnbtAnalyzer(snbtState, getAnalyzerRegions());
+  }
+
+  function renderSnbpAnalyzer() {
+    const container = document.getElementById('view-analyzer-snbp');
+    if (!container) return;
+    container.innerHTML = Components.renderSnbpAnalyzer(snbpState, getAnalyzerRegions());
+  }
+
+  function setSnbtScore(subtest, value) {
+    const numVal = value === '' ? '' : Number(value);
+    snbtState.scores[subtest] = numVal;
+    // Live re-render input panel only (update filled state)
+    const input = document.getElementById(`snbt-${subtest}`);
+    if (input) {
+      input.classList.toggle('filled', value !== '' && value != null);
+    }
+  }
+
+  function setSnbpData(key, value) {
+    snbpState[key] = value;
+    // Re-render full form so mapel grid updates when prodiType changes
+    renderSnbpAnalyzer();
+  }
+
+  function setSnbpMapel(mapelKey, value) {
+    snbpState.nilaiMapelPendukung[mapelKey] = value === '' ? '' : Number(value);
+  }
+
+  function setAnalyzerFilter(mode, key, value) {
+    if (mode === 'snbt') {
+      snbtState[key] = value;
+      // If prodiType changed, re-render form to update button states
+      renderSnbtAnalyzer();
+    } else if (mode === 'snbp') {
+      snbpState[key] = value;
+      // Clear mapel scores when switching prodiType
+      if (key === 'prodiType') snbpState.nilaiMapelPendukung = {};
+      renderSnbpAnalyzer();
+    }
+  }
+
+  function runSnbtAnalysis() {
+    if (!universityData) return;
+    showToast('⏳ Menganalisis...');
+
+    // Get all prodi for jalur SNBT
+    const allProdi = DataUtils.getAllProdi(universityData.universitas, 'snbt', activeTahun);
+    snbtState.allProdiCache = allProdi;
+
+    const filters = {
+      prodiType: snbtState.prodiType,
+      jenjang: snbtState.jenjang,
+      wilayah: snbtState.wilayah,
+    };
+
+    const results = AnalyzerUtils.analyzeSnbt(snbtState.scores, allProdi, filters);
+    snbtState.results = results;
+    analyzerFullResults.snbt = results.results || [];
+
+    // Re-render results only
+    const panel = document.getElementById('snbt-results-panel');
+    if (panel) {
+      panel.innerHTML = Components.renderAnalyzerResults(results, 'snbt');
+    }
+
+    const total = results.results?.length || 0;
+    showToast(`✅ Ditemukan ${total.toLocaleString('id')} prodi sesuai profilmu`);
+  }
+
+  function runSnbpAnalysis() {
+    if (!universityData || !snbpState.rataRapor) return;
+    showToast('⏳ Menganalisis...');
+
+    const allProdi = DataUtils.getAllProdi(universityData.universitas, 'snbp', activeTahun);
+    snbpState.allProdiCache = allProdi;
+
+    const filters = {
+      prodiType: snbpState.prodiType === 'campuran' ? 'semua' : snbpState.prodiType,
+      jenjang: snbpState.jenjang,
+      wilayah: snbpState.wilayah,
+    };
+
+    const results = AnalyzerUtils.analyzeSnbp(
+      snbpState.rataRapor,
+      snbpState.nilaiMapelPendukung,
+      snbpState.akreditasi,
+      allProdi,
+      filters
+    );
+    snbpState.results = results;
+    analyzerFullResults.snbp = results.results || [];
+
+    const panel = document.getElementById('snbp-results-panel');
+    if (panel) {
+      panel.innerHTML = Components.renderAnalyzerResults(results, 'snbp');
+    }
+
+    const total = results.results?.length || 0;
+    if (total === 0) {
+      showToast('⚠️ Tidak ada data SNBP. Coba jalur SNBT atau kurangi filter.');
+    } else {
+      showToast(`✅ Ditemukan ${total.toLocaleString('id')} prodi sesuai profilmu`);
+    }
+  }
+
+  function loadMorePeluang(levelKey, currentCount, mode) {
+    const allResults = analyzerFullResults[mode] || [];
+    const levelResults = allResults.filter(p => p.peluang.key === levelKey);
+    const nextBatch = levelResults.slice(currentCount, currentCount + 50);
+    const level = AnalyzerUtils.PELUANG_LEVELS.find(l => l.key === levelKey);
+
+    const listEl = document.getElementById(`list-${levelKey}`);
+    if (!listEl || !level) return;
+
+    // Append new cards
+    nextBatch.forEach((p, i) => {
+      const card = document.createElement('div');
+      card.className = 'peluang-card';
+      card.onclick = () => openDetail(p.univId);
+      card.innerHTML = `
+        <div class="peluang-card-rank">#${currentCount + i + 1}</div>
+        <div class="peluang-card-info">
+          <div class="peluang-card-prodi">${Components.escapeHtml(p.nama)}</div>
+          <div class="peluang-card-univ">${Components.escapeHtml(p.univNama || '')} (${Components.escapeHtml(p.univSingkatan || '')})</div>
+          ${p.jenjang ? `<span class="peluang-card-jenjang">${Components.escapeHtml(p.jenjang)}</span>` : ''}
+        </div>
+        <div class="peluang-card-meta">
+          <span class="peluang-indicator ${levelKey}">${level.emoji} ${level.label}</span>
+          <span class="peluang-keketatan">⚡ ${p.keketatan.toFixed(2)}%</span>
+        </div>
+      `;
+      listEl.appendChild(card);
+    });
+
+    // Update or remove the load-more button
+    const newCount = currentCount + nextBatch.length;
+    const btn = listEl.nextElementSibling;
+    if (btn && btn.classList.contains('btn-load-more-peluang')) {
+      if (newCount >= levelResults.length) {
+        btn.remove();
+      } else {
+        btn.textContent = `Tampilkan ${Math.min(50, levelResults.length - newCount)} lagi dari ${levelResults.length} prodi ▼`;
+        btn.onclick = () => loadMorePeluang(levelKey, newCount, mode);
+      }
+    }
+  }
+
+  // =====================================================================
   // PUBLIC API
   // =====================================================================
   return {
@@ -1124,6 +1312,13 @@ const App = (() => {
     setSimulasiPilihan,
     printCompareReport,
     printSimulasiReport,
+    setSnbtScore,
+    setSnbpData,
+    setSnbpMapel,
+    setAnalyzerFilter,
+    runSnbtAnalysis,
+    runSnbpAnalysis,
+    loadMorePeluang,
   };
 })();
 

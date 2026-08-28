@@ -680,6 +680,354 @@ const Components = (() => {
     `;
   }
 
+  // =====================================================================
+  // ANALYZER COMPONENTS — SNBT & SNBP
+  // =====================================================================
+
+  /**
+   * Render the full SNBT analyzer view
+   */
+  function renderSnbtAnalyzer(state, regions) {
+    const { scores = {}, prodiType = 'semua', jenjang = '', wilayah = '', results = null } = state;
+    const groups = AnalyzerUtils.getSnbtSubtestGroups();
+    const scoreMin = AnalyzerUtils.SNBT_MIN;
+    const scoreMax = AnalyzerUtils.SNBT_MAX;
+
+    const groupHtml = Object.entries(groups).map(([groupName, subtests]) => `
+      <div class="subtest-group">
+        <div class="subtest-group-label">${groupName}</div>
+        ${subtests.map(s => `
+          <div class="subtest-input-row">
+            <div class="subtest-input-label">
+              ${s.label}
+              <span class="subtest-abbr">${s.abbr}</span>
+            </div>
+            <input
+              type="number"
+              class="subtest-score-input ${scores[s.key] ? 'filled' : ''}"
+              id="snbt-${s.key}"
+              min="${scoreMin}" max="${scoreMax}"
+              step="0.01"
+              placeholder="200–820"
+              value="${scores[s.key] || ''}"
+              oninput="App.setSnbtScore('${s.key}', this.value)"
+            >
+          </div>
+        `).join('')}
+      </div>
+    `).join('');
+
+    const filledCount = Object.values(scores).filter(v => v !== '' && v != null).length;
+    const btnDisabled = filledCount < 3 ? 'disabled style="opacity:0.6;cursor:not-allowed;"' : '';
+
+    return `
+      <section class="analyzer-section" id="view-analyzer-snbt-inner">
+        <div class="analyzer-header">
+          <h2>🎯 Analisis Peluang Jalur UTBK-SNBT</h2>
+          <p>Masukkan skor UTBK-SNBT dari 7 subtest. Sistem akan mengestimasi peluangmu masuk ke 2.257 prodi PTN berdasarkan data keketatan resmi SNPMB 2025.</p>
+        </div>
+        <div class="analyzer-disclaimer">
+          <span class="analyzer-disclaimer-icon">⚠️</span>
+          <span><strong>Disclaimer:</strong> Hasil ini adalah <strong>estimasi statistik</strong> berdasarkan distribusi skor nasional UTBK 2025 (mean=545,78). SNPMB tidak merilis passing grade resmi — peluang aktual bergantung pada kualitas pendaftar tiap tahun. Gunakan sebagai panduan, bukan jaminan.</span>
+        </div>
+        <div class="analyzer-layout">
+          <!-- INPUT PANEL -->
+          <div class="analyzer-input-panel">
+            <h3>📊 Input Skor 7 Subtest</h3>
+            ${groupHtml}
+
+            <!-- Prodi Type Filter -->
+            <div style="margin-bottom:12px;">
+              <div class="subtest-group-label" style="margin-bottom:8px;">Fokus Jenis Prodi</div>
+              <div class="proditype-group">
+                <button class="proditype-btn ${prodiType === 'semua' ? 'active' : ''}" onclick="App.setAnalyzerFilter('snbt', 'prodiType', 'semua')">Semua</button>
+                <button class="proditype-btn ${prodiType === 'saintek' ? 'active' : ''}" onclick="App.setAnalyzerFilter('snbt', 'prodiType', 'saintek')">SAINTEK</button>
+                <button class="proditype-btn ${prodiType === 'soshum' ? 'active' : ''}" onclick="App.setAnalyzerFilter('snbt', 'prodiType', 'soshum')">SOSHUM</button>
+              </div>
+            </div>
+
+            <!-- Additional Filters -->
+            <div class="analyzer-filters">
+              <div class="analyzer-filter-row">
+                <span class="analyzer-filter-label">Jenjang</span>
+                <select class="analyzer-filter-select" onchange="App.setAnalyzerFilter('snbt', 'jenjang', this.value)">
+                  <option value="" ${jenjang === '' ? 'selected' : ''}>Semua Jenjang</option>
+                  <option value="Sarjana" ${jenjang === 'Sarjana' ? 'selected' : ''}>Sarjana (S1)</option>
+                  <option value="Sarjana Terapan" ${jenjang === 'Sarjana Terapan' ? 'selected' : ''}>Sarjana Terapan (D4)</option>
+                  <option value="Diploma" ${jenjang === 'Diploma' ? 'selected' : ''}>Diploma (D3)</option>
+                </select>
+              </div>
+              <div class="analyzer-filter-row">
+                <span class="analyzer-filter-label">Wilayah</span>
+                <select class="analyzer-filter-select" onchange="App.setAnalyzerFilter('snbt', 'wilayah', this.value)">
+                  <option value="">Semua Wilayah</option>
+                  ${(regions || []).map(r => `<option value="${escapeAttr(r)}" ${wilayah === r ? 'selected' : ''}>${escapeHtml(r)}</option>`).join('')}
+                </select>
+              </div>
+            </div>
+
+            <button class="btn-run-analysis" onclick="App.runSnbtAnalysis()" ${btnDisabled}>
+              🔍 Analisis Peluang Saya
+            </button>
+            ${filledCount < 3 ? `<p style="font-size:0.72rem;text-align:center;color:var(--text-tertiary);margin-top:8px;">Isi minimal 3 subtest untuk memulai</p>` : ''}
+          </div>
+
+          <!-- RESULTS PANEL -->
+          <div class="analyzer-results-panel" id="snbt-results-panel">
+            ${results ? renderAnalyzerResults(results, 'snbt') : renderAnalyzerEmptyState('snbt')}
+          </div>
+        </div>
+      </section>
+    `;
+  }
+
+  /**
+   * Render the full SNBP analyzer view
+   */
+  function renderSnbpAnalyzer(state, regions) {
+    const { rataRapor = '', akreditasi = 'A', prodiType = 'semua', jenjang = '', wilayah = '', nilaiMapelPendukung = {}, results = null } = state;
+    const mapelList = AnalyzerUtils.MAPEL_PENDUKUNG[prodiType === 'saintek' ? 'saintek' : prodiType === 'soshum' ? 'soshum' : 'campuran'];
+
+    return `
+      <section class="analyzer-section" id="view-analyzer-snbp-inner">
+        <div class="analyzer-header">
+          <h2>📋 Analisis Peluang Jalur SNBP (Prestasi)</h2>
+          <p>Masukkan rata-rata rapor semester 1–5, akreditasi sekolah, dan nilai mapel pendukung. Sistem akan mengestimasi peluangmu untuk jalur prestasi SNBP.</p>
+        </div>
+        <div class="analyzer-disclaimer">
+          <span class="analyzer-disclaimer-icon">⚠️</span>
+          <span><strong>Disclaimer:</strong> SNBP menggunakan penilaian holistik (rapor, prestasi, rekam jejak sekolah) yang tidak bisa direplikasi 100% secara otomatis. Estimasi ini berdasarkan komponen nilai rapor dan mapel pendukung saja — gunakan sebagai referensi awal.</span>
+        </div>
+        <div class="analyzer-layout">
+          <!-- INPUT PANEL -->
+          <div class="analyzer-input-panel">
+            <h3>📝 Input Data Rapor</h3>
+
+            <!-- Akreditasi -->
+            <div class="snbp-input-section">
+              <label>Akreditasi Sekolah</label>
+              <div class="akreditasi-group">
+                ${['A', 'B', 'C'].map(ak => `
+                  <div class="akreditasi-option">
+                    <input type="radio" id="ak-${ak}" name="akreditasi" value="${ak}" ${akreditasi === ak ? 'checked' : ''} onchange="App.setSnbpData('akreditasi', '${ak}')">
+                    <label class="akreditasi-label" for="ak-${ak}">
+                      <span class="ak-grade">${ak}</span>
+                      <span class="ak-quota">${ak === 'A' ? '40%' : ak === 'B' ? '25%' : '5%'} siswa</span>
+                    </label>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+
+            <!-- Rata-rata Rapor -->
+            <div class="snbp-input-section">
+              <label for="snbp-rata">Rata-rata Nilai Rapor (Semua Mapel, Sem 1–5)</label>
+              <input type="number" class="snbp-rapor-input" id="snbp-rata"
+                min="0" max="100" step="0.1" placeholder="contoh: 87.5"
+                value="${rataRapor}"
+                oninput="App.setSnbpData('rataRapor', this.value)">
+            </div>
+
+            <!-- Prodi Type -->
+            <div style="margin-bottom:12px;">
+              <div class="subtest-group-label" style="margin-bottom:8px;">Rumpun Prodi Tujuan</div>
+              <div class="proditype-group">
+                <button class="proditype-btn ${prodiType === 'saintek' ? 'active' : ''}" onclick="App.setAnalyzerFilter('snbp', 'prodiType', 'saintek')">IPA/Saintek</button>
+                <button class="proditype-btn ${prodiType === 'soshum' ? 'active' : ''}" onclick="App.setAnalyzerFilter('snbp', 'prodiType', 'soshum')">IPS/Soshum</button>
+                <button class="proditype-btn ${prodiType === 'campuran' ? 'active' : ''}" onclick="App.setAnalyzerFilter('snbp', 'prodiType', 'campuran')">Campuran</button>
+              </div>
+            </div>
+
+            <!-- Mapel Pendukung -->
+            <div class="snbp-input-section">
+              <label>Nilai Mapel Pendukung (Rata-rata Sem 1–5)</label>
+              <div class="mapel-grid">
+                ${mapelList.map(m => `
+                  <div class="mapel-input-item">
+                    <label>${m.label}</label>
+                    <input type="number" class="mapel-score-input"
+                      min="0" max="100" step="0.1" placeholder="0–100"
+                      value="${nilaiMapelPendukung[m.key] || ''}"
+                      oninput="App.setSnbpMapel('${m.key}', this.value)">
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+
+            <!-- Additional Filters -->
+            <div class="analyzer-filters">
+              <div class="analyzer-filter-row">
+                <span class="analyzer-filter-label">Jenjang</span>
+                <select class="analyzer-filter-select" onchange="App.setAnalyzerFilter('snbp', 'jenjang', this.value)">
+                  <option value="" ${jenjang === '' ? 'selected' : ''}>Semua Jenjang</option>
+                  <option value="Sarjana" ${jenjang === 'Sarjana' ? 'selected' : ''}>Sarjana (S1)</option>
+                  <option value="Sarjana Terapan" ${jenjang === 'Sarjana Terapan' ? 'selected' : ''}>Sarjana Terapan (D4)</option>
+                  <option value="Diploma" ${jenjang === 'Diploma' ? 'selected' : ''}>Diploma (D3)</option>
+                </select>
+              </div>
+              <div class="analyzer-filter-row">
+                <span class="analyzer-filter-label">Wilayah</span>
+                <select class="analyzer-filter-select" onchange="App.setAnalyzerFilter('snbp', 'wilayah', this.value)">
+                  <option value="">Semua Wilayah</option>
+                  ${(regions || []).map(r => `<option value="${escapeAttr(r)}" ${wilayah === r ? 'selected' : ''}>${escapeHtml(r)}</option>`).join('')}
+                </select>
+              </div>
+            </div>
+
+            <button class="btn-run-analysis" onclick="App.runSnbpAnalysis()" ${!rataRapor ? 'disabled style="opacity:0.6;cursor:not-allowed;"' : ''}>
+              🔍 Analisis Peluang Saya
+            </button>
+            ${!rataRapor ? `<p style="font-size:0.72rem;text-align:center;color:var(--text-tertiary);margin-top:8px;">Isi rata-rata rapor untuk memulai</p>` : ''}
+          </div>
+
+          <!-- RESULTS PANEL -->
+          <div class="analyzer-results-panel" id="snbp-results-panel">
+            ${results ? renderAnalyzerResults(results, 'snbp') : renderAnalyzerEmptyState('snbp')}
+          </div>
+        </div>
+      </section>
+    `;
+  }
+
+  /**
+   * Render empty state for analyzer results
+   */
+  function renderAnalyzerEmptyState(mode) {
+    return `
+      <div class="analyzer-empty-state">
+        <div class="analyzer-empty-icon">${mode === 'snbt' ? '🎯' : '📋'}</div>
+        <h3>Belum Ada Hasil Analisis</h3>
+        <p>${mode === 'snbt'
+          ? 'Isi minimal 3 skor subtest UTBK, lalu klik "Analisis Peluang Saya" untuk melihat prodi yang sesuai profil skormu.'
+          : 'Isi rata-rata rapor dan pilih rumpun prodi, lalu klik "Analisis Peluang Saya" untuk melihat estimasi peluangmu.'
+        }</p>
+      </div>
+    `;
+  }
+
+  /**
+   * Render analyzer results with paginated peluang sections
+   */
+  function renderAnalyzerResults(results, mode) {
+    const { composite, percentile, scoreTertimbang, results: prodiResults } = results;
+
+    if (!prodiResults || prodiResults.length === 0) {
+      return `<div class="analyzer-empty-state">
+        <div class="analyzer-empty-icon">😔</div>
+        <h3>Tidak Ada Prodi Ditemukan</h3>
+        <p>Coba ubah filter wilayah atau jenjang untuk memperluas hasil pencarian.</p>
+      </div>`;
+    }
+
+    // Score summary card
+    const displayScore = mode === 'snbt' ? composite : scoreTertimbang;
+    const scoreLabel = mode === 'snbt' ? 'Skor Komposit SNBT' : 'Skor Tertimbang SNBP';
+    const scoreRange = mode === 'snbt' ? `${AnalyzerUtils.SNBT_MIN}–${AnalyzerUtils.SNBT_MAX}` : '0–100';
+    const scoreMax = mode === 'snbt' ? AnalyzerUtils.SNBT_MAX : 100;
+    const scoreMin = mode === 'snbt' ? AnalyzerUtils.SNBT_MIN : 0;
+    const gaugePercent = Math.round(((displayScore - scoreMin) / (scoreMax - scoreMin)) * 100);
+    const formattedPercent = AnalyzerUtils.formatPercentile(percentile);
+
+    const percentileClass = percentile <= 10 ? 'good' : percentile <= 30 ? 'warn' : 'danger';
+
+    // Group prodi by peluang level
+    const groups = {};
+    for (const level of AnalyzerUtils.PELUANG_LEVELS) {
+      groups[level.key] = prodiResults.filter(p => p.peluang.key === level.key);
+    }
+
+    // Summary chips
+    const summaryHtml = AnalyzerUtils.PELUANG_LEVELS
+      .filter(l => groups[l.key].length > 0)
+      .map(l => `
+        <span class="peluang-summary-chip ${l.key}" onclick="document.getElementById('section-${l.key}')?.scrollIntoView({behavior:'smooth'})">
+          ${l.emoji} ${l.label} <strong>${groups[l.key].length}</strong>
+        </span>
+      `).join('');
+
+    // Peluang sections (all levels)
+    const sectionsHtml = AnalyzerUtils.PELUANG_LEVELS
+      .filter(l => groups[l.key].length > 0)
+      .map(l => {
+        const list = groups[l.key];
+        const PAGE = 50;
+        const initial = list.slice(0, PAGE);
+        const hasMore = list.length > PAGE;
+
+        const cardsHtml = initial.map((p, i) => `
+          <div class="peluang-card" onclick="App.openDetail('${escapeAttr(p.univId)}')" title="Klik untuk lihat detail ${escapeAttr(p.univNama)}">
+            <div class="peluang-card-rank">#${i + 1}</div>
+            <div class="peluang-card-info">
+              <div class="peluang-card-prodi">${escapeHtml(p.nama)}</div>
+              <div class="peluang-card-univ">${escapeHtml(p.univNama || '')} (${escapeHtml(p.univSingkatan || '')})</div>
+              ${p.jenjang ? `<span class="peluang-card-jenjang">${escapeHtml(p.jenjang)}</span>` : ''}
+            </div>
+            <div class="peluang-card-meta">
+              <span class="peluang-indicator ${l.key}">${l.emoji} ${l.label}</span>
+              <span class="peluang-keketatan">⚡ ${p.keketatan.toFixed(2)}%</span>
+            </div>
+          </div>
+        `).join('');
+
+        return `
+          <div class="peluang-section" id="section-${l.key}">
+            <div class="peluang-section-header ${l.key}">
+              <div class="peluang-section-title ${l.key}">
+                ${l.emoji} ${l.label}
+              </div>
+              <span class="peluang-section-count">${list.length} prodi</span>
+            </div>
+            <div class="peluang-prodi-list" id="list-${l.key}">
+              ${cardsHtml}
+            </div>
+            ${hasMore ? `<button class="btn-load-more-peluang" onclick="App.loadMorePeluang('${l.key}', ${PAGE}, '${mode}')">
+              Tampilkan ${Math.min(PAGE, list.length - PAGE)} lagi dari ${list.length} prodi ▼
+            </button>` : ''}
+          </div>
+        `;
+      }).join('');
+
+    return `
+      <!-- Score Summary Card -->
+      <div class="score-summary-card">
+        <div class="score-gauge-wrapper">
+          <div class="score-gauge-label">${scoreLabel}</div>
+          <div class="score-gauge-value">${displayScore.toFixed(mode === 'snbt' ? 2 : 1)}</div>
+          <div class="score-gauge-sub">Rentang: ${scoreRange}</div>
+          <div class="gauge-bar-container">
+            <div class="gauge-bar-track">
+              <div class="gauge-bar-fill" style="width:${gaugePercent}%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="score-stats-grid">
+          <div class="score-stat-item">
+            <div class="score-stat-label">Estimasi Persentil</div>
+            <div class="score-stat-value ${percentileClass}">${formattedPercent}</div>
+          </div>
+          <div class="score-stat-item">
+            <div class="score-stat-label">Total Prodi Dianalisis</div>
+            <div class="score-stat-value">${prodiResults.length.toLocaleString('id')}</div>
+          </div>
+          <div class="score-stat-item">
+            <div class="score-stat-label">Sangat Berpeluang</div>
+            <div class="score-stat-value good">${groups['sangat-berpeluang']?.length || 0} prodi</div>
+          </div>
+          <div class="score-stat-item">
+            <div class="score-stat-label">Berpeluang</div>
+            <div class="score-stat-value ${(groups['berpeluang']?.length || 0) > 0 ? 'good' : 'warn'}">${groups['berpeluang']?.length || 0} prodi</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Summary chips -->
+      <div class="peluang-summary-bar">${summaryHtml}</div>
+
+      <!-- All peluang sections -->
+      ${sectionsHtml}
+    `;
+  }
+
   return {
     Icons,
     renderCampusCard,
@@ -694,7 +1042,12 @@ const Components = (() => {
     renderBookmarkList,
     renderSimulasiView,
     generatePrintReportHTML,
+    renderSnbtAnalyzer,
+    renderSnbpAnalyzer,
+    renderAnalyzerResults,
+    renderAnalyzerEmptyState,
     escapeHtml,
     escapeAttr,
   };
 })();
+
