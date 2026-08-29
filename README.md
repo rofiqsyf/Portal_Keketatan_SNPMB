@@ -242,7 +242,7 @@ git push
 ## ⚠️ Disclaimer & Sumber Data
 
 - **Portal Resmi SNPMB**: [https://snpmb.id/](https://snpmb.id/)
-- **Disclaimer**: Portal Keketatan SNPMB **BUKAN merupakan situs resmi milik Balai Pengelolaan Pengujian Pendidikan (BPPP) atau Kemendikbudristek**. Portal ini dikembangkan secara independen untuk tujuan edukasi dan analitik data publik. Informasi resmi dan pendaftaran seleksi selalu mengacu pada [snpmb.id](https://snpmb.id/).
+- **Disclaimer**: Portal Keketatan SNPMB **BUKAN merupakan situs resmi milik Balai Pengelolaan Pengujian Pendidikan (BPPP) atau Kemendiktisaintek**. Portal ini dikembangkan secara independen untuk tujuan edukasi dan analitik data publik. Informasi resmi dan pendaftaran seleksi selalu mengacu pada [snpmb.id](https://snpmb.id/).
 
 ---
 
