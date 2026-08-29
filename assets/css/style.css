@@ -1864,7 +1864,8 @@ input[type="number"] {
   gap: 10px;
 }
 
-.footer-nav-list a {
+.footer-nav-list a,
+.footer-info-link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -1873,7 +1874,8 @@ input[type="number"] {
   transition: all var(--transition-fast);
 }
 
-.footer-nav-list a:hover {
+.footer-nav-list a:hover,
+.footer-info-link:hover {
   color: #60A5FA;
   transform: translateX(3px);
 }
