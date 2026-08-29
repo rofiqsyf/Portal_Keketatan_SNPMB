@@ -134,11 +134,11 @@ def main():
         "meta": {
             "tahun_tersedia": ["2025", "2024", "2023"],
             "tahun_aktif": "2025",
-            "sumber": "SNPMB | snpmb.bppp.kemdikbud.go.id",
+            "sumber": "SNPMB | snpmb.id",
             "terakhir_diperbarui": "2026-08-28",
             "total_universitas": len(universities),
             "total_prodi": total_prodi,
-            "disclaimer": "Portal ini BUKAN situs resmi SNPMB. Data disajikan untuk keperluan informasi dan edukasi. Untuk informasi resmi, kunjungi snpmb.bppp.kemdikbud.go.id"
+            "disclaimer": "Portal ini BUKAN situs resmi SNPMB. Data disajikan untuk keperluan informasi dan edukasi. Untuk informasi resmi, kunjungi snpmb.id"
         },
         "universitas": universities
     }

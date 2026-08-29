@@ -683,7 +683,7 @@ const Components = (() => {
         </div>
         ${bodyHTML}
         <div class="report-footer">
-          <div>Portal Keketatan SNPMB | Data Resmi SNPMB (portal.snpmb.id)</div>
+          <div>Portal Keketatan SNPMB | Data Resmi SNPMB (snpmb.id)</div>
           <div>Halaman 1 dari 1</div>
         </div>
         <script>window.onload = function() { window.print(); };</script>

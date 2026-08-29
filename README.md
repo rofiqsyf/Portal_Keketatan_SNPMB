@@ -3,7 +3,7 @@
 > **Cek Peluang & Strategi Masuk PTN Impian** : Portal analitik data keketatan seleksi masuk Perguruan Tinggi Negeri ( jalur SNBT & SNBP ) di Indonesia.
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-GitHub_Pages-2563EB?style=for-the-badge&logo=github)](https://rofiqsyf.github.io/Portal_Keketatan_SNPMB/)
-[![Official Reference](https://img.shields.io/badge/Referensi_Resmi-portal.snpmb.id-059669?style=for-the-badge)](https://portal.snpmb.id/)
+[![Official Reference](https://img.shields.io/badge/Referensi_Resmi-snpmb.id-059669?style=for-the-badge)](https://snpmb.id/)
 [![License](https://img.shields.io/badge/Lisensi-Edukasi_Publik-7C3AED?style=for-the-badge)](#disclaimer)
 
 ---
@@ -241,8 +241,8 @@ git push
 
 ## ⚠️ Disclaimer & Sumber Data
 
-- **Portal Resmi SNPMB**: [https://portal.snpmb.id/](https://portal.snpmb.id/)
-- **Disclaimer**: Portal Keketatan SNPMB **BUKAN merupakan situs resmi milik Balai Pengelolaan Pengujian Pendidikan (BPPP) atau Kemendikbudristek**. Portal ini dikembangkan secara independen untuk tujuan edukasi dan analitik data publik. Informasi resmi dan pendaftaran seleksi selalu mengacu pada [portal.snpmb.id](https://portal.snpmb.id/).
+- **Portal Resmi SNPMB**: [https://snpmb.id/](https://snpmb.id/)
+- **Disclaimer**: Portal Keketatan SNPMB **BUKAN merupakan situs resmi milik Balai Pengelolaan Pengujian Pendidikan (BPPP) atau Kemendikbudristek**. Portal ini dikembangkan secara independen untuk tujuan edukasi dan analitik data publik. Informasi resmi dan pendaftaran seleksi selalu mengacu pada [snpmb.id](https://snpmb.id/).
 
 ---
 
